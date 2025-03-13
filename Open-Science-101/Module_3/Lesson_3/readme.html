@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="TOPS Collaboration">
+
+<title>14&nbsp; Lesson 3: Making Open Data – TOPS Open Science 101</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../Open-Science-101/Module_3/Lesson_4/readme.html" rel="next">
+<link href="../../../Open-Science-101/Module_3/Lesson_2/readme.html" rel="prev">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_3/readme.html">OS101 Module 3: Open Data</a></li><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_3/Lesson_3/readme.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Data</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../">TOPS Open Science 101</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/forrtproject/Transform-to-Open-Science-Book" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../../../TOPS-Open-Science-101.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../../../TOPS-Open-Science-101.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transform to Open Science</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/README.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Open Science 101 Curriculum</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 1: The Ethos of Open Science</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lesson 1: What is Open Science?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Lesson 2: Why is Open Science Important?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lesson 3: How to do Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lesson 4: When Not to be Open</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lesson 5: Planning for Open Science: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 2: Open Tools and Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to the Process of Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lesson 2: General Tools for Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lesson 3: Tools for Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lesson 4: Tools for Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Lesson 5: Tools for Open Results</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 3: Open Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_3/readme.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 4: Open Code</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 5: Open Results</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../About/About-Announcements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About Transform to Open Science</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../About/tops_faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Frequently Asked Questions</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#navigation" id="toc-navigation" class="nav-link active" data-scroll-target="#navigation"><span class="header-section-number">14.1</span> Navigation</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview"><span class="header-section-number">14.2</span> Overview</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">14.3</span> Learning Objectives</a></li>
+  <li><a href="#planning-for-open-data" id="toc-planning-for-open-data" class="nav-link" data-scroll-target="#planning-for-open-data"><span class="header-section-number">14.4</span> Planning for Open Data</a></li>
+  <li><a href="#selecting-data-formats-and-tools-for-interoperability" id="toc-selecting-data-formats-and-tools-for-interoperability" class="nav-link" data-scroll-target="#selecting-data-formats-and-tools-for-interoperability"><span class="header-section-number">14.5</span> Selecting Data Formats and Tools for Interoperability</a>
+  <ul class="collapse">
+  <li><a href="#data-format-considerations" id="toc-data-format-considerations" class="nav-link" data-scroll-target="#data-format-considerations"><span class="header-section-number">14.5.1</span> Data Format Considerations</a></li>
+  <li><a href="#non-open-data-formats" id="toc-non-open-data-formats" class="nav-link" data-scroll-target="#non-open-data-formats"><span class="header-section-number">14.5.2</span> Non-Open Data Formats</a></li>
+  <li><a href="#open-data-format-examples" id="toc-open-data-format-examples" class="nav-link" data-scroll-target="#open-data-format-examples"><span class="header-section-number">14.5.3</span> Open Data Format Examples</a></li>
+  </ul></li>
+  <li><a href="#making-the-data-reusable-through-documentation" id="toc-making-the-data-reusable-through-documentation" class="nav-link" data-scroll-target="#making-the-data-reusable-through-documentation"><span class="header-section-number">14.6</span> Making the Data Reusable Through Documentation</a>
+  <ul class="collapse">
+  <li><a href="#adding-documentation-and-metadata-for-reusability" id="toc-adding-documentation-and-metadata-for-reusability" class="nav-link" data-scroll-target="#adding-documentation-and-metadata-for-reusability"><span class="header-section-number">14.6.1</span> Adding Documentation and Metadata for Reusability</a></li>
+  <li><a href="#metadata-for-humans-and-machines" id="toc-metadata-for-humans-and-machines" class="nav-link" data-scroll-target="#metadata-for-humans-and-machines"><span class="header-section-number">14.6.2</span> Metadata: for Humans and Machines</a></li>
+  <li><a href="#why-add-metadata" id="toc-why-add-metadata" class="nav-link" data-scroll-target="#why-add-metadata"><span class="header-section-number">14.6.3</span> Why Add Metadata?</a></li>
+  <li><a href="#metadata-tagging-best-practices" id="toc-metadata-tagging-best-practices" class="nav-link" data-scroll-target="#metadata-tagging-best-practices"><span class="header-section-number">14.6.4</span> Metadata Tagging Best Practices</a></li>
+  <li><a href="#accompanying-documentation" id="toc-accompanying-documentation" class="nav-link" data-scroll-target="#accompanying-documentation"><span class="header-section-number">14.6.5</span> Accompanying Documentation</a></li>
+  <li><a href="#data-versioning-guidelines" id="toc-data-versioning-guidelines" class="nav-link" data-scroll-target="#data-versioning-guidelines"><span class="header-section-number">14.6.6</span> Data Versioning Guidelines</a></li>
+  </ul></li>
+  <li><a href="#making-the-data-reusable-through-licensing" id="toc-making-the-data-reusable-through-licensing" class="nav-link" data-scroll-target="#making-the-data-reusable-through-licensing"><span class="header-section-number">14.7</span> Making the Data Reusable Through Licensing</a>
+  <ul class="collapse">
+  <li><a href="#example-data-licenses-and-reuse" id="toc-example-data-licenses-and-reuse" class="nav-link" data-scroll-target="#example-data-licenses-and-reuse"><span class="header-section-number">14.7.1</span> Example Data Licenses and Reuse</a></li>
+  </ul></li>
+  <li><a href="#lesson-3-summary" id="toc-lesson-3-summary" class="nav-link" data-scroll-target="#lesson-3-summary"><span class="header-section-number">14.8</span> Lesson 3: Summary</a></li>
+  <li><a href="#lesson-3-knowledge-check" id="toc-lesson-3-knowledge-check" class="nav-link" data-scroll-target="#lesson-3-knowledge-check"><span class="header-section-number">14.9</span> Lesson 3: Knowledge Check</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/edit/main/Open-Science-101/Module_3/Lesson_3/readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_3/readme.html">OS101 Module 3: Open Data</a></li><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_3/Lesson_3/readme.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Data</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Data</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="navigation" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="navigation"><span class="header-section-number">14.1</span> Navigation</h2>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#learning-objectives">Learning Objectives</a></li>
+<li><a href="#planning-for-open-data">Planning for Open Data</a></li>
+<li><a href="#selecting-data-formats-and-tools-for-interoperability">Selecting Data Formats and Tools for Interoperability</a></li>
+<li><a href="#making-the-data-reusable-through-documentation">Making the Data Reusable Through Documentation</a></li>
+<li><a href="#making-the-data-reusable-through-licensing">Making the Data Reusable Through Licensing</a></li>
+<li><a href="#lesson-3-summary">Lesson 3: Summary</a></li>
+<li><a href="#lesson-3-knowledge-check">Lesson 3: Knowledge Check</a></li>
+</ul>
+</section>
+<section id="overview" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="overview"><span class="header-section-number">14.2</span> Overview</h2>
+<p>In this lesson, you learn the criteria and tasks needed to ensure that the datasets you make are open and reusable. The lesson starts with a discussion on creating a data management plan and then continues with topics on selecting open data formats and how to include metadata, readme files, and version control for your data. It wraps up with a discussion on open licenses for data.</p>
+</section>
+<section id="learning-objectives" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">14.3</span> Learning Objectives</h2>
+<p>After completing this lesson, you should be able to:</p>
+<ul>
+<li>Evaluate and select open data formats.</li>
+<li>Add documentation that enables other researchers to assess the relevance of the data. This includes metadata, README files, and version control.</li>
+<li>List two common open licenses used for datasets.</li>
+</ul>
+</section>
+<section id="planning-for-open-data" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="planning-for-open-data"><span class="header-section-number">14.4</span> Planning for Open Data</h2>
+<p>A best practice when beginning your open data journey is to create a Data Management Plan (DMP). This describes how you will manage, preserve, and release your data during and after a research project. Common elements of DMPs relevant to open data include a description of the following:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>What?</td>
+<td>Data formats and (where relevant) standards</td>
+</tr>
+<tr class="even">
+<td>When?</td>
+<td>When and if to share data</td>
+</tr>
+<tr class="odd">
+<td>Where?</td>
+<td>The intended repositories for archived data</td>
+</tr>
+<tr class="even">
+<td>How?</td>
+<td>How the plan enables reuse of the data</td>
+</tr>
+<tr class="odd">
+<td>Who?</td>
+<td>Roles and responsibilities of the team members in implementing the DMP</td>
+</tr>
+</tbody>
+</table>
+<p>In this lesson, we will cover some commonly practiced steps to make data. Specifically, we will focus on the “what” of making data. This covers what data formats you should use and what standards to follow to make the data as open and as readily usable as possible.</p>
+<p>As a first step, check if your home institution or funding source has guidance, standards, or templates for DMPs.</p>
+</section>
+<section id="selecting-data-formats-and-tools-for-interoperability" class="level2" data-number="14.5">
+<h2 data-number="14.5" class="anchored" data-anchor-id="selecting-data-formats-and-tools-for-interoperability"><span class="header-section-number">14.5</span> Selecting Data Formats and Tools for Interoperability</h2>
+<section id="data-format-considerations" class="level3" data-number="14.5.1">
+<h3 data-number="14.5.1" class="anchored" data-anchor-id="data-format-considerations"><span class="header-section-number">14.5.1</span> Data Format Considerations</h3>
+<p>Preferred data formats are community supported, machine-readable, non- proprietary, modifiable, and open. It might seem like there are as many data formats as there are different types of data. When you think about selecting a data format, consider the following:</p>
+<ul>
+<li>Is the format compatible with your data type, shape, and size?</li>
+<li>Does the data format have adequate metadata support?</li>
+<li>Are there tools readily available or any specialized tools are required for reading the data format?</li>
+<li>Is the data format routinely used in your field? Community standards ensure compatibility, interoperability, and ease of use when exchanging or sharing data among researchers or organizations of the same community.</li>
+</ul>
+<p><img src="../images/media/image31.png" style="width:100%;height:auto;"></p>
+<p>Investigate if your funding agency, institutions, and/or data repository has additional requirements for or guidance on data formats.</p>
+</section>
+<section id="non-open-data-formats" class="level3" data-number="14.5.2">
+<h3 data-number="14.5.2" class="anchored" data-anchor-id="non-open-data-formats"><span class="header-section-number">14.5.2</span> Non-Open Data Formats</h3>
+<p>A non-open (unsupported and closed/proprietary) data format refers to a file format that is not freely accessible, standardized, or widely supported by different software applications. Here are some examples of closed/proprietary data formats:</p>
+<ul>
+<li><strong>Adobe Photoshop (.psd):</strong> The default proprietary file format for Adobe Photoshop, a popular image editing software.</li>
+<li><strong>Microsoft Word (.doc/.docx):</strong> A proprietary file format used to store word processing data.</li>
+<li><strong>AutoCAD Drawing (.dwg):</strong> A proprietary data format used for computer-aided design (CAD).</li>
+</ul>
+<p>Software applications that can read but not create DOC, PSD, or DWG formatted data usually do not fully support all the features, layers, specifications, and inner workings of the original file.</p>
+<p>Some challenges of using data in non-open formats include:</p>
+<ul>
+<li>Trouble opening the file due to compatibility issues.</li>
+<li>The need to install additional software or converters, leading to frustration and inconvenience.</li>
+<li>Initial setback dampens the enthusiasm for using your data.</li>
+<li>Converting the data to a universal format can lead to unique formatting or features that do not translate well, making the data lose part of its value.</li>
+<li>New open-data policies can limit the sharing of proprietary data as it is often non-compatible with the concept of easy distribution.</li>
+</ul>
+</section>
+<section id="open-data-format-examples" class="level3" data-number="14.5.3">
+<h3 data-number="14.5.3" class="anchored" data-anchor-id="open-data-format-examples"><span class="header-section-number">14.5.3</span> Open Data Format Examples</h3>
+<p>Some examples of open data formats include:</p>
+<p><em>Select each card to find out more information.</em></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Comma Separated Values (CSV)</td>
+<td>For simplicity, readability, compatibility, easy data exchange.</td>
+</tr>
+<tr class="even">
+<td>Hierarchical Data Format (HDF)</td>
+<td>For efﬁcient storing and retrieving data, compression, multi-dimensional support.</td>
+</tr>
+<tr class="odd">
+<td>Network Common Data Form (NetCDF)</td>
+<td>For self-describing and portability, efﬁcient data subsetting (extract speciﬁc portions of large datasets), standardization and interoperability.</td>
+</tr>
+<tr class="even">
+<td>Investigation-Study- Assay (ISA) model for life science studies</td>
+<td>For structured data organization, data integration and interoperability among experiments, reproducibility and transparency.</td>
+</tr>
+<tr class="odd">
+<td>Flexible Image Transport System (FITS)</td>
+<td>As a standard for astronomical data, ﬂexible and extensible metadata and image headers, efﬁcient data compression and archiving of large datasets.</td>
+</tr>
+<tr class="even">
+<td>Common Data Format (CDF)</td>
+<td>For self-describing format readable across multiple operating systems, programming languages, and software environments, multidimensional data, and metadata inclusion.</td>
+</tr>
+</tbody>
+</table>
+<p>By embracing open standards, authors can avoid unnecessary barriers and maximize their chances of making data useful to their communities.</p>
+</section>
+</section>
+<section id="making-the-data-reusable-through-documentation" class="level2" data-number="14.6">
+<h2 data-number="14.6" class="anchored" data-anchor-id="making-the-data-reusable-through-documentation"><span class="header-section-number">14.6</span> Making the Data Reusable Through Documentation</h2>
+<section id="adding-documentation-and-metadata-for-reusability" class="level3" data-number="14.6.1">
+<h3 data-number="14.6.1" class="anchored" data-anchor-id="adding-documentation-and-metadata-for-reusability"><span class="header-section-number">14.6.1</span> Adding Documentation and Metadata for Reusability</h3>
+<p>Metadata and data documentation describe data so that we and others can use and better understand data. While metadata and documentation are related, there is an important distinction. Metadata are structured, standardized, and machine readable. Documentation is unstructured and can be any format (often a text file that accompanies the data).</p>
+<p>To better understand documentation and metadata, let’s take an example of an online recipe. Many online recipes start with a long description and history of the recipe, and perhaps cooking or baking tips for the dish, before listing ingredients and step-by-step cooking instructions.</p>
+<ul>
+<li>The ingredients and instructions are like metadata. They can be indexed and searched via Google and other search engines.</li>
+<li>The descriptive text that includes background and context for the recipe are like documentation. They are more free-form, and not standardized.</li>
+</ul>
+<p>We already discussed metadata earlier in this module, but it’s important enough that we will repeat ourselves a little bit! We will also discuss other types of documentation, like README files.</p>
+</section>
+<section id="metadata-for-humans-and-machines" class="level3" data-number="14.6.2">
+<h3 data-number="14.6.2" class="anchored" data-anchor-id="metadata-for-humans-and-machines"><span class="header-section-number">14.6.2</span> Metadata: for Humans and Machines</h3>
+<p>Metadata can facilitate the assessment of dataset quality and data sharing by answering key questions. It is also the primary way users will find information about your dataset. It includes key information on topics, such as:</p>
+<ul>
+<li>How data were collected and processed</li>
+<li>What variables/parameters are included in the dataset</li>
+<li>What variables are included and what variables are related to</li>
+<li>Who collected the data (science team, organization, etc.)</li>
+<li>How and where to find the data (e.g., DOI)</li>
+<li>How to cite the data</li>
+<li>Which spatio-temporal region/time the data covers</li>
+<li>Any legal, guideline, or standard information about the data</li>
+</ul>
+</section>
+<section id="why-add-metadata" class="level3" data-number="14.6.3">
+<h3 data-number="14.6.3" class="anchored" data-anchor-id="why-add-metadata"><span class="header-section-number">14.6.3</span> Why Add Metadata?</h3>
+<p>Metadata enhances searchability and findability of the data by potentially allowing both humans and machines to read and interpret datasets. Benefits to creating metadata about your data include:</p>
+<ul>
+<li>Helps users understand what the data are and if/how they can use/cite it.</li>
+<li>Helps users find the data, particularly when metadata is machine- readable and standardized.</li>
+<li>Can make analysis easier with software tools that interpret standardized metadata (e.g.&nbsp;Xarray).</li>
+</ul>
+<p>To be machine readable, the metadata needs to be standardized. See an example of a community-accepted standard for labeling climate datasets with the <a href="http://cfconventions.org/">CF Conventions</a>.</p>
+<p>There are also software packages that can read metadata and enhance the user experience significantly as a result. For instance, <a href="https://docs.xarray.dev/en/stable/index.html">Xarray</a> is an open-source, community developed software package that is widely used in the climate and biomedical fields, among many others. According to their website, “Xarray makes working with labeled multi-dimensional arrays in Python simple, efficient, and fun!”. It’s the “labeled” part where standardized metadata comes in! Xarray can interpret variable and dimension names without user input, making the workflow easier and less prone to making mistakes (e.g.&nbsp;users don’t have to remember which axis is “time” - they just need to call the axis with the label “time”).</p>
+<p>Many standards exist for metadata fields and structure to describe general data information. Use a standard from your domain when applicable, or one that is requested by your data repository.</p>
+</section>
+<section id="metadata-tagging-best-practices" class="level3" data-number="14.6.4">
+<h3 data-number="14.6.4" class="anchored" data-anchor-id="metadata-tagging-best-practices"><span class="header-section-number">14.6.4</span> Metadata Tagging Best Practices</h3>
+<p>Useful and informative metadata:</p>
+<ul>
+<li>Uses standards that are commonly used in your field.</li>
+<li>Complies with FAIR Principles.</li>
+<li>Is as descriptive as possible.</li>
+<li>Is self-describing.</li>
+</ul>
+<p>Remember, the more metadata you add, the easier it will be for users of your data to use it effectively. When in doubt:</p>
+<ul>
+<li>Seek and comply with repository/community standards.</li>
+<li>Investigate open science online resources for metadata, e.g., <a href="https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-metadata.html">Turing Way.</a></li>
+</ul>
+</section>
+<section id="accompanying-documentation" class="level3" data-number="14.6.5">
+<h3 data-number="14.6.5" class="anchored" data-anchor-id="accompanying-documentation"><span class="header-section-number">14.6.5</span> Accompanying Documentation</h3>
+<p>When creating your data, in addition to adding metadata, it is a best practice to create a document that users can refer to. The document can be done as a README file, a user guide, or even a quick start (or all three).</p>
+<p>README and other documentation files can include information such as:</p>
+<ul>
+<li>Contact information</li>
+<li>Information about variables</li>
+<li>Information about uncertainty</li>
+<li>Data collection methods</li>
+<li>Versioning and license references</li>
+<li>Information about the structure and file naming of the data</li>
+<li>References to publications that describe the dataset and/or it’s processing</li>
+</ul>
+<p>The intent is to help users quickly understand how they might use the data and to answer any commonly asked questions about your data. You can read more information and view a README template along with an example (particularly relevant for the medical sciences) at <a href="https://datamanagement.hms.harvard.edu/collect-analyze/documentation-metadata/readme-files">this Harvard Medical School website.</a></p>
+</section>
+<section id="data-versioning-guidelines" class="level3" data-number="14.6.6">
+<h3 data-number="14.6.6" class="anchored" data-anchor-id="data-versioning-guidelines"><span class="header-section-number">14.6.6</span> Data Versioning Guidelines</h3>
+<p>Establish a versioning schema for your data. This is a method for keeping track of iterations of data that features track changes and the ability to revert to a previous revision.</p>
+<p>Proper versioning generates a changed copy of a data object that is uniquely labeled with a version number. This enables users to track changes and correct errors.</p>
+<p>Proper versioning preserves data quality and provenance (the origin, history, and processing steps that lead to the dataset) by:</p>
+<ul>
+<li>Providing a record of traceability from the data’s source through all aspects of its transmission, storage, and processing to its final form.</li>
+<li>Saving data files at key steps along the way.</li>
+<li>Aiming for downstream verification/validation of original findings.</li>
+</ul>
+</section>
+</section>
+<section id="making-the-data-reusable-through-licensing" class="level2" data-number="14.7">
+<h2 data-number="14.7" class="anchored" data-anchor-id="making-the-data-reusable-through-licensing"><span class="header-section-number">14.7</span> Making the Data Reusable Through Licensing</h2>
+<p><img src="../images/media/image32.jpeg" style="width:100%;height:auto;"></p>
+<p>Image source: <a href="https://www.explainxkcd.com/wiki/index.php/File:copyright.jpg">xkcd.com</a></p>
+<hr>
+<p>Data is the intellectual property of the researcher(s), or possibly of their funder(s) or supporting institution(s). Data is intellectual property, but that does not mean it cannot be used by other researchers (with appropriate attribution).</p>
+<p><img style="width:100%;height:auto;" src="../images/media/applylicensetoyourwork.jpg"></p>
+<p>“By applying a license to your work, you make clear what others can do with the things you’re sharing, and also the conditions under which you’re providing them (like cite you). You can also require others who copy your work to do things in return.”</p>
+<p><strong><a href="https://www.cos.io/">Open Science Knowledge Base</a></strong></p>
+<hr>
+<p>If you don’t license your work, others can’t/shouldn’t re-use it - even if you want them to. As mentioned previously in this module, a license is a legal document that tells users how they can use the dataset. It is important to understand the licensing conditions of a dataset before data reuse to avoid any copyright infringement or other intellectual property issues.</p>
+<p>A dataset without a license does not mean that the data is open; using a licenseless dataset is not ethical. Contacting the data creator and getting explicit permission, while suggesting they apply a license, is the best path forward.</p>
+<p>Understanding when and where the license applies is crucial. For example, data created using US Government public research funds is, by default, in the public domain. However, that only applies to the jurisdiction of the United States. In order for this to apply internationally, data creators need to select an open license.</p>
+<p><img src="../images/media/image34.jpeg" style="width:100%;height:auto;"></p>
+<p>There are several different types of licenses that build on each other. Creative Commons (CC) licenses are often used for datasets. CC0 (also known as “public domain”) is the license that allows for the most reuse because it has the least restrictions on what users can do with it. Although the CC0 license does not explicitly require citation, you should still follow community best practices and cite the data source. CC-BY is another common license used for scientific data that requires citation. From there, you can add restrictions around commercial use, ability to adapt or modify the data, or requirements to share with the same license. These other flavors all reduce usability by adding restrictions, such that other scientists may be unable to use the data because of institutional or legal restrictions. Funding agencies may require use of a specific license. For public agencies, this is often CC-0 or CC-BY, to maximize their return on investment and ensure widest possible re-use.</p>
+<section id="example-data-licenses-and-reuse" class="level3" data-number="14.7.1">
+<h3 data-number="14.7.1" class="anchored" data-anchor-id="example-data-licenses-and-reuse"><span class="header-section-number">14.7.1</span> Example Data Licenses and Reuse</h3>
+<p>Here is an example of how a data license can affect reuse. Coupled Model Intercomparison Project Phase 6 (CMIP6) consists of the “runs” from around 100 distinct climate models being produced across 49 different modeling groups. This is the data that is used to understand what our future climate might look like. You have probably seen images that use this data in articles about Earth’s changing climate and how it may impact our lives. Previous versions of these data were licensed CC-BY-NC-SA (cite-noncommercial- sharealike).</p>
+<p><img src="../images/media/image35.jpeg" style="width:100%;height:auto;"></p>
+<p>Figure citation: IPCC “<a href="https://www.researchgate.net/publication/369301788_Framing_and_Context_in_In_Global_warming_of_15C_An_IPCC_Special_Report?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ">Framing and Context in : In: Global warming of 1.5°C. An IPCC Special Report</a>” 2020</p>
+<hr>
+<p>This meant that any commercial use was restricted. Insurance companies, global corporations, and any type of organization that wanted to use them for commercial use - were having to do their own modeling or just deciding to not develop resources related to climate projections (such as fire risk, flooding risk, and how that may affect transportation, commerce, and where we live). This directly impacted the reuse of this data and created additional work. The <a href="https://pcmdi.llnl.gov/CMIP6/TermsOfUse/TermsOfUse6-2.html">latest version of CMIP data is moving to CC-BY</a> because of the negative impacts from the -NC-SA restrictions.</p>
+</section>
+</section>
+<section id="lesson-3-summary" class="level2" data-number="14.8">
+<h2 data-number="14.8" class="anchored" data-anchor-id="lesson-3-summary"><span class="header-section-number">14.8</span> Lesson 3: Summary</h2>
+<p>Following are the key takeaways from this lesson:</p>
+<ul>
+<li>It is best practice to create an open data management plan that includes open-related topics.</li>
+<li>A critical step to making open data is evaluating and selecting open data formats.</li>
+<li>Always add documentation that enables other researchers to assess the relevance and reusability of your product. This includes metadata, README files, and version control details.</li>
+<li>It is important to assign an open license to your data to enable reuse.</li>
+</ul>
+</section>
+<section id="lesson-3-knowledge-check" class="level2" data-number="14.9">
+<h2 data-number="14.9" class="anchored" data-anchor-id="lesson-3-knowledge-check"><span class="header-section-number">14.9</span> Lesson 3: Knowledge Check</h2>
+<p>Answer the following questions to test what you have learned so far.</p>
+<p><em>Question</em></p>
+<p><strong>01/04</strong></p>
+<p>Which of the following are steps you should take when making a Data Management Plan?</p>
+<ul>
+<li>Evaluate different data formats</li>
+<li>Test your metadata for compliance</li>
+<li>Create a small collection of test data</li>
+</ul>
+<p><em>Question</em></p>
+<p><strong>02/04</strong></p>
+<p>Which of the following are considerations when choosing a file format?</p>
+<ul>
+<li>The format has adequate metadata support</li>
+<li>Tools are readily available to read the data format</li>
+<li>The data format is widely used in your community</li>
+<li>All of the above</li>
+</ul>
+<p><em>Question</em></p>
+<p><strong>03/04</strong></p>
+<p>Read the statement below and decide whether it’s true or false.</p>
+<p><em>Metadata is only useful for using data in interoperable tools and does not enhance searchability and findability of data.</em></p>
+<ul>
+<li>True</li>
+<li>False</li>
+</ul>
+<p><em>Question</em></p>
+<p><strong>04/04</strong></p>
+<p>Read the statement below and decide whether it’s true or false.</p>
+<p><em>When a dataset does not explicitly require citation, such as the CC0 license, it is still recommended that you cite the data source.</em></p>
+<ul>
+<li>True</li>
+<li>False</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/forrt\.org\/Transform-to-Open-Science-Book");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../Open-Science-101/Module_3/Lesson_2/readme.html" class="pagination-link" aria-label="Lesson 2: Using Open Data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Data</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../Open-Science-101/Module_3/Lesson_4/readme.html" class="pagination-link" aria-label="Lesson 4: Sharing Open Data">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Data</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/edit/main/Open-Science-101/Module_3/Lesson_3/readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

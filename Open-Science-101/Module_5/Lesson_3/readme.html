@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="TOPS Collaboration">
+
+<title>24&nbsp; Lesson 3: Making Open Results – TOPS Open Science 101</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../Open-Science-101/Module_5/Lesson_4/readme.html" rel="next">
+<link href="../../../Open-Science-101/Module_5/Lesson_2/readme.html" rel="prev">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_5/readme.html">OS101 Module 5: Open Results</a></li><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_5/Lesson_3/readme.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Results</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../">TOPS Open Science 101</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/forrtproject/Transform-to-Open-Science-Book" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../../../TOPS-Open-Science-101.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../../../TOPS-Open-Science-101.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transform to Open Science</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/README.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Open Science 101 Curriculum</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 1: The Ethos of Open Science</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lesson 1: What is Open Science?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Lesson 2: Why is Open Science Important?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lesson 3: How to do Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lesson 4: When Not to be Open</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lesson 5: Planning for Open Science: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 2: Open Tools and Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to the Process of Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lesson 2: General Tools for Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lesson 3: Tools for Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lesson 4: Tools for Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Lesson 5: Tools for Open Results</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 3: Open Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 4: Open Code</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 5: Open Results</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_3/readme.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../About/About-Announcements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About Transform to Open Science</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../About/tops_faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Frequently Asked Questions</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#navigation" id="toc-navigation" class="nav-link active" data-scroll-target="#navigation"><span class="header-section-number">24.1</span> Navigation</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview"><span class="header-section-number">24.2</span> Overview</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">24.3</span> Learning Objectives</a></li>
+  <li><a href="#how-to-make-open-results" id="toc-how-to-make-open-results" class="nav-link" data-scroll-target="#how-to-make-open-results"><span class="header-section-number">24.4</span> How to Make Open Results</a>
+  <ul class="collapse">
+  <li><a href="#capturing-the-research-process-accurately-in-the-making-of-results" id="toc-capturing-the-research-process-accurately-in-the-making-of-results" class="nav-link" data-scroll-target="#capturing-the-research-process-accurately-in-the-making-of-results"><span class="header-section-number">24.4.1</span> Capturing the Research Process Accurately in the Making of Results</a></li>
+  <li><a href="#case-study-open-results-from-distributed-multi-team-event-horizon-telescope-collaboration-ehtc" id="toc-case-study-open-results-from-distributed-multi-team-event-horizon-telescope-collaboration-ehtc" class="nav-link" data-scroll-target="#case-study-open-results-from-distributed-multi-team-event-horizon-telescope-collaboration-ehtc"><span class="header-section-number">24.4.2</span> Case Study: Open Results from Distributed Multi-Team Event Horizon Telescope Collaboration (EHTC)</a></li>
+  <li><a href="#making-results-and-crediting-contributors-fairly-at-different-stages-of-research" id="toc-making-results-and-crediting-contributors-fairly-at-different-stages-of-research" class="nav-link" data-scroll-target="#making-results-and-crediting-contributors-fairly-at-different-stages-of-research"><span class="header-section-number">24.4.3</span> Making Results and Crediting Contributors Fairly at Different Stages of Research</a></li>
+  <li><a href="#making-all-types-of-research-outputs" id="toc-making-all-types-of-research-outputs" class="nav-link" data-scroll-target="#making-all-types-of-research-outputs"><span class="header-section-number">24.4.4</span> Making All Types of Research Outputs</a></li>
+  <li><a href="#making-open-and-reproducible-results" id="toc-making-open-and-reproducible-results" class="nav-link" data-scroll-target="#making-open-and-reproducible-results"><span class="header-section-number">24.4.5</span> Making Open and Reproducible Results</a></li>
+  <li><a href="#how-to-make-different-types-of-open-results" id="toc-how-to-make-different-types-of-open-results" class="nav-link" data-scroll-target="#how-to-make-different-types-of-open-results"><span class="header-section-number">24.4.6</span> How to Make Different Types of Open Results</a></li>
+  <li><a href="#maintaining-ethical-standards" id="toc-maintaining-ethical-standards" class="nav-link" data-scroll-target="#maintaining-ethical-standards"><span class="header-section-number">24.4.7</span> Maintaining Ethical Standards</a></li>
+  </ul></li>
+  <li><a href="#role-of-contributors-in-open-science" id="toc-role-of-contributors-in-open-science" class="nav-link" data-scroll-target="#role-of-contributors-in-open-science"><span class="header-section-number">24.5</span> Role of Contributors in Open Science</a>
+  <ul class="collapse">
+  <li><a href="#ehtc-case-study-recognizing-all-contributors" id="toc-ehtc-case-study-recognizing-all-contributors" class="nav-link" data-scroll-target="#ehtc-case-study-recognizing-all-contributors"><span class="header-section-number">24.5.1</span> EHTC Case Study: Recognizing All Contributors</a></li>
+  <li><a href="#making-open-results-starts-with-contributors" id="toc-making-open-results-starts-with-contributors" class="nav-link" data-scroll-target="#making-open-results-starts-with-contributors"><span class="header-section-number">24.5.2</span> Making Open Results Starts with Contributors!</a></li>
+  <li><a href="#contributors-and-authorship" id="toc-contributors-and-authorship" class="nav-link" data-scroll-target="#contributors-and-authorship"><span class="header-section-number">24.5.3</span> Contributors and Authorship</a></li>
+  <li><a href="#are-all-authors-contributors-and-vice-versa" id="toc-are-all-authors-contributors-and-vice-versa" class="nav-link" data-scroll-target="#are-all-authors-contributors-and-vice-versa"><span class="header-section-number">24.5.4</span> Are All Authors Contributors and Vice Versa?</a></li>
+  <li><a href="#diverse-role-of-contributors" id="toc-diverse-role-of-contributors" class="nav-link" data-scroll-target="#diverse-role-of-contributors"><span class="header-section-number">24.5.5</span> Diverse Role of Contributors</a></li>
+  </ul></li>
+  <li><a href="#how-to-give-open-recognition" id="toc-how-to-give-open-recognition" class="nav-link" data-scroll-target="#how-to-give-open-recognition"><span class="header-section-number">24.6</span> How to Give Open Recognition</a>
+  <ul class="collapse">
+  <li><a href="#activity-3.1-draft-a-contribution-guideline" id="toc-activity-3.1-draft-a-contribution-guideline" class="nav-link" data-scroll-target="#activity-3.1-draft-a-contribution-guideline"><span class="header-section-number">24.6.1</span> Activity 3.1: Draft a Contribution Guideline</a></li>
+  </ul></li>
+  <li><a href="#combining-open-results-for-scientific-reporting-and-publications" id="toc-combining-open-results-for-scientific-reporting-and-publications" class="nav-link" data-scroll-target="#combining-open-results-for-scientific-reporting-and-publications"><span class="header-section-number">24.7</span> Combining Open Results for Scientific Reporting and Publications</a>
+  <ul class="collapse">
+  <li><a href="#ehtc-case-study-capturing-results-on-activities-ranging-from-collaboration-to-observations-image-generation-to-interpretation" id="toc-ehtc-case-study-capturing-results-on-activities-ranging-from-collaboration-to-observations-image-generation-to-interpretation" class="nav-link" data-scroll-target="#ehtc-case-study-capturing-results-on-activities-ranging-from-collaboration-to-observations-image-generation-to-interpretation"><span class="header-section-number">24.7.1</span> EHTC Case Study: Capturing Results on Activities Ranging From Collaboration to Observations, Image Generation to Interpretation</a></li>
+  <li><a href="#how-do-i-connect-open-results-to-make-reproducible-publications" id="toc-how-do-i-connect-open-results-to-make-reproducible-publications" class="nav-link" data-scroll-target="#how-do-i-connect-open-results-to-make-reproducible-publications"><span class="header-section-number">24.7.2</span> How Do I Connect Open Results to Make Reproducible Publications</a></li>
+  </ul></li>
+  <li><a href="#lesson-3-summary" id="toc-lesson-3-summary" class="nav-link" data-scroll-target="#lesson-3-summary"><span class="header-section-number">24.8</span> Lesson 3: Summary</a></li>
+  <li><a href="#lesson-3-knowledge-check" id="toc-lesson-3-knowledge-check" class="nav-link" data-scroll-target="#lesson-3-knowledge-check"><span class="header-section-number">24.9</span> Lesson 3: Knowledge Check</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/edit/main/Open-Science-101/Module_5/Lesson_3/readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_5/readme.html">OS101 Module 5: Open Results</a></li><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_5/Lesson_3/readme.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Results</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Results</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="navigation" class="level2" data-number="24.1">
+<h2 data-number="24.1" class="anchored" data-anchor-id="navigation"><span class="header-section-number">24.1</span> Navigation</h2>
+<ul>
+<li><a href="#how-to-make-open-results">How to Make Open Results</a></li>
+<li><a href="#role-of-contributors-in-open-science">Role of Contributors in Open Science</a></li>
+<li><a href="#how-to-give-open-recognition">How to Give Open Recognition</a></li>
+<li><a href="#combining-open-results-for-scientific-reporting-and-publications">Combining Open Results for Scientific Reporting and Publications</a></li>
+<li><a href="#lesson-3-summary">Lesson 3: Summary</a></li>
+<li><a href="#lesson-3-knowledge-check">Lesson 3: Knowledge Check</a></li>
+</ul>
+</section>
+<section id="overview" class="level2" data-number="24.2">
+<h2 data-number="24.2" class="anchored" data-anchor-id="overview"><span class="header-section-number">24.2</span> Overview</h2>
+<p>In Lesson 2 you learned how to use other’s results. In this lesson, we focus on making open results. We will start by discussing what it means to make reproducible results. Having earlier in the course discussed the computational reproducibility practices in open software, in this lesson, we specifically emphasize the importance of collaborations in making those results open and reproducible. This begins with acknowledging that the scientific results are not made by single individuals. We will then teach how to ensure equitable, fair, and successful collaborations when making your open results that acknowledge all contributions. Once you’ve planned the rules of engagement, we will provide you with ways to ensure that your reporting and publication abide by open results principles and combat the reproducibility crisis.</p>
+</section>
+<section id="learning-objectives" class="level2" data-number="24.3">
+<h2 data-number="24.3" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">24.3</span> Learning Objectives</h2>
+<p>After completing this lesson, you should be able to:</p>
+<ul>
+<li>Identify approaches to make different types of open results.</li>
+<li>Recognize the importance of collaboration in making results.</li>
+<li>Develop contribution guidelines to enable recognition of contributors who make results.</li>
+<li>Combine different open results to create scientific reports and reproducible outputs.</li>
+</ul>
+</section>
+<section id="how-to-make-open-results" class="level2" data-number="24.4">
+<h2 data-number="24.4" class="anchored" data-anchor-id="how-to-make-open-results"><span class="header-section-number">24.4</span> How to Make Open Results</h2>
+<section id="capturing-the-research-process-accurately-in-the-making-of-results" class="level3" data-number="24.4.1">
+<h3 data-number="24.4.1" class="anchored" data-anchor-id="capturing-the-research-process-accurately-in-the-making-of-results"><span class="header-section-number">24.4.1</span> Capturing the Research Process Accurately in the Making of Results</h3>
+<blockquote class="blockquote">
+<p>I am aware of the reproducibility crisis and how open science can help combat it. What practical ways can I apply to my research outputs to make open results? How can I ensure that the results I share can be reproduced by others? How can I publish scientiﬁc publications that do not add to, but combat the reproducibility crisis?</p>
+</blockquote>
+<p>In the Ethos of Open Science, you learned about the ethics and principles underlying responsible open science practices. In Open Software, you explored and identified the right tools and methods that ensure the usability and reproducibility of your analysis. In Open Data, you developed a data management plan that can ensure the Findability, Accessibility, Interoperability and Reusability (FAIR) of your data throughout the research process, and not just at the end when the final report from the project is released. These open science approaches directly address the root causes of the reproducibility crisis, which are a lack of openness throughout the scientific process, lack of documentation, poor description of intermediate methods or missing data that were used at intermediate stages of the research process. In this lesson, you will learn to put all of these together to ensure that you are prepared to make your open results easy to reproduce by others.</p>
+<p>In Lesson 1, we identified different research components that can be considered open results at various stages of research. In this lesson, we want to specifically explain what processes are involved in making them.</p>
+</section>
+<section id="case-study-open-results-from-distributed-multi-team-event-horizon-telescope-collaboration-ehtc" class="level3" data-number="24.4.2">
+<h3 data-number="24.4.2" class="anchored" data-anchor-id="case-study-open-results-from-distributed-multi-team-event-horizon-telescope-collaboration-ehtc"><span class="header-section-number">24.4.2</span> Case Study: Open Results from Distributed Multi-Team Event Horizon Telescope Collaboration (EHTC)</h3>
+<p><strong>Example:</strong> Capturing results on activities ranging from collaboration to observations, image generation to interpretation.</p>
+<p>In 2017, the Event Horizon Telescope targeted supermassive black holes with the largest apparent event horizons: M87, and Sgr A* in the Galactic Center on four separate days. This distributed collaboration led to the multi-petabyte yield of data that allowed astronomers to unveil the first image of a black hole providing the strongest visual evidence of their existence. The <a href="https://eventhorizontelescope.org/">EHTC website</a> provides information about research projects, scientific methods, instruments, press and media resources (such as blog posts, news articles and YouTube videos), as well as events, data, proposals and publications. This project shows large-scale and high-impact work that applies open practices in making their results. Different kinds of outputs shared under this project can be mapped to different stages of the research process and the teams involved in creating them.</p>
+</section>
+<section id="making-results-and-crediting-contributors-fairly-at-different-stages-of-research" class="level3" data-number="24.4.3">
+<h3 data-number="24.4.3" class="anchored" data-anchor-id="making-results-and-crediting-contributors-fairly-at-different-stages-of-research"><span class="header-section-number">24.4.3</span> Making Results and Crediting Contributors Fairly at Different Stages of Research</h3>
+<p>The case studies listed above highlight that results associated with a project are more than a publication. By understanding how open results are created in different projects, we can gain deep insights into the processes for making them. With that goal, the rest of this lesson describes the process of making results into three parts: 1) making all types of research outputs; 2) recognizing all contributors; and 3) combining outputs for scientific reporting and publications.</p>
+</section>
+<section id="making-all-types-of-research-outputs" class="level3" data-number="24.4.4">
+<h3 data-number="24.4.4" class="anchored" data-anchor-id="making-all-types-of-research-outputs"><span class="header-section-number">24.4.4</span> Making All Types of Research Outputs</h3>
+<p>New ways of working with creative approaches for collaboration and communication in research have opened up opportunities to engage with the broader research communities by sharing scientific outcomes as they develop, rather than at the end through summary articles. A range of research components are created throughout the research lifecycle that can be shared openly. For example, resources created in a scientific project include, but are not limited to the following:</p>
+<table>
+<thead>
+<tr>
+<th>
+IDEATION AND PLANNING ☑
+</th>
+<th>
+DATA COLLECTION AND EXPLORATION
+</th>
+<th>
+COMMUNITY ENGAGEMENT AND REPRODUCIBILITY
+</th>
+<th>
+PRESERVATION AND PUBLICATION
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4">
+<p>
+Ideation and planning – perhaps before the research project is funded or started:
+</p>
+<ul>
+<li>
+Research proposals
+</li>
+<li>
+People and organizations involved
+</li>
+<li>
+Research ethics guidelines
+</li>
+<li>
+Data management plan
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+IDEATION AND PLANNING
+</th>
+<th>
+DATA COLLECTION AND EXPLORATION ☑
+</th>
+<th>
+COMMUNITY ENGAGEMENT AND REPRODUCIBILITY
+</th>
+<th>
+PRESERVATION AND PUBLICATION
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4">
+<p>
+Data collection and exploration – research artifacts created during the active research process:
+</p>
+<ul>
+<li>
+Project repository
+</li>
+<li>
+Project roadmap and milestones
+</li>
+<li>
+Resource requirements
+</li>
+<li>
+Project management resources (without sensitive information)
+</li>
+<li>
+Collaboration processes like Code of Conduct and contributor guidelines
+</li>
+<li>
+Virtual research environment
+</li>
+<li>
+Data and metadata information
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+IDEATION AND PLANNING
+</th>
+<th>
+DATA COLLECTION AND EXPLORATION
+</th>
+<th>
+COMMUNITY ENGAGEMENT AND REPRODUCIBILITY ☑
+</th>
+<th>
+PRESERVATION AND PUBLICATION
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4">
+<p>
+Community engagement and reproducibility – most valuable during the project period:
+</p>
+<ul>
+<li>
+Training and education materials
+</li>
+<li>
+Computational notebooks
+</li>
+<li>
+Computational workflow
+</li>
+<li>
+Code repository (version controlled)
+</li>
+<li>
+Blog posts
+</li>
+<li>
+Short form videos and podcasts
+</li>
+<li>
+Social media posts
+</li>
+<li>
+Forum discussions (for example when asking for feedback or troubleshooting)
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+IDEATION AND PLANNING
+</th>
+<th>
+DATA COLLECTION AND EXPLORATION
+</th>
+<th>
+COMMUNITY ENGAGEMENT AND REPRODUCIBILITY
+</th>
+<th>
+PRESERVATION AND PUBLICATION ☑
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4">
+<p>
+Preservation and publication – expected to persist long-term:
+</p>
+<ul>
+<li>
+Publication and authorship guidelines
+</li>
+<li>
+Open access peer-reviewed articles
+</li>
+<li>
+Conference abstracts and presentations
+</li>
+<li>
+End of project report
+</li>
+<li>
+User manual or documentation
+</li>
+<li>
+Public outreach and events
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><img style="width:100%;height:auto;" src="../images/media/turingwayillustration.jpg"></p>
+<p>Image credit: The Turing Way project illustration by Scriberia. Zenodo.</p>
+<hr>
+<p>You have already come across some of these in the previous lessons, and hopefully, you could already identify which of these or additional outputs you are generating in your work. To make them part of your open results, it’s important that they are shared openly with appropriate licensing and documentation so that others can read, investigate and when possible, reuse or build upon them.</p>
+</section>
+<section id="making-open-and-reproducible-results" class="level3" data-number="24.4.5">
+<h3 data-number="24.4.5" class="anchored" data-anchor-id="making-open-and-reproducible-results"><span class="header-section-number">24.4.5</span> Making Open and Reproducible Results</h3>
+<p>Open science ultimately informs our decisions as scientists and guides the selection of approaches that contribute to making our results open at different stages. One of the main purposes of open results is to ensure research reproducibility, often explained through definitions such as the following by <a href="https://www.annualreviews.org/doi/10.1146/annurev-statistics-010814-020127">Stodden (2015)</a>:</p>
+<p><img src="../images/media/stoddenquote.jpg" style="width:100%;height:auto;"></p>
+<p>“Reproducibility is a researcher’s ability to obtain the same results in a published article using the raw data and code used in the original study.”</p>
+<p><strong>Stodden (2015)</strong></p>
+<hr>
+<p>Using this definition, results that can be computationally reproduced by others would be called Reproducible Results. The EHTC case studies present open results as collections of research objects created at different stages of the research process. They also provide documentation and resources that allow reanalysis and reproduction of the original results.</p>
+<p>Ideally, anyone, anywhere, must be able to read a publication and understand the results, easily find methods applied, as well as properly follow procedures to achieve the same results as shared in that study. However, as already learned, the issue of reproducibility is prevalent across all scientific fields (refer to this Nature <a href="https://www.nature.com/articles/533452a">report</a>). A well-intentioned scientist may share all research objects and describe all steps applied in their research, but failing to provide the research environment or other technical setup they used for analyzing their data can prohibit others from reproducing their results. This issue is further compounded by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4776714/">human bias and errors</a>. For example, individuals may not always be able to identify how their interests and experiences inform their decisions that impact their research conclusions. This makes the issue of combating the reproducibility crisis even bigger.</p>
+<p>Approaches for making open results should integrate reproducible tools and methods, such as version control, continuous integration, containerisation, code review, code testing and documentation. Furthermore, to extend the reproducibility beyond computational aspects of research, reporting and documentation for different types of outputs and decisions should also be supplied transparently.</p>
+</section>
+<section id="how-to-make-different-types-of-open-results" class="level3" data-number="24.4.6">
+<h3 data-number="24.4.6" class="anchored" data-anchor-id="how-to-make-different-types-of-open-results"><span class="header-section-number">24.4.6</span> How to Make Different Types of Open Results</h3>
+<p>Sharing different types of results as early as possible not only helps you find solutions faster, but also helps your science be more reproducible because that openness helps you understand how to communicate your methodologies and your findings more clearly to others. Here we provide some easy places to start creating your results openly.</p>
+<table>
+<thead>
+<tr>
+<th>
+WRITING A FORUM POST ☑
+</th>
+<th>
+WRITING A GOOD BLOG POST
+</th>
+<th>
+MAKING A GOOD VIDEO
+</th>
+<th>
+WRITING A SOCIAL MEDIA POST
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4">
+<p>
+Often, when first starting in research, public forums are a great place to begin understanding and collaborating with communities. Most discussion forums have a code of conduct and guidelines on best practices for participation. Some common ones that may be helpful are guidelines from <a href="https://stackoverflow.com/help/discussions-guidelines">StackOverflow</a>, and <a href="https://github.com/pydata/xarray/discussions/5404">Xarray</a>, but most forums have some specific guidance. On forums, you increase trust by interacting with the community, so the more you interact, the more people are likely to respond! Often, best practices include making sure you are posting to the right area, using tags (when available), and including examples that document the question or issue you are having. If you review the <a href="https://discourse.pangeo.io/t/trick-for-improving-kerchunk-performance-for-large-numbers-of-chunks-files/3090">post</a> on the <a href="https://discourse.pangeo.io/">Pangeo Discourse Forum</a> with a large number of reviews you can see that they clearly state the problem they are trying to solve, reference other posts on similar topics, link to a computational notebook that has an example of their code, and give an example of the code they are trying to do.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+WRITING A FORUM POST
+</th>
+<th>
+WRITING A GOOD BLOG POST ☑
+</th>
+<th>
+MAKING A GOOD VIDEO
+</th>
+<th>
+WRITING A SOCIAL MEDIA POST
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4">
+<p>
+Blogs are long-form articles that aren’t peer-reviewed. Blogs can be a great way to share your scientific process and findings before they are published, but also after they are published to provide another more accessible presentation of the material. For example, maybe you write a scientific article on your research that is highly technical, but then break it down in more accessible language in a blog post. Many scientists use blog posts to develop and test ideas and approaches because they are more interactive. There are science blogs all over the internet. Some popular ones are <a href="https://medium.com/tag/science">Medium</a>, <a href="https://sciencebites.org/sciencebites-sites-galaxy/">Science Bites</a>, and <a href="https://blogs.scientificamerican.com/">Scientific American</a>. One good way to get started is to find a blog post that you liked or found inspirational and use that as a guide for writing your own post.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+WRITING A FORUM POST
+</th>
+<th>
+WRITING A GOOD BLOG POST
+</th>
+<th>
+MAKING A GOOD VIDEO ☑
+</th>
+<th>
+WRITING A SOCIAL MEDIA POST
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4">
+<p>
+Start small! Record a short video where you show how to do something that you struggled with or a new skill or tool that you learned how to use and post it to YouTube or other popular video platforms. Great videos often explain science concepts, ideas, or experiments to a target audience. Videos can inspire others to work in science, so talk about how you got into science, and show some of your research. There are a lot of online resources to help you out here as well!
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+WRITING A FORUM POST
+</th>
+<th>
+WRITING A GOOD BLOG POST
+</th>
+<th>
+MAKING A GOOD VIDEO
+</th>
+<th>
+WRITING A SOCIAL MEDIA POST ☑
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4">
+<p>
+Social media is also a good place to ask questions as you are just starting on a research topic and also as a place to share all types of results. Providing a link to a video, blog post, or computational notebook and/or sharing an image of a scientific result is a great way to start interactions. You can draw attention to your post by using hashtags and tagging other collaborators. There are a lot of online guides for how to write social media posts and it is always good to look at what others in your area are doing. Responding to comments and engaging with others can help you improve your research and learn about new tools or methods.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>All these different ways of sharing information will help make your published report or article better. And as you start working more in the open, with others, think about how collaborations will work and how you will give credit. All resources can be centralized through reports and documentation on a repository or website so anyone, including the ‘future you’ can find them in the future.</p>
+<p>More ways to communicate your work can be found in a <a href="https://the-turing-way.netlify.app/communication/communication">guide for communication</a> in The Turing Way.</p>
+</section>
+<section id="maintaining-ethical-standards" class="level3" data-number="24.4.7">
+<h3 data-number="24.4.7" class="anchored" data-anchor-id="maintaining-ethical-standards"><span class="header-section-number">24.4.7</span> Maintaining Ethical Standards</h3>
+<p>Open science, as learned in the Ethos of Open Science, should maintain the highest ethical standards. This can be enabled through the involvement of diverse contributors in the development of scientific outcomes. Participatory approaches allow multiple perspectives and expertise to be integrated into research from the start and ensure that peer review happens for all outputs in an iterative manner, not just for the articles at the end.</p>
+<p>In making and planning to share open results, you can apply the “as open as possible, as closed as necessary” principle. This means, protecting sensitive information, managing data protection practices where necessary and not carelessly sharing sensitive data or people’s private information that can be misused. Online repositories, such as GitHub and GitLab, allow online interaction in addition to serving the technical purpose of version control and content hosting. For example, you can use <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues">issues</a> and <a href="https://docs.github.com/en/github-ae%40latest/issues/organizing-your-work-with-project-boards/managing-project-boards/creating-a-project-board">a project board</a> to communicate what is happening in a project at any given point. The use of <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">Pull Requests</a> signals an invitation for peer review on the new development of code or other content. Thanks to a number of reusable templates you don’t have to set up repositories from scratch. For example, you can directly use a <a href="https://github.com/the-turing-way/reproducible-project-template">template for reproducible research projects</a>.</p>
+</section>
+</section>
+<section id="role-of-contributors-in-open-science" class="level2" data-number="24.5">
+<h2 data-number="24.5" class="anchored" data-anchor-id="role-of-contributors-in-open-science"><span class="header-section-number">24.5</span> Role of Contributors in Open Science</h2>
+<p>Collaboration is central to all scientific research. The positive impact of collaboration is achieved when diverse contributors are supported to combine a range of skills, perspectives and resources together to work towards a shared goal. Projects that apply open and reproducible approaches, make it easier for diverse contributors to be involved and get recognized for their contributions while supporting the development of solutions that they can all benefit from.</p>
+<p>Involving and recognizing the roles of all contributors in making open results is an important part of open science, which we will discuss next.</p>
+<section id="ehtc-case-study-recognizing-all-contributors" class="level3" data-number="24.5.1">
+<h3 data-number="24.5.1" class="anchored" data-anchor-id="ehtc-case-study-recognizing-all-contributors"><span class="header-section-number">24.5.1</span> EHTC Case Study: Recognizing All Contributors</h3>
+<p><img src="../images/media/image52.jpeg" style="width:100%;height:auto;"></p>
+<p>A map of the EHT. Stations active in 2017 and 2018 are shown with connecting lines and labeled in yellow, sites in commission are labeled in green, and legacy sites are labeled in red. From Paper II (Figure 1). IOPscience. https://iopscience.iop.org/journal/2041-8205/page/Focus_on_EHT</p>
+<hr>
+<p>The Event Horizon Telescope (EHT) team involved 200 members from 59 institutes in 20 countries, from undergraduates to senior members of the field. They used an array that included eight radio telescopes at six geographic locations across the USA, Latin America, Europe and the South Pole. All collaborators were located in different geographic locations, had access to different instruments, collected data generated from telescopes in different locations and applied skills from across different teams to create groundbreaking results. Each contributor was acknowledged across different communication channels and given authorships in publications. EHTC also supports the “critical, independent analysis and interpretation” of their published results to facilitate transparency, rigor, and reproducibility (<a href="https://eventhorizontelescope.org/blog/imaging-reanalyses-eht-data">EHTC website</a>).</p>
+</section>
+<section id="making-open-results-starts-with-contributors" class="level3" data-number="24.5.2">
+<h3 data-number="24.5.2" class="anchored" data-anchor-id="making-open-results-starts-with-contributors"><span class="header-section-number">24.5.2</span> Making Open Results Starts with Contributors!</h3>
+<p>Making different research components and preparing to share them as open results involve a range of activities. Behind these activities are the contributors who engage in various responsibilities that include, but are not limited to:</p>
+<ul>
+<li>Conceptualizing the idea</li>
+<li>Designing the project</li>
+<li>Serving as advisor or mentor</li>
+<li>Conducting experiment as a student, researcher, or research assistant</li>
+<li>Creating tools essential for carrying out the research</li>
+<li>Providing data expertise</li>
+<li>Developing software</li>
+<li>Providing specialized expertise and support</li>
+<li>Managing community and project requirements</li>
+<li>Providing feedback to the results</li>
+<li>Designing experiments and interpreting results</li>
+<li>Manuscript writing and review</li>
+<li>And <a href="https://the-turing-way.netlify.app/collaboration/shared-ownership/shared-ownership-projects.html">more</a>!</li>
+</ul>
+<p>Too often conversations about contribution and authorship take place towards the end of a project or when a scientific publication is drafted. However, as you learned in the previous lessons, research outputs are generated throughout the lifetime of a research project. Therefore, it is important to build an agreement at the beginning of the project for how contributorship in the project will be managed.</p>
+<p>Developing contribution guidelines and contributor agreements requires collaboratively defining what is considered contributions in your project, who among the current contributors will get authorship, who will get acknowledged as a contributor, what is the significance of the order in which authors are listed in a scientific publication, and who makes these decisions. Ensuring that all collaborators understand and agree to these guidelines before beginning the project is also important.</p>
+</section>
+<section id="contributors-and-authorship" class="level3" data-number="24.5.3">
+<h3 data-number="24.5.3" class="anchored" data-anchor-id="contributors-and-authorship"><span class="header-section-number">24.5.3</span> Contributors and Authorship</h3>
+<p>First and foremost, you must ensure that anyone who has contributed to the research project has their contributions recognized. With that shared understanding, in this lesson, you will explore what those recognitions as contributors or authors in your research project might look like.</p>
+<p>Let’s first define contributor and author roles.</p>
+<table>
+<thead>
+<tr>
+<th>
+A “CONTRIBUTOR” ☑
+</th>
+<th>
+AN “AUTHOR”
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<p>
+A contributor is anyone who has done any activity that made it possible for the research to happen and results to be created, published or shared.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+A “CONTRIBUTOR”
+</th>
+<th>
+AN “AUTHOR” ☑
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<p>
+An author of an open result is a contributor who has given a substantial contribution to the conception or design of the work or the acquisition, analysis, or interpretation of the data for the published work.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="are-all-authors-contributors-and-vice-versa" class="level3" data-number="24.5.4">
+<h3 data-number="24.5.4" class="anchored" data-anchor-id="are-all-authors-contributors-and-vice-versa"><span class="header-section-number">24.5.4</span> Are All Authors Contributors and Vice Versa?</h3>
+<p>An author is a contributor who actively carries out one or several of the tasks listed above (<a href="https://oir.nih.gov/sourcebook/ethical-conduct/authorship-guidelines-resources/authorship-resources">National Institute of Health - NIH</a> and <a href="https://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html">ICMJE</a>). All authors are contributors, but all contributors may not be authors, for example, someone serving as a mentor, trainer or infrastructure maintainer. Ideally, all contributors are given the opportunity to author research outputs.</p>
+<p>Given the importance traditionally placed on authorship in scientific publication and the fuzziness of the definitions (that often contain relative terms such as “substantial” or “extensive” leaving too much room for interpretation), it is not surprising that determining who amongst the contributors gets to be an author can lead to biased or unfair decisions, disputes between contributors, or at the very least leave someone resentful and feeling unappreciated.</p>
+<p>There is no single approach for recognizing contributors as authors, but here is what you should consider:</p>
+<table>
+<thead>
+<tr>
+<th>
+GROUP POWER DYNAMICS &amp; EQUITY (E.G. SENIORITY, SYSTEMS OF OPPRESSION) ☑
+</th>
+<th>
+THE TYPE OF CONTRIBUTION
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<p>
+Consider this hypothetical scenario: You are a postdoctoral fellow and the leading author of a research project. A rotating student spends 4 months in the lab helping you set up and perfect the experimental protocol that you will then use to carry out the experiments needed to answer your research question. They may even help you collect some preliminary data, but then they leave and later decide to join another lab. Would you provide authorship for the student?
+</p>
+<p>
+It would be unethical not to give authorship or credit to someone who has provided significant help and contributed to the success of a research, even when they are no longer involved. A fair path in this scenario could be to contact the previous contributor and involve them in writing a relevant section of the manuscript.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+GROUP POWER DYNAMICS &amp; EQUITY (E.G. SENIORITY, SYSTEMS OF OPPRESSION)
+</th>
+<th>
+THE TYPE OF CONTRIBUTION ☑
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<p>
+The NIH guidelines for authorship outline what type of contribution does or does not warrant authorship. Each contribution is represented on a sliding scale and has no rigid cutoffs. Some contributions are given more weight than others. For example, for “design and interpretation of results”, nearly all types of “original ideas, planning, and input” result in authorship. Whereas simply supervising the 1st author usually does not result in authorship (unless they are also contributing to the paper, of course). This is just one example. You will need to think about what this looks like for your own work!
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Clear communication about roles and responsibilities early in the project, and guidelines for how credit will be determined, can help mitigate some of these issues.</p>
+</section>
+<section id="diverse-role-of-contributors" class="level3" data-number="24.5.5">
+<h3 data-number="24.5.5" class="anchored" data-anchor-id="diverse-role-of-contributors"><span class="header-section-number">24.5.5</span> Diverse Role of Contributors</h3>
+<p>It is important to set a reference for each research team/project about different kinds of responsibilities and opportunities available for different contributors and how each of them are acknowledged. <a href="https://credit.niso.org/">CRediT Taxonomy</a> represents roles typically played by contributors to research in creating scholarly output. Below, we provide a table with research roles that extends the CRediT taxonomy to include broader contributorship (<a href="https://zenodo.org/record/8403386">Sharan, 2022</a>). Using this as a starting point, open dialogue and discussion among team members can be facilitated to set a shared understanding and agreement about diverse roles of contributors including authorship of publications. The distinction between contribution types can help set clear expectations about responsibilities and how they can be recognized in a project.</p>
+<table>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr>
+<th>
+Research Roles
+</th>
+<th>
+Definition
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Project Administration
+</td>
+<td>
+Management and coordination responsibility for the research activity planning and execution
+</td>
+</tr>
+<tr>
+<td>
+Funding Acquisition
+</td>
+<td>
+Acquisition of the financial support for the project leading to the research and publications
+</td>
+</tr>
+<tr>
+<td>
+Community Engagement
+</td>
+<td>
+Connecting with project stakeholders, enabling collaboration, identifying resources, and managing contributors interactions
+</td>
+</tr>
+<tr>
+<td>
+Equity, Diversity, Inclusion and Accessibility (EDIA)
+</td>
+<td>
+Inclusive approaches to collaboration and research, involvement of diverse contributors, accessibility of resources, consideration of disability, neurodiversity and other considerations for equitable participation
+</td>
+</tr>
+<tr>
+<td>
+Ethics Review
+</td>
+<td>
+Ensure that if the research project needs to undergo an ethics review process
+</td>
+</tr>
+<tr>
+<td>
+Communications and Engagement
+</td>
+<td>
+Communications about the project and engagements with the stakeholders beyond the project and institution
+</td>
+</tr>
+<tr>
+<td>
+Engagement with Experts and Policymakers
+</td>
+<td>
+Pre-publication review, external advisory board meetings, regular reporting, post-publication reporting, and reaching out to the relevant policy makers actively
+</td>
+</tr>
+<tr>
+<td>
+Recognition and Credit
+</td>
+<td>
+Assessing incentives, creating a fair value system, fair recognition of all contributors
+</td>
+</tr>
+<tr>
+<td>
+Project Design
+</td>
+<td>
+Technical planning, expert recommendations, supervision or guidance, developing project roadmaps and milestones, tooling and template development
+</td>
+</tr>
+<tr>
+<td>
+Conceptualization
+</td>
+<td>
+Ideas; formulation or evolution of overarching research goals and aims
+</td>
+</tr>
+<tr>
+<td>
+Methodology
+</td>
+<td>
+Development or design of methodology; creation of models
+</td>
+</tr>
+<tr>
+<td>
+Software
+</td>
+<td>
+Programming, software development; designing computer programs; implementation of the computer code and supporting algorithms; testing of existing code components
+</td>
+</tr>
+<tr>
+<td>
+Validation
+</td>
+<td>
+Verification, whether as a part of the activity or separate, of the overall replication/ reproducibility of results/experiments and other research outputs - generalizable
+</td>
+</tr>
+<tr>
+<td>
+Investigation
+</td>
+<td>
+Conducting a research and investigation process, specifically performing the experiments, or data/evidence collection
+</td>
+</tr>
+<tr>
+<td>
+Resources
+</td>
+<td>
+Provision of study materials, reagents, materials, patients, laboratory samples, animals, instrumentation, computing resources, or other analysis tools
+</td>
+</tr>
+<tr>
+<td>
+Data Curation
+</td>
+<td>
+Management activities to annotate (produce metadata), scrub data and maintain research data (including software code, where it is necessary for interpreting the data itself) for initial use and later reuse (including licensing)
+</td>
+</tr>
+<tr>
+<td>
+Writing - Original Draft
+</td>
+<td>
+Preparation, creation and/or presentation of the published work, specifically writing the initial draft (including substantive translation)
+</td>
+</tr>
+<tr>
+<td>
+Writing - Review &amp; Editing
+</td>
+<td>
+Preparation, creation and/or presentation of the published work by those from the research group, specifically critical review, commentary or revision – including pre-or post publication stages
+</td>
+</tr>
+<tr>
+<td>
+Visualization
+</td>
+<td>
+Preparation, creation and/or presentation of the published work, specifically visualization/ data presentation
+</td>
+</tr>
+<tr>
+<td>
+Supervision
+</td>
+<td>
+Oversight and leadership responsibility for the research activity planning and execution, including mentorship external to the core team
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="how-to-give-open-recognition" class="level2" data-number="24.6">
+<h2 data-number="24.6" class="anchored" data-anchor-id="how-to-give-open-recognition"><span class="header-section-number">24.6</span> How to Give Open Recognition</h2>
+<p>To openly and fairly recognize all contributors, their names with the types of contributions they made should be listed in the project documentation. In manuscripts, it is a common practice to mention contributors’ roles under the ‘acknowledgement’ section, such as using CRedIT or similar taxonomy as provided in the table above. All contributors should be encouraged to provide ORCiDs associated with their names to make them identifiable.</p>
+<p>Contribution statements in documentation and manuscripts can specify who did what in the official results. This is great for transparency. It is also a great way to guard against unfair power dynamics. Details about contribution type shows explicitly who works on which parts of results, and makes it easy to give fair authorship. For example: <em>“Pierro Asara: review and editing (equal). Kerys Jones: Conceptualization (lead); writing – original draft (lead); formal analysis (lead); writing – review and editing (equal). Elisha Roberto: Software (lead); writing – review and editing (equal). Hebei Wang: Methodology (lead); writing – review and editing (equal). Jinnie Wu: Conceptualization (supporting); Writing – original draft (supporting); Writing – review and editing (equal).”</em></p>
+<p>If a GitHub repository and website exist, a dedicated page should be created to list and recognize all contributors. If someone minorly contributed to the paper, code or data, you could add them as an author or contributor to the GitHub and Zenodo releases respectively. Engaged collaborators and contributors not already involved in making research outputs should be given the opportunity to contribute to open results such as through presentation, posters, talks, blogs, podcasts, data, software as well as articles.</p>
+<section id="activity-3.1-draft-a-contribution-guideline" class="level3" data-number="24.6.1">
+<h3 data-number="24.6.1" class="anchored" data-anchor-id="activity-3.1-draft-a-contribution-guideline"><span class="header-section-number">24.6.1</span> Activity 3.1: Draft a Contribution Guideline</h3>
+<p><img src="../images/media/image21.png" style="width:350px;height:auto;"></p>
+<p>A standalone contribution guideline should be created for each open project, even when that means reusing an existing draft that the research team has used in another project.</p>
+<p>Note that this is different from “contributing” guidelines that describe “how” to contribute (for example on code repositories). Contribution guidelines should describe contribution types and ways to acknowledge them as discussed above.</p>
+<p>Contribution guidelines are not set-in-stone, but rather:</p>
+<ul>
+<li>Are discipline-dependent</li>
+<li>Can be adapted for your unique situation</li>
+</ul>
+<p>You can begin by reviewing guidelines by <a href="https://oir.nih.gov/sourcebook/ethical-conduct/authorship-guidelines-resources/authorship-resources">NIH</a> and <a href="https://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html">ICMJEs</a> for authorship contributions.</p>
+<p>Notice that many categories and criteria for authorship, such as represented in the NIH guidelines’ sliding scale, may be differently decided. For example, in some fields providing financial resources for a research project always warrants authorship. In other fields this is not the case.</p>
+<p>Some projects may not follow traditional manuscripts as their outputs. For example, if software is a primary output from a project, there may be a need to define specific roles regarding code contributions. You can work with your research team to create a version of CRediT Taxonomy for your project, such as shared in an expanded version of the table above.</p>
+<p>When different kinds of contributorship have been identified, clarify how different contributors will be involved and acknowledged. This may include recommended communication and collaboration processes for the team members, as well as recognition and credit for different kinds of contributions they make.</p>
+<p><strong>Additional Information</strong></p>
+<p>For additional tips on how to acknowledge different kinds of contributors to developing a resource including authorship, check out <a href="https://the-turing-way.netlify.app/community-handbook/acknowledgement.html">Acknowledging Contributors The Turing Way</a>.</p>
+<p>If working with online repositories such as GitHub, an app like ‘<a href="https://allcontributors.org/">all-contributors</a>’ bot is a great way to automate capturing all kinds of contributions, from fixing bugs to organizing events to improving accessibility in the project.</p>
+<p>More systematic work is being undertaken by <a href="https://hidden-ref.org/">hidden REF</a> who constructed a broad set of <a href="https://hidden-ref.org/categories">categories</a> that can be used for celebrating everyone who contributes to the research.</p>
+<p>There are several <a href="https://the-turing-way.netlify.app/collaboration/research-infrastructure-roles.html">infrastructure roles</a> like community managers, data stewards, product managers, ethicists and science communicators, who are also being recognized as valued members in research projects with an intention to provide leadership paths for technical and subject matter experts, even when their contributions can’t always be assessed in tangible or traditional outputs [<a href="https://journals.lww.com/academicmedicine/fulltext/2015/10000/evaluating_academic_scientists_collaborating_in.14.aspx">Mazumdar et al.&nbsp;2015</a>, <a href="https://journal.trialanderror.org/pub/manifesto-rewarding-recognizing/release/1">Bennett et al., 2023</a>].</p>
+<p><a href="https://sfdora.org/">The Declaration on Research Assessment</a> (DORA) is also a good resource to understand what researchers, institutions, funders and publishers can do to improve the ways in which researchers and the outputs of scholarly research are evaluated.</p>
+</section>
+</section>
+<section id="combining-open-results-for-scientific-reporting-and-publications" class="level2" data-number="24.7">
+<h2 data-number="24.7" class="anchored" data-anchor-id="combining-open-results-for-scientific-reporting-and-publications"><span class="header-section-number">24.7</span> Combining Open Results for Scientific Reporting and Publications</h2>
+<p>Scientific publications have traditionally remained one of the most popular modes of reporting and publication. Over the last decade, it has become a standard practice to submit pre-peer reviewed manuscripts on preprint servers (such as <a href="https://arxiv.org/">arXiv</a>) to speed access to research before the peer-reviewed journal articles are published (discussed in Lesson 2). The publication system has also evolved massively. Journal articles are no longer about writing overview and summary of research, but can be used to share articles on software, data, education materials and more.</p>
+<section id="ehtc-case-study-capturing-results-on-activities-ranging-from-collaboration-to-observations-image-generation-to-interpretation" class="level3" data-number="24.7.1">
+<h3 data-number="24.7.1" class="anchored" data-anchor-id="ehtc-case-study-capturing-results-on-activities-ranging-from-collaboration-to-observations-image-generation-to-interpretation"><span class="header-section-number">24.7.1</span> EHTC Case Study: Capturing Results on Activities Ranging From Collaboration to Observations, Image Generation to Interpretation</h3>
+<p><img src="../images/media/image53.jpeg" style="width:100%;height:auto;"></p>
+<p>The polarized image of the M87 black hole shadow as observed on 2017 April 11 by the EHT (left panel) and an image from the EHT Model Library with a MAD magnetic configuration (right pane), with a list of papers describing different sets of results.</p>
+<hr>
+<p>Across <a href="https://arxiv.org/search/astro-ph?searchtype=author&amp;query=Event%2BHorizon%2BTelescope%2BCollaboration">several preprints</a> and <a href="https://iopscience.iop.org/journal/2041-8205/page/Focus_on_EHT">eight peer-reviewed letters</a>, EHTC presented open results issued from different teams on instrumentation, observation, algorithm, software, modeling, and data management, providing the full scope of the project and the conclusions drawn to date.</p>
+<p>Open results such as reports, publications, code, white papers, press releases, blog posts, videos, TED talks and social media posts add to the comprehensive repertoire of open results supported by EHTC. Resources are centralized on the <a href="https://eventhorizontelescope.org/">EHTC website</a>, <a href="https://github.com/eventhorizontelescope">GitHub organization</a> and <a href="https://www.youtube.com/%40ehtelescope">YouTube channel</a> among others to provide easy access to all open results.</p>
+<p>It’s important to highlight that their efforts have led to independent reanalysis and regeneration of black hole images. Specifically, <a href="https://arxiv.org/abs/2205.10267">Patel et. al.&nbsp;(2022)</a> not only reproduced the original finding, but also contributed additional documentation, code, and a computational environment as open-source containerized software package to ensure future testing. Some of the original authors reviewed this work and <a href="https://quarxiv.authorea.com/users/557984/articles/607408-review-reproducibility-of-the-first-image-of-a-black-hole-in-the-galaxy-m87-from-the-event-horizon-telescope-eht-collaboration">made their comments also available online</a> (Authorea).</p>
+</section>
+<section id="how-do-i-connect-open-results-to-make-reproducible-publications" class="level3" data-number="24.7.2">
+<h3 data-number="24.7.2" class="anchored" data-anchor-id="how-do-i-connect-open-results-to-make-reproducible-publications"><span class="header-section-number">24.7.2</span> How Do I Connect Open Results to Make Reproducible Publications</h3>
+<p>If not considered from the start, it can become challenging to ensure result reproducibility at the publication stage. Assuming that you have maintained open results considering their reproducibility, you can start assembling them to connect with the final reporting and publication with appropriate references to previous studies.</p>
+<ul>
+<li>Before writing your manuscript, assess each output to make sure that appropriate license is attached for reuse, documentation has been provided and contributors are clearly listed. You can decide to create a version of the record and point to a permanent identifier such as via Zenodo so that the link never breaks when sharing them on a public repository (such as GitLab/GitHub) or manuscripts with a visible list of contributors.</li>
+<li>Your publications can be created individually (such as in EHTC case study) or by combining several outputs or pieces of information in manuscripts. These will include resource requirements, dependencies, software, data, repository where code is shared with documentation and contributor information, among other research artifacts.</li>
+<li>The manuscript itself will describe research questions, methods as well as individual figures and tables explaining the results. When writing a manuscript, you can begin with figures by packaging data, code and parameters used, ensuring that information represented can be reproduced. You can find a detailed checklist in the publication by <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2015EA000136">Gil et al.</a> (2016).</li>
+</ul>
+<p>As demonstrated in the EHTC case study, a final step towards making open results could be to create a meta article and/or simple website/git page that centralizes all your research outputs. Different parts of research (individual open results) can be accessed centrally with details including open recognition for all contributors.</p>
+<p>If you are looking for concrete actions you can take to make open results, pick one of these four items:</p>
+<ul>
+<li>Improve how you define contributorship in your project and how authorship is assigned.</li>
+<li>Ensure the data or software in your paper is uploaded to Zenodo with license and documentation including metadata and that the DOI is posted to your scientific report and publication.</li>
+<li>Ensure that the process you use to collect data and perform its analysis, including all the dependencies and methods used in your data analysis pipeline, are clearly described to allow others to reproduce your results.</li>
+<li>Create a centralized repository or a simple git page to centralize all research outputs with contributors list.</li>
+</ul>
+</section>
+</section>
+<section id="lesson-3-summary" class="level2" data-number="24.8">
+<h2 data-number="24.8" class="anchored" data-anchor-id="lesson-3-summary"><span class="header-section-number">24.8</span> Lesson 3: Summary</h2>
+<p>The steps that we highlight to make open results are not intractable. In fact, the steps we have highlighted are things we can do on a regular basis to ensure that all research artifacts can be shared later as open and reproducible results. In this lesson we learned:</p>
+<ul>
+<li>Approaches for making open results.</li>
+<li>The importance of collaboration in making results.</li>
+<li>How to recognize and credit all of the contributors who make results.</li>
+<li>How to combine different open results to create scientific reports and reproducible outputs.</li>
+</ul>
+</section>
+<section id="lesson-3-knowledge-check" class="level2" data-number="24.9">
+<h2 data-number="24.9" class="anchored" data-anchor-id="lesson-3-knowledge-check"><span class="header-section-number">24.9</span> Lesson 3: Knowledge Check</h2>
+<p>Answer the following questions to test what you have learned so far.</p>
+<p><em>Question</em></p>
+<p><strong>01/02</strong></p>
+<ol type="1">
+<li>Which of the following roles would be most appropriately credited with contributorship? Select all that apply.</li>
+</ol>
+<ul>
+<li>Original idea, planning, and input</li>
+<li>Supervision of the project</li>
+<li>Original experimental work</li>
+<li>Data analysis</li>
+<li>Drafting of manuscript</li>
+</ul>
+<p><em>Question</em></p>
+<p><strong>02/02</strong></p>
+<p>What is not an example of open research results?</p>
+<ul>
+<li>Open access papers</li>
+<li>Conference presentation</li>
+<li>Internal team meeting notes</li>
+<li>Regular reports shared online</li>
+<li>Poster at a workshop</li>
+<li>Blog post</li>
+<li>Computational notebook on GitHub</li>
+<li>Figure with a DOI (e.g, Zenodo or Figshare)</li>
+<li>Pre-print of a paper</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/forrt\.org\/Transform-to-Open-Science-Book");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../Open-Science-101/Module_5/Lesson_2/readme.html" class="pagination-link" aria-label="Lesson 2: Using Open Results">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Results</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../Open-Science-101/Module_5/Lesson_4/readme.html" class="pagination-link" aria-label="Lesson 4: Sharing Open Results">
+        <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Results</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/edit/main/Open-Science-101/Module_5/Lesson_3/readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

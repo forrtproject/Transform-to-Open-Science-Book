@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="TOPS Collaboration">
+
+<title>19&nbsp; Lesson 3: Making Open Code – TOPS Open Science 101</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../Open-Science-101/Module_4/Lesson_4/readme.html" rel="next">
+<link href="../../../Open-Science-101/Module_4/Lesson_2/readme.html" rel="prev">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_4/readme.html">OS101 Module 4: Open Code</a></li><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_4/Lesson_3/readme.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Code</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../">TOPS Open Science 101</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/forrtproject/Transform-to-Open-Science-Book" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../../../TOPS-Open-Science-101.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../../../TOPS-Open-Science-101.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transform to Open Science</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/README.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Open Science 101 Curriculum</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 1: The Ethos of Open Science</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lesson 1: What is Open Science?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Lesson 2: Why is Open Science Important?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lesson 3: How to do Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lesson 4: When Not to be Open</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lesson 5: Planning for Open Science: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 2: Open Tools and Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to the Process of Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lesson 2: General Tools for Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lesson 3: Tools for Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lesson 4: Tools for Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Lesson 5: Tools for Open Results</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 3: Open Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 4: Open Code</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_3/readme.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 5: Open Results</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../About/About-Announcements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About Transform to Open Science</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../About/tops_faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Frequently Asked Questions</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#navigation" id="toc-navigation" class="nav-link active" data-scroll-target="#navigation"><span class="header-section-number">19.1</span> Navigation</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview"><span class="header-section-number">19.2</span> Overview</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">19.3</span> Learning Objectives</a></li>
+  <li><a href="#how-do-we-plan-for-making-code" id="toc-how-do-we-plan-for-making-code" class="nav-link" data-scroll-target="#how-do-we-plan-for-making-code"><span class="header-section-number">19.4</span> How do We Plan for Making Code?</a>
+  <ul class="collapse">
+  <li><a href="#starting-a-new-project" id="toc-starting-a-new-project" class="nav-link" data-scroll-target="#starting-a-new-project"><span class="header-section-number">19.4.1</span> Starting a New Project</a></li>
+  <li><a href="#organizing-a-project" id="toc-organizing-a-project" class="nav-link" data-scroll-target="#organizing-a-project"><span class="header-section-number">19.4.2</span> Organizing a Project</a></li>
+  </ul></li>
+  <li><a href="#importance-of-version-control" id="toc-importance-of-version-control" class="nav-link" data-scroll-target="#importance-of-version-control"><span class="header-section-number">19.5</span> Importance of Version Control</a></li>
+  <li><a href="#describing-our-code-to-others" id="toc-describing-our-code-to-others" class="nav-link" data-scroll-target="#describing-our-code-to-others"><span class="header-section-number">19.6</span> Describing Our Code to Others</a>
+  <ul class="collapse">
+  <li><a href="#readme" id="toc-readme" class="nav-link" data-scroll-target="#readme"><span class="header-section-number">19.6.1</span> README</a></li>
+  <li><a href="#contributor-guidelines" id="toc-contributor-guidelines" class="nav-link" data-scroll-target="#contributor-guidelines"><span class="header-section-number">19.6.2</span> Contributor Guidelines</a></li>
+  <li><a href="#code-of-conduct" id="toc-code-of-conduct" class="nav-link" data-scroll-target="#code-of-conduct"><span class="header-section-number">19.6.3</span> Code of Conduct</a></li>
+  <li><a href="#code-documentation" id="toc-code-documentation" class="nav-link" data-scroll-target="#code-documentation"><span class="header-section-number">19.6.4</span> Code Documentation</a></li>
+  <li><a href="#code-level-documentation-for-the-user" id="toc-code-level-documentation-for-the-user" class="nav-link" data-scroll-target="#code-level-documentation-for-the-user"><span class="header-section-number">19.6.5</span> Code Level Documentation for the User</a></li>
+  <li><a href="#programming-and-documenting" id="toc-programming-and-documenting" class="nav-link" data-scroll-target="#programming-and-documenting"><span class="header-section-number">19.6.6</span> Programming and Documenting</a></li>
+  </ul></li>
+  <li><a href="#what-license-should-we-choose-for-our-code" id="toc-what-license-should-we-choose-for-our-code" class="nav-link" data-scroll-target="#what-license-should-we-choose-for-our-code"><span class="header-section-number">19.7</span> What License Should We Choose for Our Code?</a>
+  <ul class="collapse">
+  <li><a href="#licensing-considerations-when-using-open-software" id="toc-licensing-considerations-when-using-open-software" class="nav-link" data-scroll-target="#licensing-considerations-when-using-open-software"><span class="header-section-number">19.7.1</span> Licensing Considerations when Using Open Software</a></li>
+  <li><a href="#some-common-types-of-software-license" id="toc-some-common-types-of-software-license" class="nav-link" data-scroll-target="#some-common-types-of-software-license"><span class="header-section-number">19.7.2</span> Some Common Types of Software License</a></li>
+  <li><a href="#types-of-open-source-software-licenses" id="toc-types-of-open-source-software-licenses" class="nav-link" data-scroll-target="#types-of-open-source-software-licenses"><span class="header-section-number">19.7.3</span> Types of Open-Source Software Licenses</a></li>
+  <li><a href="#common-licenses-for-open-software" id="toc-common-licenses-for-open-software" class="nav-link" data-scroll-target="#common-licenses-for-open-software"><span class="header-section-number">19.7.4</span> Common Licenses for Open Software</a></li>
+  <li><a href="#activity-3.1-licenses" id="toc-activity-3.1-licenses" class="nav-link" data-scroll-target="#activity-3.1-licenses"><span class="header-section-number">19.7.5</span> Activity 3.1: Licenses</a></li>
+  </ul></li>
+  <li><a href="#programming-best-practices" id="toc-programming-best-practices" class="nav-link" data-scroll-target="#programming-best-practices"><span class="header-section-number">19.8</span> Programming Best Practices</a>
+  <ul class="collapse">
+  <li><a href="#code-review" id="toc-code-review" class="nav-link" data-scroll-target="#code-review"><span class="header-section-number">19.8.1</span> Code Review</a></li>
+  <li><a href="#testing" id="toc-testing" class="nav-link" data-scroll-target="#testing"><span class="header-section-number">19.8.2</span> Testing</a></li>
+  <li><a href="#minimizing-the-risk-of-security-vulnerabilities" id="toc-minimizing-the-risk-of-security-vulnerabilities" class="nav-link" data-scroll-target="#minimizing-the-risk-of-security-vulnerabilities"><span class="header-section-number">19.8.3</span> Minimizing the Risk of Security Vulnerabilities</a></li>
+  <li><a href="#creating-fair-software" id="toc-creating-fair-software" class="nav-link" data-scroll-target="#creating-fair-software"><span class="header-section-number">19.8.4</span> Creating FAIR Software</a></li>
+  <li><a href="#additional-helpful-tips" id="toc-additional-helpful-tips" class="nav-link" data-scroll-target="#additional-helpful-tips"><span class="header-section-number">19.8.5</span> Additional Helpful Tips</a></li>
+  </ul></li>
+  <li><a href="#lesson-3-summary" id="toc-lesson-3-summary" class="nav-link" data-scroll-target="#lesson-3-summary"><span class="header-section-number">19.9</span> Lesson 3: Summary</a></li>
+  <li><a href="#lesson-3-knowledge-check" id="toc-lesson-3-knowledge-check" class="nav-link" data-scroll-target="#lesson-3-knowledge-check"><span class="header-section-number">19.10</span> Lesson 3: Knowledge Check</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/edit/main/Open-Science-101/Module_4/Lesson_3/readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_4/readme.html">OS101 Module 4: Open Code</a></li><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_4/Lesson_3/readme.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Code</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Code</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="navigation" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="navigation"><span class="header-section-number">19.1</span> Navigation</h2>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#learning-objectives">Learning Objectives</a></li>
+<li><a href="#how-do-we-plan-for-making-code">How do We Plan for Making Code?</a></li>
+<li><a href="#importance-of-version-control">Importance of Version Control</a></li>
+<li><a href="#describing-our-code-to-others">Describing Our Code to Others</a></li>
+<li><a href="#what-license-should-we-choose-for-our-code">What License Should We Choose for Our Code?</a></li>
+<li><a href="#programming-best-practices">Programming Best Practices</a></li>
+<li><a href="#lesson-3-summary">Lesson 3: Summary</a></li>
+<li><a href="#lesson-3-knowledge-check">Lesson 3: Knowledge Check</a></li>
+</ul>
+</section>
+<section id="overview" class="level2" data-number="19.2">
+<h2 data-number="19.2" class="anchored" data-anchor-id="overview"><span class="header-section-number">19.2</span> Overview</h2>
+<p>In this lesson, you will learn about the practical steps to make code openly accessible. Large volume and well-established software have different needs than an incipient project. For example, a script written to create a simple plot has different requirements than a software package that models the Earth’s climate. The size of a research team can also determine the steps required to make code open access. This lesson covers the process to make code usable to other researchers through documentation, considerations around licenses, and software development best practices.</p>
+</section>
+<section id="learning-objectives" class="level2" data-number="19.3">
+<h2 data-number="19.3" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">19.3</span> Learning Objectives</h2>
+<p>After completing this lesson, you should be able to:</p>
+<ul>
+<li>Describe the key considerations when planning a new open software project.</li>
+<li>List three reasons for projects to use version control.</li>
+<li>Explain the purpose and recall general information typically included in a README file.</li>
+<li>Be able to select a license for your code and list the differences between permissive and protective open-source software licenses.</li>
+<li>Explain best practices in software development that support transparency, inclusion, and reproducibility.</li>
+</ul>
+</section>
+<section id="how-do-we-plan-for-making-code" class="level2" data-number="19.4">
+<h2 data-number="19.4" class="anchored" data-anchor-id="how-do-we-plan-for-making-code"><span class="header-section-number">19.4</span> How do We Plan for Making Code?</h2>
+<p>Code is written to solve a challenge. This can range from producing a plot, to data processing Earth observations, to modeling the Universe. The challenges associated with writing code can range in difficulty, from simpler tasks such as the use of spreadsheets to more complex activities such as the creation of extensive libraries and use of high performance or cloud computing. Code can be developed as an individual, team, or a community. Once written, code might be used for decades or never again.</p>
+<p>When starting a research project, it is useful to answer the following questions:</p>
+<ol type="1">
+<li>What problem am I trying to solve, and are others in my community facing it as well?</li>
+<li>Are there existing solutions? (In Lesson 2, we explored how to look for existing solutions.)</li>
+<li>Did you find code that was close to what you want but didn’t quite meet your needs?</li>
+</ol>
+<p>You could potentially contribute to it instead of writing something new.</p>
+<p>Even if a solution already exists, there might be good reasons to develop your own code. Instances include:</p>
+<ul>
+<li>The code is written in a different programming language than you are familiar with.</li>
+<li>The license is not open enough to adopt it.</li>
+<li>To try new techniques or to develop a deeper understanding of the problem.</li>
+</ul>
+<p><img src="../images/media/image333.jpg" style="width:350px;height:auto;"></p>
+<p>It might take more time to start a new project, or it might take more time to integrate someone else’s code than writing your own. You will have to make that call.</p>
+<p>We looked for existing code, and though we found a few things that were close we decided in the end our needs were unique enough - we’re starting a new project!</p>
+<section id="starting-a-new-project" class="level3" data-number="19.4.1">
+<h3 data-number="19.4.1" class="anchored" data-anchor-id="starting-a-new-project"><span class="header-section-number">19.4.1</span> Starting a New Project</h3>
+<p>When starting a new project, the key things to consider are:</p>
+<ol type="1">
+<li>Define the project scope, its primary features and any limitations, and the intended audience.</li>
+<li>Consider resources required for the software to run. Will it be on a personal computer, a high-performance computing server, or on the cloud?</li>
+<li>How will it be managed?</li>
+</ol>
+<p>This lesson focuses predominantly on the question of how to manage open access code.</p>
+<p>Who will be working on the project? What are some of the development best practices? How will you share it openly? How will it be licensed?</p>
+</section>
+<section id="organizing-a-project" class="level3" data-number="19.4.2">
+<h3 data-number="19.4.2" class="anchored" data-anchor-id="organizing-a-project"><span class="header-section-number">19.4.2</span> Organizing a Project</h3>
+<p><img src="../images/media/image353.png" style="width:250px;height:auto;"></p>
+<p>Source: https://xkcd.com/1459/</p>
+<hr>
+<p>Software projects can be organized in a variety ways, each that involve unique considerations about how to begin. Many projects start out as a single script that was only intended for a single use. However, a script can grow into a much larger project with unforeseen applications in its original or new field of research. Other projects can start with formal requirements and standards.</p>
+<p>Making code public has many advantages:</p>
+<ul>
+<li>It enables open collaboration.</li>
+<li>It invites constructive feedback that contributes to a code’s accuracy and robustness.</li>
+<li>People with less experience with the subject matter will learn more.</li>
+<li>Those with less programming experience can learn from those with more programming experience as they improve the code.</li>
+<li>It provides an intermediate product that can still be cited.</li>
+</ul>
+<p>When naming a project, conduct a quick search of the envisioned name to see what shows up. Avoid names with many other uses as this will make it difficult for others to discover the code. Also, do not choose embarrassing or trademarked names.</p>
+<p>Hosting the product on a version control platform ensures the permanence of your project. If code only exists on your computer, it may disappear if the computer is damaged or is lost.</p>
+<p>Documenting the production and management of your code benefits both you and those that might use your code in the future. You are your own best collaborator. Documentation can save you from a headache should you reuse the code in six months or attempt to recall meticulous details about your process later on.</p>
+<p>Questions to consider when choosing a programming language:</p>
+<ul>
+<li>Will potential collaborators be able to contribute in the chosen language?</li>
+<li>Which languages are you most experienced with?</li>
+<li>Are there any limitations from your computing environment that would impede your ability to write or manage this code?</li>
+<li>Languages have strengths and weaknesses; which are most important for your project?</li>
+</ul>
+<p>Before someone else can use your code, they’re going to ask some questions:</p>
+<ul>
+<li>Where can I find your code?</li>
+<li>Is your code documented?</li>
+<li>In what ways am I allowed to use your code?</li>
+<li>Will you accept changes to your code? If I find a bug, what do I do?</li>
+<li>How do I trust your code works?</li>
+<li>How do I know if the code will be supported long term?</li>
+</ul>
+</section>
+</section>
+<section id="importance-of-version-control" class="level2" data-number="19.5">
+<h2 data-number="19.5" class="anchored" data-anchor-id="importance-of-version-control"><span class="header-section-number">19.5</span> Importance of Version Control</h2>
+<p>Your code will change significantly over the lifetime of your project. Just as we appreciate the ability to track earlier versions of documents or versions created by different people, inevitably someone will want to be able to revert, compare, and synthesize changes in code.</p>
+<p>The most popular tool for version control is git. Git is a system that tracks changes in computer files, similar to Google Docs or SharePoint but more applicable to code script. Git is usually used in conjunction with a version control platform such as GitHub, Gitlab, or Bitbucket. These tools were covered in Module 2.2.</p>
+<p>Version control enables the following:</p>
+<ul>
+<li>Helps developers keep track of changes to a project’s code (as well as supplemental files and documentation) over the entire course of a project’s evolution.</li>
+<li>Revisions to a project’s files can be tracked, including contributions made by different people.</li>
+<li>Undesirable changes (like errors or bugs) can be reverted at any time.</li>
+</ul>
+<p>Version control is a good practice for coding, even if you are not immediately sharing the code. You can use version control with your code privately on your computer, or use the private mode on hosting services (e.g., GitHub and GitLab). By setting up version control early on, you prepare your code for intended and unforeseen future use.</p>
+<p><strong>Further Resources on version control</strong></p>
+<ul>
+<li><a href="https://swcarpentry.github.io/git-novice/">Software Carpentry Version Control with Git</a></li>
+<li><a href="https://the-turing-way.netlify.app/reproducible-research/vcs.html">The Turing Way, Version Control</a></li>
+<li><a href="https://fair-software.eu/recommendations/repository/">Use a publicly accessible repository with version control: guidance for FAIR software</a></li>
+</ul>
+</section>
+<section id="describing-our-code-to-others" class="level2" data-number="19.6">
+<h2 data-number="19.6" class="anchored" data-anchor-id="describing-our-code-to-others"><span class="header-section-number">19.6</span> Describing Our Code to Others</h2>
+<section id="readme" class="level3" data-number="19.6.1">
+<h3 data-number="19.6.1" class="anchored" data-anchor-id="readme"><span class="header-section-number">19.6.1</span> README</h3>
+<p>The first stop for a user when they approach a new project should be the README file. Aptly named, this file contains orientation information that will help a user understand a project’s purpose, provides examples of how it can be used, and lists other important information that the creator deems pertinent.</p>
+<p>At the minimum, a README should contain the name of the project and a very short paragraph of what the software is. Two to three sentences in a plain-language style that does not assume who is reading it. It’s the elevator pitch for the project.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Bad</strong> README example</td>
+<td>“This code recomputes the fundamental permutation factor of the downward flow (for J &lt; 10, obviously).”</td>
+</tr>
+<tr class="even">
+<td><strong>Good</strong> README example</td>
+<td>“LeapKitten. This Python software package takes any picture of a kitten (JPEG, PNG) and uses artificial intelligence to output what it would look like leaping into the air. In addition, the code takes leap years into account on the timestamp on the image.”</td>
+</tr>
+</tbody>
+</table>
+<p>In addition, the following information is helpful to add to the README especially if they are not listed elsewhere:</p>
+<ul>
+<li>A list of any code dependencies the software has, e.g.&nbsp;“Numpy, kitten-rng, and human- readable must be installed to run this software.”</li>
+<li>How to install and a brief description of how to run the software.</li>
+<li>Detailed description of the software, especially if there is no external documentation.</li>
+<li>Examples of how to use the software.</li>
+<li>Acknowledgement of team members or sources of support.</li>
+</ul>
+<p>As seen in these examples, README files can be useful for a <a href="https://github.com/granttremblay/Tremblay2018_Code">collection of scripts supporting a publication</a> or an <a href="https://github.com/MillionConcepts/lhorizon">extensively developed software package</a>.</p>
+</section>
+<section id="contributor-guidelines" class="level3" data-number="19.6.2">
+<h3 data-number="19.6.2" class="anchored" data-anchor-id="contributor-guidelines"><span class="header-section-number">19.6.2</span> Contributor Guidelines</h3>
+<p>The <em>CONTRIBUTING.md</em> file gives information about how to contribute to the project. It details how the contribution process works and what type of contributions are needed. While not every project has a <em>CONTRIBUTING.md</em> file, the existence of one is a clear indicator that contributions are welcomed.</p>
+<p>You’ll need to decide for yourself when your project has progressed enough to consider inviting contributors. When it has, create a document called CONTRIBUTING at the top level of your report.</p>
+<p>The <a href="https://github.com/astropy/astropy/blob/main/CONTRIBUTING.md">Astropy contributing guidelines</a> and <a href="https://numpy.org/devdocs/dev/index.html">Numpy contributing guidelines</a> provide two examples.</p>
+<p><strong>Bonus Tip: Even if you are developing your code publicly, this does not mean you have to accept contributions from others or maintain your code forever. The contributing guidelines or README are good places to indicate what your expectations are for your code. This can clarify that the code is not maintained or not accepting contributions.</strong></p>
+</section>
+<section id="code-of-conduct" class="level3" data-number="19.6.3">
+<h3 data-number="19.6.3" class="anchored" data-anchor-id="code-of-conduct"><span class="header-section-number">19.6.3</span> Code of Conduct</h3>
+<p>The code of conduct sets ground rules for participants’ behavior and helps to facilitate a friendly, welcoming environment. While not every project has a CODE_OF_CONDUCT file, its presence signals that this is a welcoming project to contribute to.</p>
+</section>
+<section id="code-documentation" class="level3" data-number="19.6.4">
+<h3 data-number="19.6.4" class="anchored" data-anchor-id="code-documentation"><span class="header-section-number">19.6.4</span> Code Documentation</h3>
+<p><strong>Code Level Documentation for the Developer</strong></p>
+<p>Your software should be documented within the source code. Each function should have comments at the start that briefly state, in plain language, what the function is for. This is not only for other developers, but yourself a week later when you forgot what you wrote.</p>
+<blockquote class="blockquote">
+<p><strong>Example</strong></p>
+<p># This function takes the image array and crops it from the center to 50% of the original size.</p>
+<p>Without going into details of the data type, calling parameters, etc. this description immediately puts someone looking at the code into the context of what the function aims to accomplish; they can then explore the details.</p>
+<p>While you should consider placing a description at the start of a function, use your discretion on where you put similar descriptions of code. At the start of a complex loop or analysis would be good ideas. Don’t go overboard - things like this aren’t useful:</p>
+<p># set x to 17</p>
+<p>x = 17</p>
+<p>Descriptive variable, class, and function names can make your code very readable. . Sometimes even great coders are working fast and will name variables ‘a’, ‘temp’, or other names that probably won’t make a lot of sense in a week or two when they come back to something they were working on. Names like ‘baking_time’ or ‘velocity’ are more clear. Variable names should be easy to understand and clearly represent what they are.</p>
+<p>Ideally, someone who doesn’t write in the software language of the code can read the comments in the file and have a rough idea of what is happening.</p>
+<p>Use the comments to put URLs that reference where you might have found the algorithm you’re using (e.g.&nbsp;Stack Overflow) or the journal paper where you found the formula you’re implementing.</p>
+</blockquote>
+</section>
+<section id="code-level-documentation-for-the-user" class="level3" data-number="19.6.5">
+<h3 data-number="19.6.5" class="anchored" data-anchor-id="code-level-documentation-for-the-user"><span class="header-section-number">19.6.5</span> Code Level Documentation for the User</h3>
+<p>If you are developing code that you expect others to use, produce a manual on how to use the code. As code constantly develops, it is much easier to document while or even before you write any code.</p>
+<p>If you write your documentation within the code itself, there are pieces of software that can then extract it, format it, and present it as a polished manual. Examples of documentation generated from the code can be seen for <a href="https://docs.astropy.org/en/latest/">Astropy</a> or <a href="https://numpy.org/doc/stable/">NumPy</a>.</p>
+<p>They look fancy, but very similar too. These sites were completely generated from comments and documents written in the source code. Different from the comments written for developers of the code above, these comments were written specifically for the audience of external users of the code: the manual.</p>
+<p>While there are multiple software packages for automatic documentation generation, the most commonly used ones are <a href="https://www.sphinx-doc.org/en/master/">Sphinx</a> for Python and <a href="https://www.doxygen.nl/index.html">D</a><a href="https://www.doxygen.nl/index.html">oxygen</a> for most everything else. <a href="https://www.markdownguide.org/">M</a><a href="https://www.markdownguide.org/">arkdown</a> is also a popular choice for the formatting language for documentation.</p>
+</section>
+<section id="programming-and-documenting" class="level3" data-number="19.6.6">
+<h3 data-number="19.6.6" class="anchored" data-anchor-id="programming-and-documenting"><span class="header-section-number">19.6.6</span> Programming and Documenting</h3>
+<p><strong>Establishing a Development Environment</strong> - Establishing an appropriate development environment will help you write good, clean code and will help you maintain the project as it evolves.</p>
+<ul>
+<li>Configure any necessary tools for writing the code. Perhaps an IDE (Integrated Development Environment) or text editor. Some popular examples include VS Code, Pycharm, R Studio, Xcode.</li>
+<li>Set up a package manager. For example, for Python, one could use ‘anaconda’ or ‘poetry’.</li>
+<li>Create a virtual environment specific to your project to isolate its dependencies (and their versions) from those used for other projects</li>
+</ul>
+<p><strong>Structuring Files and Folders</strong> - How you structure the files in your project from the beginning will contribute to the success of the final results.</p>
+<p>Different programming languages have different standard folder structures. Familiarize yourself with the standards before starting as it will help others collaborate and will likely save you from difficulties later.</p>
+<p>There are a variety of sample code structures that can be used to get started. For example, for Python there is Cookiecutter and an Astropy package template.</p>
+</section>
+</section>
+<section id="what-license-should-we-choose-for-our-code" class="level2" data-number="19.7">
+<h2 data-number="19.7" class="anchored" data-anchor-id="what-license-should-we-choose-for-our-code"><span class="header-section-number">19.7</span> What License Should We Choose for Our Code?</h2>
+<section id="licensing-considerations-when-using-open-software" class="level3" data-number="19.7.1">
+<h3 data-number="19.7.1" class="anchored" data-anchor-id="licensing-considerations-when-using-open-software"><span class="header-section-number">19.7.1</span> Licensing Considerations when Using Open Software</h3>
+<p><img src="../images/media/image130.png" style="width:350px;height:auto;"></p>
+<p>Open-source software licenses are the basis for how scientists use, make, and share code and software. Understanding some of the nuances of these licenses is important because it will affect how your project can license and share code.</p>
+<p>A software license is a legal document that states the rights of the developer and user of a piece of software.</p>
+<p>An open source license is a type of software license, approved by the Open Source Initiative (OSI) as compliant with the Open Source Definition. An open source license grants permissions for anyone to inspect, use, modify, and distribute the software’s source code for any purpose.</p>
+<p>Licenses ensure that developers receive credit and control over how their work is used. Without a license, software is assumed copyrighted and without permissions. Programmers include licenses to allow reuse.</p>
+<p>Licenses take various forms in order to outline:</p>
+<ul>
+<li>Contractual obligations (if any exist) between the developer and user.</li>
+<li>What the user may do with the software.</li>
+<li>To whom the user may distribute the software (if any such right exists).</li>
+<li>Length of time the user has the right to use the software.</li>
+</ul>
+</section>
+<section id="some-common-types-of-software-license" class="level3" data-number="19.7.2">
+<h3 data-number="19.7.2" class="anchored" data-anchor-id="some-common-types-of-software-license"><span class="header-section-number">19.7.2</span> Some Common Types of Software License</h3>
+<p><em>Click ‘+’ to travel more information.</em></p>
+<p><img style="width:100%;height:auto;" src="../images/media/commonsoftwarelicenses.png"></p>
+<p><strong>Public Domain</strong></p>
+<p>Anyone free to use.</p>
+<p><strong>Lesser General Domain</strong></p>
+<p>Can link to open source libraries, and code can be licensed under any license type.</p>
+<p><strong>Permissive</strong></p>
+<p>Gives users wide but not complete latitude to reuse/relicense.</p>
+<p><strong>Non-permissive</strong></p>
+<p>Allows users to reuse, but also gives users the responsibility to share their changes with the community.</p>
+<p><strong>Copyleft</strong></p>
+<p>Can be distributed or modified if all the code involved is licensed under the same license.</p>
+<p><strong>Proprietary</strong></p>
+<p>Cannot be copied, modified, or distributed.</p>
+<hr>
+<p>Before you choose a license, first check with your organization or employer. They may have specific guidelines about what software license you are allowed to use. Your research grant may also stipulate permissible license types. The software management plan should specify what license you plan to use.</p>
+<p>If a license is not shared with a code, a creative work is assumed to be copyrighted by <a href="https://www.copyright.gov/help/faq/faq-general.html">default in the United States</a>. It does not need to be registered, and it is assumed to be automatically protected by copyright the moment it is created.</p>
+<p>For software, the license is shared in a file called LICENSE at the top of the repository. It’s a standard location people will know to look at. It’s not bad practice to put a one line version of the license at the top of each file of code as well, with a pointer to where one could find the full license.</p>
+</section>
+<section id="types-of-open-source-software-licenses" class="level3" data-number="19.7.3">
+<h3 data-number="19.7.3" class="anchored" data-anchor-id="types-of-open-source-software-licenses"><span class="header-section-number">19.7.3</span> Types of Open-Source Software Licenses</h3>
+<p>There are two main types of open-source licenses. Permissive and protective (sometimes referred to as copy-left). The difference in these types of licenses is primarily related to the type of license users of the code are allowed to apply to their derivative works.</p>
+<table>
+<thead>
+<tr>
+<th>
+PERMISSIVE LICENSE ☑
+</th>
+<th>
+PROTECTIVE LICENSE
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<p>
+The Open Source Initiative defines a permissive software license as a license that guarantees the freedoms to use, modify, redistribute, and create derivative works. An example of this type of license is the Apache 2.0 license by the Apache Software Foundation. It is the most popular and widely used permissive license.
+</p>
+<p>
+Users have wide latitude for reuse under this license. They are generally free to incorporate the code into their project or use it how they wish. A user of permissive-license open source in a product could redeploy the open source software with a wide range of licenses, including proprietary closed source software.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+PERMISSIVE LICENSE
+</th>
+<th>
+PROTECTIVE LICENSE ☑
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<p>
+Protective (copyleft) licenses are a legal technique of granting certain freedoms over copies of copyrighted works with the requirement that the same rights be preserved in derivative works. This allows users to reuse, but also requires users to share their changes with the community using the same license. An example of a protective license is the General Public License (GPL) that ensures users have the freedom and responsibility to share their changes with the community. It is the most widely used protective license. These types of licenses can result in less re-use by users who may prefer or be required to only use permissive licenses.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="common-licenses-for-open-software" class="level3" data-number="19.7.4">
+<h3 data-number="19.7.4" class="anchored" data-anchor-id="common-licenses-for-open-software"><span class="header-section-number">19.7.4</span> Common Licenses for Open Software</h3>
+<p>Some of the most popular licenses used in open software are:</p>
+<table>
+<thead>
+<tr>
+<th>
+PERMISSIVE (CAN APPLY ANY LICENSE TO DERIVATIVE WORKS) ☑
+</th>
+<th>
+PROTECTIVE/ COPYLEFT (ALL DERIVATIVE WORKS MUST DISTRIBUTE ALL ITS SOURCE CODE UNDER THE SAME LICENSE)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<ul>
+<li>
+<a href="https://opensource.org/license/apache-2-0/">Apache License</a>
+</li>
+<li>
+<a href="https://opensource.org/license/mit/">MIT license</a>
+</li>
+<li>
+<a href="https://opensource.org/license/bsd-3-clause/">BSD License</a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+PERMISSIVE (CAN APPLY ANY LICENSE TO DERIVATIVE WORKS)
+</th>
+<th>
+PROTECTIVE/ COPYLEFT (ALL DERIVATIVE WORKS MUST DISTRIBUTE ALL ITS SOURCE CODE UNDER THE SAME LICENSE) ☑
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<ul>
+<li>
+GNU General Public License (<a href="https://opensource.org/license/gpl-2-0/">GPL</a>)
+</li>
+<li>
+<a href="https://opensource.org/license/mpl-2-0/">Mozilla</a> Public License
+</li>
+<li>
+Common Development and Distribution License (<a href="https://opensource.org/license/cddl-1-0/">CDDL</a>)
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>For more information on different types of licenses please refer to the <a href="https://opensource.org/licenses/category">Open Source Initiative OSI</a>.</p>
+</section>
+<section id="activity-3.1-licenses" class="level3" data-number="19.7.5">
+<h3 data-number="19.7.5" class="anchored" data-anchor-id="activity-3.1-licenses"><span class="header-section-number">19.7.5</span> Activity 3.1: Licenses</h3>
+<p>In this activity, you are asked to answer whether the following statements are true or false.</p>
+<p><strong>Statement 1:</strong></p>
+<p>A software license states the rights of the developer and user for a piece of software.</p>
+<ul>
+<li>True</li>
+<li>False</li>
+</ul>
+<p><strong>Statement 2:</strong></p>
+<p>Without a license, software is assumed copyrighted and without permissions.</p>
+<ul>
+<li>True</li>
+<li>False</li>
+</ul>
+<p><strong>Statement 3:</strong></p>
+<p>Anyone is free to use software with a “permissive” license without restriction.</p>
+<ul>
+<li>True</li>
+<li>False</li>
+</ul>
+<p><strong>Statement 4:</strong></p>
+<p>Users are not allowed to copy and modify any software with a copyleft license.</p>
+<ul>
+<li>True</li>
+<li>False</li>
+</ul>
+</section>
+</section>
+<section id="programming-best-practices" class="level2" data-number="19.8">
+<h2 data-number="19.8" class="anchored" data-anchor-id="programming-best-practices"><span class="header-section-number">19.8</span> Programming Best Practices</h2>
+<p>In this section, some best practices in development are provided including on code review, testing, security, and accessibility. These best practices will improve the quality of code, reproducibility of results, and security of a project. Combined, these actions help improve the robustness of open access code and help to meet the unique challenges that can arise with multiple contributors and revisions that occur over an extended period of time.</p>
+<section id="code-review" class="level3" data-number="19.8.1">
+<h3 data-number="19.8.1" class="anchored" data-anchor-id="code-review"><span class="header-section-number">19.8.1</span> Code Review</h3>
+<p>Code benefits from peer review in the same way as science. Having someone else read over your code and test it is one of the best ways to improve the quality of the code.</p>
+<p>Many version control platforms have built in tools that enable developers to review, comment, and iterate on each other’s code. These can be done in the open and allow anyone to comment.</p>
+<p>Here is a great example of the discussion that can happen when the original creator of an algorithm <a href="https://github.com/astropy/astropy/pull/4301">comments on a python implementation made by a first time contributor to the Astropy project</a>. The open and constructive discussion led to a better implementation of the algorithm along with possible future improvements.</p>
+<p>Software packages can be reviewed as their own products as well. Many scientific publications now accept papers focused on software. There are entities like <a href="https://www.pyopensci.org/">PyOpenSci</a> and the <a href="https://joss.theoj.org/">Journal of Open Source Software</a> that provide open peer review of scientific packages. See more details about JOSS in the next lesson on sharing your code.</p>
+</section>
+<section id="testing" class="level3" data-number="19.8.2">
+<h3 data-number="19.8.2" class="anchored" data-anchor-id="testing"><span class="header-section-number">19.8.2</span> Testing</h3>
+<p>A proven method to evaluate the reproducibility of your software is through testing. There are many types of testing that range from testing the smallest testable parts of a code to verifying if a code works as whole under different scenarios. Code testing can include a wide range of different techniques. The following lesson section provides only a brief introduction to the topic.</p>
+<p>The main objective of code testing is to evaluate if a code does what its authors intended it to do. Comprehensively testing code can be very difficult as it involves testing the code for generating expected outputs as well as for failing when it should.</p>
+<table>
+<thead>
+<tr>
+<th>
+SCIENTIFIC VALIDATION ☑
+</th>
+<th>
+REPRODUCI-BILITY TESTING
+</th>
+<th>
+BUILT IN TESTS
+</th>
+<th>
+AUTOMATED TESTING
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4">
+<p>
+Whether producing a script or an entire data processing pipeline, the validation of software is critical to ensuring the quality and trustworthiness of the scientific results. This could mean manually calculating the results to check the output of the code or comparing to previously produced results or having another team member test it.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+SCIENTIFIC VALIDATION
+</th>
+<th>
+REPRODUCI-BILITY TESTING ☑
+</th>
+<th>
+BUILT IN TESTS
+</th>
+<th>
+AUTOMATED TESTING
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4">
+<p>
+Given the same inputs and parameters, can the same results be produced? Making the configuration files, input data, etc. openly available so users can easily run and produce the same published results is a critical way to increase trust in your code.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+SCIENTIFIC VALIDATION
+</th>
+<th>
+REPRODUCI-BILITY TESTING
+</th>
+<th>
+BUILT IN TESTS ☑
+</th>
+<th>
+AUTOMATED TESTING
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4">
+<p>
+Unit tests enable software developers to bolster their confidence in their code’s ability to perform as expected. Unit tests are small functions that sit outside the code base that test a specific function or run a specific test. For example, if a function takes an image and flips it horizontally, one test might check that the resulting image is the same size. Another compares the output using a known image with the expected result. Another checks that a new image is returned.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+SCIENTIFIC VALIDATION
+</th>
+<th>
+REPRODUCI-BILITY TESTING
+</th>
+<th>
+BUILT IN TESTS
+</th>
+<th>
+AUTOMATED TESTING ☑
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4">
+<p>
+Built in tests can usually be run both manually and automatically. Most version control platforms offer services for running tests automatically. When run this way, code can be checked to see if changes raise any problems. This process of checking the code automatically as it is developed is called continuous development or continuous integration (CI/CD). If a small change made in one part of the code results in an unexpected change in another part, running the tests will uncover this immediately.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="minimizing-the-risk-of-security-vulnerabilities" class="level3" data-number="19.8.3">
+<h3 data-number="19.8.3" class="anchored" data-anchor-id="minimizing-the-risk-of-security-vulnerabilities"><span class="header-section-number">19.8.3</span> Minimizing the Risk of Security Vulnerabilities</h3>
+<p>Whether using open source, closed source, or commercial software, it is important to consider the security risks inherent in the development of software.</p>
+<ul>
+<li>Ensure minimal, DRY (Don’t repeat yourself) code (easier to maintain and fix).</li>
+<li>Use global variables or key managers for credentials. Never include credentials in your code.</li>
+<li>Use well-tested and maintained dependencies. In packages that you maintain, keep the list of dependencies up to date.</li>
+<li>Create software with tools that provide automated scanning and auditing.</li>
+<li>If there are unsupported dependencies that you rely on, assess them to determine how they might introduce security risks and whether it would be appropriate to switch to a different package.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>
+SECURITY TOOLS AND SECURITY VULNERABILITIES ☑
+</th>
+<th>
+TEST COMPONENTS AND DEPENDENCIES
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<p>
+Commercial and open-source tools have been developed to address the challenge of identifying the security vulnerabilities in different source components. If you do not have any technology to secure your open source usage, you can consider using the Dependabot or <a href="https://owasp.org/">OWASP</a> dependency check tools.
+</p>
+<p>
+The Open Web Application Security Project (OWASP), is an online community that produces free tools and technologies in the field of web application security. OWASP dependency check is a utility created for developers, which identifies project dependencies and checks if they contain any known, publicly disclosed, open-source vulnerabilities.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+SECURITY TOOLS AND SECURITY VULNERABILITIES
+</th>
+<th>
+TEST COMPONENTS AND DEPENDENCIES ☑
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<p>
+Testing the security of the open-source components you are using is the best way to ensure the safety of your applications and your organization. Your commitment to timely and frequent analysis of open-source components should be the same as to your proprietary code.
+</p>
+<p>
+This is especially true as the component in question may have unknown security vulnerabilities or dependencies that differ with each use case. It is possible for a component to be secure in a particular application but vulnerable in another.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="creating-fair-software" class="level3" data-number="19.8.4">
+<h3 data-number="19.8.4" class="anchored" data-anchor-id="creating-fair-software"><span class="header-section-number">19.8.4</span> Creating FAIR Software</h3>
+<table>
+<thead>
+<tr>
+<th>
+FINDABLE ☑
+</th>
+<th>
+ACCESSIBLE
+</th>
+<th>
+INTER-OPERABLE
+</th>
+<th>
+REUSABLE
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4">
+<p>
+Software includes a persistent and unique identifier and rich metadata, so it is easy for humans and machines to find.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+FINDABLE
+</th>
+<th>
+ACCESSIBLE ☑
+</th>
+<th>
+INTER-OPERABLE
+</th>
+<th>
+REUSABLE
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4">
+<p>
+Software is retrievable from its identifier via standard communication protocols.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+FINDABLE
+</th>
+<th>
+ACCESSIBLE
+</th>
+<th>
+INTER-OPERABLE ☑
+</th>
+<th>
+REUSABLE
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4">
+<p>
+Software interoperates with other software; it exchanges data and/or metadata via community standards.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+FINDABLE
+</th>
+<th>
+ACCESSIBLE
+</th>
+<th>
+INTER-OPERABLE
+</th>
+<th>
+REUSABLE ☑
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="4">
+<p>
+Fully described metadata with provenance, meeting community standards. License permits reuse.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="additional-helpful-tips" class="level3" data-number="19.8.5">
+<h3 data-number="19.8.5" class="anchored" data-anchor-id="additional-helpful-tips"><span class="header-section-number">19.8.5</span> Additional Helpful Tips</h3>
+<p>Here are some further suggestions on how to make your code more accessible, reproducible, and transparent:</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><strong>Descriptive Names</strong></td>
+<td>Variables, functions, and similar entities should be given descriptive names as opposed to vague names. Descriptive names instantly give other programmers an idea of what the variable or function is. For example, the variable name <strong>colourOfCat</strong> is a good name because it describes what it intends to do, which is to encompass the color of a cat.</td>
+</tr>
+<tr class="even">
+<td><strong>Metadata File</strong></td>
+<td>Consider including a metadata file for your software to make it more discoverable. A ‘codemeta.json’ can be created using <a href="https://codemeta.github.io/codemeta-generator/">Code Meta’s generator</a> to include with your package.</td>
+</tr>
+<tr class="odd">
+<td><strong>Operation Documentation</strong></td>
+<td>Share details about how you are running the code. For example, document the version of a software library you are using, or the version of the compiler. These are often shared in an ‘environment.yml’ file.</td>
+</tr>
+<tr class="even">
+<td><strong>Automation</strong></td>
+<td>Consider the following scenario:<br><br>You are getting ready to publish your paper that includes 17 plots that all depend on a data set released by a mission. Right before you are about to submit, the mission releases an updated version of the data set.<br><br> How easy will it be to recreate those plots?<br><br> Software allows you to automate the running of scripts and alert programmers when written so that input files are not hardcoding. This allows programmers to easily re-run code if an initial parameter changes.</td>
+</tr>
+<tr class="odd">
+<td><strong>Using Standards</strong></td>
+<td>Most languages have their own coding style adopted by their respective communities. Following those conventions makes it easier for others to contribute to your code and makes your project more inclusive.</td>
+</tr>
+<tr class="even">
+<td><strong>Portability</strong></td>
+<td>Share details about how you are running the code, for example the version of a software library you are using, or the version of the compiler. These are often shared in an ‘environment.yml’ file.</td>
+</tr>
+<tr class="odd">
+<td><strong>Naming</strong></td>
+<td>Many historical terms used in software have negative connotations depending on the context. When considering different terms or naming, consider how different audiences may react to those terms.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="lesson-3-summary" class="level2" data-number="19.9">
+<h2 data-number="19.9" class="anchored" data-anchor-id="lesson-3-summary"><span class="header-section-number">19.9</span> Lesson 3: Summary</h2>
+<p>In this lesson, you learned:</p>
+<ul>
+<li>Planning a new project requires programmers to have a clearly defined purpose, recognize any resource limitations, and envision a data management plan.</li>
+<li>Using a repository with version control allows developers to track changes across time and from multiple contributors, which can help with troubleshooting for errors and with managing a team of programers.</li>
+<li>A README file should include the name of a project and short but clear description of the software.</li>
+<li>Licenses ensure that developers receive credit and control over how their work is used. Without a license, software is assumed copyrighted and without permissions</li>
+<li>Testing, labeling, and implementing security measures are examples of programming best practices that support Open Science.</li>
+</ul>
+<p>In addition to learning how to Share your Code in the next lesson, you will also have some opportunities to put this lesson into practice.</p>
+</section>
+<section id="lesson-3-knowledge-check" class="level2" data-number="19.10">
+<h2 data-number="19.10" class="anchored" data-anchor-id="lesson-3-knowledge-check"><span class="header-section-number">19.10</span> Lesson 3: Knowledge Check</h2>
+<p>Answer the following questions to test what you have learned so far.</p>
+<p><em>Question</em></p>
+<p><strong>01/05</strong></p>
+<p>Which of the following should be considered when planning an open software project? Select all that apply.</p>
+<ul>
+<li>The intended user audience.</li>
+<li>What protocol will be used to sync changes between individual contributors and the central repository.</li>
+<li>The programming language to be used.</li>
+<li>Who will financially benefit from sales of the software.</li>
+</ul>
+<p><em>Question</em></p>
+<p><strong>02/05</strong></p>
+<p>Which of the following is a benefit of using a version control system in your software?</p>
+<ul>
+<li>New changes are automatically tracked.</li>
+<li>Different contributors can add or edit code at the same time.</li>
+<li>Undesirable changes can be quickly reverted.</li>
+<li>All of the above.</li>
+</ul>
+<p><em>Question</em></p>
+<p><strong>03/05</strong></p>
+<p>Select two items that are good to include in a README file from the list below:</p>
+<ul>
+<li>Installation/compilation instructions</li>
+<li>Code development history</li>
+<li>The most important portions of the code</li>
+<li>Usage instructions and example output</li>
+</ul>
+<p><em>Question</em></p>
+<p><strong>04/05</strong></p>
+<p>Which of the following licenses allows users to reuse, but also require users to share their changes with the community using the same license?</p>
+<ul>
+<li>Public Domain</li>
+<li>Lesser general domain</li>
+<li>Permissive</li>
+<li>Protective License</li>
+<li>Commercial</li>
+</ul>
+<p><em>Question</em></p>
+<p><strong>05/05</strong></p>
+<p>Which of the following practices makes your project more inclusive?</p>
+<ul>
+<li>Including a Code of Conduct.</li>
+<li>Referencing historical events in the name of your project.</li>
+<li>Following standards for the programming language being used.</li>
+<li>Developing the project privately.</li>
+<li>Including a Guideline for Contributors.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/forrt\.org\/Transform-to-Open-Science-Book");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../Open-Science-101/Module_4/Lesson_2/readme.html" class="pagination-link" aria-label="Lesson 2: Using Open Code">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Code</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../Open-Science-101/Module_4/Lesson_4/readme.html" class="pagination-link" aria-label="Lesson 4: Sharing Open Code">
+        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Code</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/edit/main/Open-Science-101/Module_4/Lesson_3/readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

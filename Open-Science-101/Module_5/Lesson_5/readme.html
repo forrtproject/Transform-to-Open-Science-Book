@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="TOPS Collaboration">
+
+<title>26&nbsp; Lesson 5: From Theory to Practice – TOPS Open Science 101</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../About/About-Announcements.html" rel="next">
+<link href="../../../Open-Science-101/Module_5/Lesson_4/readme.html" rel="prev">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_5/readme.html">OS101 Module 5: Open Results</a></li><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_5/Lesson_5/readme.html"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../">TOPS Open Science 101</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/forrtproject/Transform-to-Open-Science-Book" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../../../TOPS-Open-Science-101.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../../../TOPS-Open-Science-101.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transform to Open Science</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/README.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Open Science 101 Curriculum</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 1: The Ethos of Open Science</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lesson 1: What is Open Science?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Lesson 2: Why is Open Science Important?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lesson 3: How to do Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lesson 4: When Not to be Open</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lesson 5: Planning for Open Science: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 2: Open Tools and Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to the Process of Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lesson 2: General Tools for Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lesson 3: Tools for Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lesson 4: Tools for Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Lesson 5: Tools for Open Results</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 3: Open Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 4: Open Code</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 5: Open Results</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_5/readme.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../About/About-Announcements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About Transform to Open Science</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../About/tops_faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Frequently Asked Questions</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#navigation" id="toc-navigation" class="nav-link active" data-scroll-target="#navigation"><span class="header-section-number">26.1</span> Navigation</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview"><span class="header-section-number">26.2</span> Overview</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">26.3</span> Learning Objectives</a></li>
+  <li><a href="#writing-an-osdmp-what-to-include-in-the-osdmp-for-sharing-results-openly" id="toc-writing-an-osdmp-what-to-include-in-the-osdmp-for-sharing-results-openly" class="nav-link" data-scroll-target="#writing-an-osdmp-what-to-include-in-the-osdmp-for-sharing-results-openly"><span class="header-section-number">26.4</span> Writing an OSDMP: What to Include in the OSDMP for Sharing Results Openly</a>
+  <ul class="collapse">
+  <li><a href="#activity-5.1-pen-to-paper" id="toc-activity-5.1-pen-to-paper" class="nav-link" data-scroll-target="#activity-5.1-pen-to-paper"><span class="header-section-number">26.4.1</span> Activity 5.1: Pen to Paper</a></li>
+  </ul></li>
+  <li><a href="#example-steps-toward-more-open-results" id="toc-example-steps-toward-more-open-results" class="nav-link" data-scroll-target="#example-steps-toward-more-open-results"><span class="header-section-number">26.5</span> Example Steps Toward More Open Results</a></li>
+  <li><a href="#how-emerging-technology-like-ai-is-changing-how-we-do-science" id="toc-how-emerging-technology-like-ai-is-changing-how-we-do-science" class="nav-link" data-scroll-target="#how-emerging-technology-like-ai-is-changing-how-we-do-science"><span class="header-section-number">26.6</span> How Emerging Technology Like AI is Changing How We Do Science</a>
+  <ul class="collapse">
+  <li><a href="#using-ai" id="toc-using-ai" class="nav-link" data-scroll-target="#using-ai"><span class="header-section-number">26.6.1</span> Using AI:</a></li>
+  <li><a href="#making-with-ai" id="toc-making-with-ai" class="nav-link" data-scroll-target="#making-with-ai"><span class="header-section-number">26.6.2</span> Making with AI:</a></li>
+  <li><a href="#sharing-with-ai" id="toc-sharing-with-ai" class="nav-link" data-scroll-target="#sharing-with-ai"><span class="header-section-number">26.6.3</span> Sharing with AI:</a></li>
+  <li><a href="#cautions-about-use-of-ai-tools" id="toc-cautions-about-use-of-ai-tools" class="nav-link" data-scroll-target="#cautions-about-use-of-ai-tools"><span class="header-section-number">26.6.4</span> Cautions About Use of AI Tools</a></li>
+  </ul></li>
+  <li><a href="#lesson-5-summary" id="toc-lesson-5-summary" class="nav-link" data-scroll-target="#lesson-5-summary"><span class="header-section-number">26.7</span> Lesson 5: Summary</a></li>
+  <li><a href="#lesson-5-knowledge-check" id="toc-lesson-5-knowledge-check" class="nav-link" data-scroll-target="#lesson-5-knowledge-check"><span class="header-section-number">26.8</span> Lesson 5: Knowledge Check</a></li>
+  <li><a href="#open-results-summary" id="toc-open-results-summary" class="nav-link" data-scroll-target="#open-results-summary"><span class="header-section-number">26.9</span> Open Results Summary</a>
+  <ul class="collapse">
+  <li><a href="#moving-toward-an-open-collaborative-and-inclusive-scientiﬁc-future" id="toc-moving-toward-an-open-collaborative-and-inclusive-scientiﬁc-future" class="nav-link" data-scroll-target="#moving-toward-an-open-collaborative-and-inclusive-scientiﬁc-future"><span class="header-section-number">26.9.1</span> Moving Toward an Open, Collaborative, and Inclusive Scientiﬁc Future</a></li>
+  </ul></li>
+  <li><a href="#open-science-101-summary" id="toc-open-science-101-summary" class="nav-link" data-scroll-target="#open-science-101-summary"><span class="header-section-number">26.10</span> Open Science 101 Summary</a>
+  <ul class="collapse">
+  <li><a href="#learn-more-about-and-engage-with-tops" id="toc-learn-more-about-and-engage-with-tops" class="nav-link" data-scroll-target="#learn-more-about-and-engage-with-tops"><span class="header-section-number">26.10.1</span> Learn more about and engage with TOPS!</a></li>
+  <li><a href="#learn-more-through-online-courses" id="toc-learn-more-through-online-courses" class="nav-link" data-scroll-target="#learn-more-through-online-courses"><span class="header-section-number">26.10.2</span> Learn more through online courses:</a></li>
+  <li><a href="#take-your-coding-and-data-science-skills-to-the-next-level" id="toc-take-your-coding-and-data-science-skills-to-the-next-level" class="nav-link" data-scroll-target="#take-your-coding-and-data-science-skills-to-the-next-level"><span class="header-section-number">26.10.3</span> Take your coding and data science skills to the next level!</a></li>
+  <li><a href="#read-online-guides-and-learn-about-ongoing-open-science-community-initiatives" id="toc-read-online-guides-and-learn-about-ongoing-open-science-community-initiatives" class="nav-link" data-scroll-target="#read-online-guides-and-learn-about-ongoing-open-science-community-initiatives"><span class="header-section-number">26.10.4</span> Read online guides and learn about ongoing open science community initiatives:</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/edit/main/Open-Science-101/Module_5/Lesson_5/readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_5/readme.html">OS101 Module 5: Open Results</a></li><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_5/Lesson_5/readme.html"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="navigation" class="level2" data-number="26.1">
+<h2 data-number="26.1" class="anchored" data-anchor-id="navigation"><span class="header-section-number">26.1</span> Navigation</h2>
+<ul>
+<li><a href="#writing-an-osdmp-what-to-include-in-the-osdmp-for-sharing-results-openly">Writing an OSDMP: What to Include in the OSDMP for Sharing Results Openly</a></li>
+<li><a href="#example-steps-toward-more-open-results">Example Steps Toward More Open Results</a></li>
+<li><a href="#how-emerging-technology-like-ai-is-changing-how-we-do-science">How Emerging Technology Like AI is Changing How We Do Science</a></li>
+<li><a href="#lesson-5-summary">Lesson 5: Summary</a></li>
+<li><a href="#lesson-5-knowledge-check">Lesson 5: Knowledge Check</a></li>
+<li><a href="#open-results-summary">Open Results Summary</a></li>
+<li><a href="#open-science-101-summary">Open Science 101 Summary</a></li>
+</ul>
+</section>
+<section id="overview" class="level2" data-number="26.2">
+<h2 data-number="26.2" class="anchored" data-anchor-id="overview"><span class="header-section-number">26.2</span> Overview</h2>
+<p>In the previous lessons, we learned about various ways to share our science, and what steps we should think about when sharing. In this lesson, we tie the concepts from previous lessons together with some specific guidance for writing the Sharing Results section of an Open Science and Data Management Plans (OSDMP). We will also reflect on how our society and technology constantly evolve, as does the way we do science. A new technology with the potential to radically alter the way we do and share science is artificial intelligence (AI), particularly when it comes to language learning models. These AI tools are already changing how we interact with written text. In this lesson, we discuss some of the ways that AI is and will affect how we do and share our science.</p>
+</section>
+<section id="learning-objectives" class="level2" data-number="26.3">
+<h2 data-number="26.3" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">26.3</span> Learning Objectives</h2>
+<p>After completing this lesson, you should be able to:</p>
+<ul>
+<li>List what to include in an OSDMP for sharing results openly.</li>
+<li>List some concrete steps toward sharing results openly.</li>
+<li>Describe how emerging technology like AI is currently impacting how we use, make, and share our science.</li>
+</ul>
+</section>
+<section id="writing-an-osdmp-what-to-include-in-the-osdmp-for-sharing-results-openly" class="level2" data-number="26.4">
+<h2 data-number="26.4" class="anchored" data-anchor-id="writing-an-osdmp-what-to-include-in-the-osdmp-for-sharing-results-openly"><span class="header-section-number">26.4</span> Writing an OSDMP: What to Include in the OSDMP for Sharing Results Openly</h2>
+<p>The process within an Open Science and Data Management Plans (OSDMP) to share data and software is covered in other modules, so here we will discuss how to share the other type of research outputs. Most proposals require that you include plans for publications such as peer reviewed manuscripts, technical reports, books, and conference materials.</p>
+<p>Though not required, it can be a good idea to include plans for making your results publicly accessible in ways other than traditional publishing, e.g.&nbsp;online blog posts, tutorials, or other materials. After all, writing an OSDMP is often required for funding requests, and this can be a way to show proposal reviewers that you are thinking about how to best share your science.</p>
+<section id="activity-5.1-pen-to-paper" class="level3" data-number="26.4.1">
+<h3 data-number="26.4.1" class="anchored" data-anchor-id="activity-5.1-pen-to-paper"><span class="header-section-number">26.4.1</span> Activity 5.1: Pen to Paper</h3>
+<p><img src="../images/media/image21.png" style="width:350px;height:auto;"></p>
+<p>Write a sample results section of an OSDMP that details how you would plan to make your results open. Think about an example from your research and what details you would need to include to convince reviewers that you will share open access results.</p>
+<p><strong>Example 1:</strong> This activity will result in 2 peer-reviewed publications that will be published green open- access. Pre-prints will be archived in PubSpace.</p>
+<p><strong>Example 2:</strong> This activity will result in the creation of computational notebooks, 4 conference abstracts and posters, 2 peer reviewed manuscripts, and 2 online plain-language articles, summarizing our results. Peer-reviewed publications will be published green open-access and pre-prints will be archived in PubSpace or the journals open-access preprint server. All other materials will be archived at Zenodo, assigned a DOI, and assigned a CC-BY license or permissive software license.</p>
+<p>For these examples, what other information or details could be added? If you were planning to write a tutorial about your science, what would you include?</p>
+</section>
+</section>
+<section id="example-steps-toward-more-open-results" class="level2" data-number="26.5">
+<h2 data-number="26.5" class="anchored" data-anchor-id="example-steps-toward-more-open-results"><span class="header-section-number">26.5</span> Example Steps Toward More Open Results</h2>
+<p><a href="https://www.nasa.gov/news-release/nasa-announces-summer-2023-hottest-on-record/"><strong>NASA Announces Summer 2023 Hottest on Record</strong></a></p>
+<p><img src="../images/media/image75.jpeg" style="width:350px;height:auto;"></p>
+<p>Image credit: NASA Earth Observatory/Lauren Dauphin.</p>
+<hr>
+<p>When results and research objects are published openly, anyone can reproduce the scientific result. For topics like climate change, the transparency of results helps reduce misinformation and increases public trust in results.</p>
+<p>Here is a GitHub <a href="https://github.com/jmunroe/OpenScienceExample_GISTEMPv4/tree/main">repository</a> with an example of a <a href="https://gist.github.com/jmunroe/74a1eda18d1473040ed91f2a1f02b1b5">result</a> made available as open access. This visualization is not perfect but provides a snapshot of a work in progress that can be shared with the community for feedback and refinement. This could be further refined, or perhaps serve as the start of a new effort that will extend the initial results. The results are more accessible, inclusive, and reproducible by being published openly.</p>
+<p>There are lots of ways that open science can extend the span or scope of projects. Here are some steps you can take to share your open results in a way that makes your work more usable, reproducible, and inclusive:</p>
+<ul>
+<li>Add a Code of Conduct via the CODE_OF_CONDUCT file and link to other policies that apply to your work.</li>
+<li>Add contributors and authorship guidelines via a CONTRIBUTING file.</li>
+<li>Add your collaborators and team members’ names with their permission.</li>
+<li>Add your proposal but remove any sensitive information.</li>
+<li>Create a preliminary roadmap and what goals the project is trying to achieve.</li>
+<li>Create a project management, code and data folders where you can upload appropriate information as your project develops.</li>
+<li>Create a resource list that your project requires.</li>
+<li>Provide links to training materials that your collaborators and contributors may benefit from.</li>
+<li>Use issues and project boards to communicate what is happening in the project.</li>
+<li>Use Pull Request to invite reviews to new development of code and content.</li>
+<li>Add user manual and executable notebooks to allow code testing.</li>
+<li>Create and share executable notebooks that document how data is processed and the result obtained.</li>
+<li>Create tutorials or short form videos demonstrating how a step in your research workflow was accomplished.</li>
+<li>Write a blog post about your experience wrestling with a particular research challenge and how you solved it.</li>
+<li>Contribute to documentation to improve the open-source tools based on your own experience.</li>
+<li>Connect your repository to Binder to allow online testing of your code and executable notebooks.</li>
+<li>Link all the outputs that are generated outside this repository (like blog, video, forum post and podcast among others as discussed above).</li>
+<li>Some advanced steps that should be applied as the project develops include continuous integration, containerisation, Citation CFF file and the creation of a simple web page to link all information.</li>
+</ul>
+</section>
+<section id="how-emerging-technology-like-ai-is-changing-how-we-do-science" class="level2" data-number="26.6">
+<h2 data-number="26.6" class="anchored" data-anchor-id="how-emerging-technology-like-ai-is-changing-how-we-do-science"><span class="header-section-number">26.6</span> How Emerging Technology Like AI is Changing How We Do Science</h2>
+<p>Throughout these modules, the internet has been identified as a fundamental disruptive technology that changed how almost all of science is accomplished. Scientists rarely go to libraries to read the latest journal articles. Data is no longer mailed around the world on tape drives. Software isn’t shared via floppy disks. The internet helped create the modern scientific workflow and made science more interactive and accessible. Now AI tools are starting to disrupt science in a similar manner. AI is not only revolutionizing many aspects of our lives, it is also changing how we do science. As companies race to create and integrate new generative AI tools into every aspect of our lives, many scientists, institutions, journal publishers, and agencies are looking to see how to use these tools effectively, understand their reliability, accuracy, biases, and how to also use these cutting edge tools ethically. An additional concern is how any information shared with AI tools may be used to intentionally or unintentionally disclose confidential data, leading to privacy concerns.</p>
+<p>AI can help us use and share research. It can act as an accelerant, taking care of tedious tasks while leaving scientits free for more creative thought. These tools are better than humans at processing vast amounts of data, but humans are better at creative and nuanced thought. This is important to consider when determining whether or not to use AI. As an example, many people already use AI tools to help with their inbox management and writing emails with AI generated suggested content. Within science, there are many potential tasks that could potentially be expedited using AI, according to three studies published in Nature:</p>
+<ul>
+<li><a href="https://www.nature.com/articles/d41586-023-01273-w">AI science search engines are exploding in number — are they any good?</a></li>
+<li><a href="https://www.nature.com/articles/d41586-018-06617-5">How AI technology can tame the scientific literature</a></li>
+<li><a href="https://www.nature.com/articles/d41586-023-02980-0">AI and science: what 1,600 researchers think</a></li>
+</ul>
+<section id="using-ai" class="level3" data-number="26.6.1">
+<h3 data-number="26.6.1" class="anchored" data-anchor-id="using-ai"><span class="header-section-number">26.6.1</span> Using AI:</h3>
+<table>
+<thead>
+<tr>
+<th>
+LITERATURE REVIEWS ☑
+</th>
+<th>
+SEARCHING FOR RELEVANT DATASETS AND SOFTWARE TOOLS
+</th>
+<th>
+LANGUAGE BARRIERS
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">
+<p>
+The ever-increasing volume of scientific literature has made it challenging for researchers to stay abreast of recent articles and find relevant older ones. AI tools can be used to create personalized recommendations for relevant articles as well as create summaries of them in various formats. Some examples of these tools include <a href="https://scisummary.com/dashboard">SciSummary</a>, <a href="https://www.summarizebot.com/">SummarizeBot</a>, <a href="https://www.scholarcy.com/">Scholarcy</a>, <a href="https://www.paperdigest.org/">Paper Digest</a>, <a href="https://www.scilynk.com/">Lynx AI</a>, <a href="https://www.tldrthis.com/">TLDR This.</a>
+</p>
+<p>
+Possible drawbacks when using these tools include:
+</p>
+<ul>
+<li>
+Potential introduction of biases
+</li>
+<li>
+Insufficient contextual understanding or interpretation
+</li>
+<li>
+Possible inability to handle complex technical language
+</li>
+<li>
+Incorrectly identifying key points
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+LITERATURE REVIEWS
+</th>
+<th>
+SEARCHING FOR RELEVANT DATASETS AND SOFTWARE TOOLS ☑
+</th>
+<th>
+LANGUAGE BARRIERS
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">
+<p>
+AI tools can be used to discover different datasets that may be relevant to a scientific query and recommend relevant software libraries.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+LITERATURE REVIEWS
+</th>
+<th>
+SEARCHING FOR RELEVANT DATASETS AND SOFTWARE TOOLS
+</th>
+<th>
+LANGUAGE BARRIERS ☑
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">
+<p>
+AI tools can be used to create automatic translations into different languages. Several of the tools above also offer translation.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="making-with-ai" class="level3" data-number="26.6.2">
+<h3 data-number="26.6.2" class="anchored" data-anchor-id="making-with-ai"><span class="header-section-number">26.6.2</span> Making with AI:</h3>
+<table>
+<thead>
+<tr>
+<th>
+CODE ☑
+</th>
+<th>
+RESULTS
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<p>
+AI tools can be used to generate code to perform analysis tasks and translate between programming languages. Some examples of these tools include <a href="https://github.com/features/copilot">Co-Pilot</a>, <a href="https://openai.com/blog/openai-codex">Codex</a>, <a href="https://chat.openai.com/auth/login">ChatGPT</a>, and <a href="https://alphacode.deepmind.com/">AlphaCode</a>.
+</p>
+<p>
+<strong>Usage tip:</strong> Popular large language models can be used to generate code, but it has been noted by many that breaking down tasks and using careful prompts helps generate better results.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+CODE
+</th>
+<th>
+RESULTS ☑
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<p>
+AI tools can be used to generate text, summarize background materials, develop key points, develop images and figures, and conclusions. Using these tools may help non-native speakers communicate science in different languages more clearly. Additionally, they could be helpful to develop plain-language summaries, blog posts, and social media posts.
+</p>
+<p>
+Some possible drawbacks when using these tools:
+</p>
+<ul>
+<li>
+See the list above for a literature review.
+</li>
+<li>
+Factual and commonsense reasoning mistakes because they do not (at this time) have the type of cognition or perception needed to understand language and its relationship to the external physical, biological, and social world (cite: <a href="https://www.tandfonline.com/doi/full/10.1080/08989621.2023.2168535">https://www.tandfonline.com/doi/full/10.1080/08989621.2023.2168535)</a>.
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sharing-with-ai" class="level3" data-number="26.6.3">
+<h3 data-number="26.6.3" class="anchored" data-anchor-id="sharing-with-ai"><span class="header-section-number">26.6.3</span> Sharing with AI:</h3>
+<ul>
+<li>Results - AI/ML models are increasingly being used in research. When sharing results, follow best practices as outlined in the <a href="https://essopenarchive.org/users/536571/articles/635008-ethical-and-responsible-use-of-ai-ml-in-the-earth-space-and-environmental-sciences">Ethical and Responsible Use of AI/ML in the Earth, Space, and Environmental Sciences</a> article.</li>
+<li>Incremental prompting can help create an outline for your research article. An example can be found on <a href="https://twitter.com/MushtaqBilalPhD/status/1640243808851075072?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1640243808851075072%7Ctwgr%5E86f4269a3a6f05f7927bdb57e4f45654f827dc44%7Ctwcon%5Es1_&amp;ref_url=https%3A%2F%2Fwww.euronews.com%2Fnext%2F2023%2F08%2F07%2Fbest-ai-tools-academic-research-chatgpt-consensus-chatpdf-elicit-research-rabbit-scite">X</a>.</li>
+<li>AI tools can help identify where to share results and help write social media or other short posts based on your article.</li>
+</ul>
+</section>
+<section id="cautions-about-use-of-ai-tools" class="level3" data-number="26.6.4">
+<h3 data-number="26.6.4" class="anchored" data-anchor-id="cautions-about-use-of-ai-tools"><span class="header-section-number">26.6.4</span> Cautions About Use of AI Tools</h3>
+<p>Journals are increasingly implementing guidelines and requirements concerning the usage of AI tools during the writing process. Many require that the use of AI tools for writing, images creation, or other elements must be disclosed and their method of use identified. As is the case with all other material within an article, authors are fully responsible for ensuring that content is correct. Examples of this policy can be read in the AI guidelines of <a href="https://www.nature.com/nature-portfolio/editorial-policies/ai">Nature</a> and <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10318315/">NCBI</a>.</p>
+<p>Furthermore, there are numerous examples of generative AI (for both code and content) delivering plagiarized information in violation of licenses, as well as fabricateding material including citations. Using these AI tools may lead to findings of academic and research misconduct should fabrication, falsification or plagiarism be contained within AI generated materials. So BE CAREFUL. Learn more about possible issues with AI in a <a href="https://www.nature.com/nature-index/news/artificial-intelligence-writing-tools-promise-faster-manuscripts-for-researchers">Nature example</a> here.</p>
+<p>At this time, and for these reasons, AI tools are generally not allowed in grant applications or in peer- review or proposal review activities.</p>
+<p>The National Institutes of Health (NIH) has prohibited “scientific peer reviewers from using natural language processors, large language models, or other generative Artificial Intelligence (AI) technologies for analyzing and formulating peer review critiques for grant applications and R&amp;D contract proposals.” Utilizing AI in the peer review process is a breach of confidentiality because these tools “have no guarantee of where data is being sent, saved, viewed or used in the future.” Using AI tools to help draft a critique or to assist with improving the grammar and syntax of a critique draft are both considered breaches of confidentiality. Read <a href="https://grants.nih.gov/grants/guide/notice-files/NOT-OD-23-149.html">NIH’s AI policy</a> here.</p>
+<p>AI tools for science are developing rapidly. The science community’s understanding of how to ethically and safely use AI is just developing as its use in research expands rapidly. The guidelines above offer a snapshot in time and will likely continue to evolve. If you choose to use these tools for scientific research, carefully consider how much to rely on them and how their biases may impact results, as cautioned in <a href="https://www.nature.com/articles/d41586-023-02980-0">this Nature article</a>. The internet has transformed the world and AI tools are likely to do the same. As with any tool, it is important they are used for the appropriate purpose and in an ethical manner.</p>
+</section>
+</section>
+<section id="lesson-5-summary" class="level2" data-number="26.7">
+<h2 data-number="26.7" class="anchored" data-anchor-id="lesson-5-summary"><span class="header-section-number">26.7</span> Lesson 5: Summary</h2>
+<p>The steps that we highlight to make your research more reproducible and open will advance science and the impact of your research. In fact, the steps we have highlighted are things we can do immediately to ensure we make open and reproducible results.</p>
+<p>In this lesson, you learned:</p>
+<ul>
+<li>How to include open results in the OSDMP.</li>
+<li>An example of how results can be shared openly.</li>
+<li>That developing AI tools are being used in all parts of the scientific workflow, they are changing rapidly, and there are still many open questions about how and when to use them.</li>
+</ul>
+</section>
+<section id="lesson-5-knowledge-check" class="level2" data-number="26.8">
+<h2 data-number="26.8" class="anchored" data-anchor-id="lesson-5-knowledge-check"><span class="header-section-number">26.8</span> Lesson 5: Knowledge Check</h2>
+<p>Answer the following questions to test what you have learned so far.</p>
+<p><em>Question</em></p>
+<p><strong>01/03</strong></p>
+<p>Read the statement below and decide whether it’s true or false.</p>
+<p><em>It is a good idea to include plans in your OSDMP for making your results available in ways outside of traditional publishing, e.g.&nbsp;online blog posts or tutorials.</em></p>
+<ul>
+<li>True</li>
+<li>False</li>
+</ul>
+<p><em>Question</em></p>
+<p><strong>02/03</strong></p>
+<p>Which of the following aspects of AI are considered as benefits? Select all that apply.</p>
+<ul>
+<li>Personalized journal article recommendations based on your discipline and interests</li>
+<li>Recommendations for data and software relevant to your science project</li>
+<li>Potential introduction of bias</li>
+<li>Factual mistakes</li>
+<li>Translation between languages</li>
+</ul>
+<p><em>Question</em></p>
+<p><strong>03/03</strong></p>
+<p>Which of the following are steps you can take to share your open results online? Let’s assume that, like the activity, you are sharing an interactive visualization.</p>
+<ul>
+<li>Host your project in a public GitHub repository</li>
+<li>Assign an open license</li>
+<li>Add a code of conduct to the GitHub repository</li>
+<li>Add a user manual</li>
+<li>Release your project on public repositories that assign DOIs</li>
+<li>All of the above</li>
+</ul>
+</section>
+<section id="open-results-summary" class="level2" data-number="26.9">
+<h2 data-number="26.9" class="anchored" data-anchor-id="open-results-summary"><span class="header-section-number">26.9</span> Open Results Summary</h2>
+<section id="moving-toward-an-open-collaborative-and-inclusive-scientiﬁc-future" class="level3" data-number="26.9.1">
+<h3 data-number="26.9.1" class="anchored" data-anchor-id="moving-toward-an-open-collaborative-and-inclusive-scientiﬁc-future"><span class="header-section-number">26.9.1</span> Moving Toward an Open, Collaborative, and Inclusive Scientiﬁc Future</h3>
+<p>Science is meant to benefit society. Sharing our science helps ensure that it benefits society and informs the decisions of the public and policymakers, especially when funded by public agencies or governments. Going back to the ‘Ethos of Open Science’ module:</p>
+<p><img src="../images/media/opensciencequote.jpg" style="width:100%;height:auto;"></p>
+<p>“Open Science is the principle and practice of making research products and processes available to all, while respecting diverse cultures, maintaining security and privacy, and fostering collaborations, reproducibility, and equity”</p>
+<p><strong>https://open.science.gov/</strong></p>
+<hr>
+<p>Throughout this curriculum, we have focused on skills needed to make research products and processes available to all. The traditional practice of only sharing results limits insight into how science is done and may act to limit who can participate in science. By sharing your scientific process and working openly, you advance all of science in a more rapid and inclusive way. This curriculum will continue to evolve as science evolves and we welcome your contributions!</p>
+</section>
+</section>
+<section id="open-science-101-summary" class="level2" data-number="26.10">
+<h2 data-number="26.10" class="anchored" data-anchor-id="open-science-101-summary"><span class="header-section-number">26.10</span> Open Science 101 Summary</h2>
+<p>Congratulations! You have successfully completed Open Science 101! Thank you for taking the time to learn about open science - you are part of a broader movement to improve science and make our world better!</p>
+<p>Ready to learn more? Here are some great next steps:</p>
+<section id="learn-more-about-and-engage-with-tops" class="level3" data-number="26.10.1">
+<h3 data-number="26.10.1" class="anchored" data-anchor-id="learn-more-about-and-engage-with-tops"><span class="header-section-number">26.10.1</span> Learn more about and engage with TOPS!</h3>
+<p><strong>TOPS website</strong></p>
+<p><a href="https://nasa.github.io/Transform-to-Open-Science/">CLICK TO LEARN</a></p>
+<p><strong>TOPS GitHub Discussion Forum</strong></p>
+<p><a href="https://github.com/forrt/Transform-to-Open-Science/discussions">CLICK TO LEARN</a></p>
+</section>
+<section id="learn-more-through-online-courses" class="level3" data-number="26.10.2">
+<h3 data-number="26.10.2" class="anchored" data-anchor-id="learn-more-through-online-courses"><span class="header-section-number">26.10.2</span> Learn more through online courses:</h3>
+<p><strong>OpenSciency</strong></p>
+<p><a href="https://opensciency.github.io/sprint-content/">CLICK TO LEARN</a></p>
+<p><strong>Open Science MOOC</strong></p>
+<p><a href="https://opensciencemooc.eu/">CLICK TO LEARN</a></p>
+</section>
+<section id="take-your-coding-and-data-science-skills-to-the-next-level" class="level3" data-number="26.10.3">
+<h3 data-number="26.10.3" class="anchored" data-anchor-id="take-your-coding-and-data-science-skills-to-the-next-level"><span class="header-section-number">26.10.3</span> Take your coding and data science skills to the next level!</h3>
+<p><strong>Carpentries</strong></p>
+<p><a href="https://carpentries.org/">CLICK TO LEARN</a></p>
+</section>
+<section id="read-online-guides-and-learn-about-ongoing-open-science-community-initiatives" class="level3" data-number="26.10.4">
+<h3 data-number="26.10.4" class="anchored" data-anchor-id="read-online-guides-and-learn-about-ongoing-open-science-community-initiatives"><span class="header-section-number">26.10.4</span> Read online guides and learn about ongoing open science community initiatives:</h3>
+<p><strong>The Turing Way</strong></p>
+<p><a href="https://the-turing-way.netlify.app/index.html">CLICK TO LEARN</a></p>
+<p><strong>Center for Open Science</strong></p>
+<p><a href="https://www.cos.io/">CLICK TO LEARN</a></p>
+<p><strong>Open Science NL</strong></p>
+<p><a href="https://www.openscience.nl/en">CLICK TO LEARN</a></p>
+<p>These are just a start - there are a lot more fantastic open science resources online!</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/forrt\.org\/Transform-to-Open-Science-Book");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../Open-Science-101/Module_5/Lesson_4/readme.html" class="pagination-link" aria-label="Lesson 4: Sharing Open Results">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Results</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../About/About-Announcements.html" class="pagination-link" aria-label="About Transform to Open Science">
+        <span class="nav-page-text">About Transform to Open Science</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/edit/main/Open-Science-101/Module_5/Lesson_5/readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
