@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="TOPS Collaboration">
+
+<title>10&nbsp; Lesson 4: Tools for Open Code – TOPS Open Science 101</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../Open-Science-101/Module_2/Lesson_5/readme.html" rel="next">
+<link href="../../../Open-Science-101/Module_2/Lesson_3/readme.html" rel="prev">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_2/readme.html">OS101 Module 2: Open Tools and Resources</a></li><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_2/Lesson_4/readme.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lesson 4: Tools for Open Code</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../">TOPS Open Science 101</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/forrtproject/Transform-to-Open-Science-Book" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../../../TOPS-Open-Science-101.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../../../TOPS-Open-Science-101.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transform to Open Science</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/README.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Open Science 101 Curriculum</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 1: The Ethos of Open Science</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lesson 1: What is Open Science?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Lesson 2: Why is Open Science Important?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lesson 3: How to do Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lesson 4: When Not to be Open</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lesson 5: Planning for Open Science: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 2: Open Tools and Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to the Process of Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lesson 2: General Tools for Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lesson 3: Tools for Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_4/readme.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lesson 4: Tools for Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Lesson 5: Tools for Open Results</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 3: Open Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 4: Open Code</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 5: Open Results</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../About/About-Announcements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About Transform to Open Science</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../About/tops_faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Frequently Asked Questions</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#navigation" id="toc-navigation" class="nav-link active" data-scroll-target="#navigation"><span class="header-section-number">10.1</span> Navigation</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview"><span class="header-section-number">10.2</span> Overview</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">10.3</span> Learning Objectives</a></li>
+  <li><a href="#introduction-to-open-code" id="toc-introduction-to-open-code" class="nav-link" data-scroll-target="#introduction-to-open-code"><span class="header-section-number">10.4</span> Introduction to Open Code</a>
+  <ul class="collapse">
+  <li><a href="#historical-precedent-for-making-code-open-linux-operating-system" id="toc-historical-precedent-for-making-code-open-linux-operating-system" class="nav-link" data-scroll-target="#historical-precedent-for-making-code-open-linux-operating-system"><span class="header-section-number">10.4.1</span> Historical Precedent for Making Code Open: Linux Operating System</a></li>
+  </ul></li>
+  <li><a href="#tools-for-version-control" id="toc-tools-for-version-control" class="nav-link" data-scroll-target="#tools-for-version-control"><span class="header-section-number">10.5</span> Tools for Version Control</a>
+  <ul class="collapse">
+  <li><a href="#version-control" id="toc-version-control" class="nav-link" data-scroll-target="#version-control"><span class="header-section-number">10.5.1</span> Version Control</a></li>
+  <li><a href="#types-of-software-version-control" id="toc-types-of-software-version-control" class="nav-link" data-scroll-target="#types-of-software-version-control"><span class="header-section-number">10.5.2</span> Types of Software Version Control</a></li>
+  <li><a href="#version-control-platforms" id="toc-version-control-platforms" class="nav-link" data-scroll-target="#version-control-platforms"><span class="header-section-number">10.5.3</span> Version Control Platforms</a></li>
+  <li><a href="#summary-of-benefits-to-using-version-control-and-version-control-platforms" id="toc-summary-of-benefits-to-using-version-control-and-version-control-platforms" class="nav-link" data-scroll-target="#summary-of-benefits-to-using-version-control-and-version-control-platforms"><span class="header-section-number">10.5.4</span> Summary of Benefits to Using Version Control and Version Control Platforms</a></li>
+  </ul></li>
+  <li><a href="#tools-for-editing-code" id="toc-tools-for-editing-code" class="nav-link" data-scroll-target="#tools-for-editing-code"><span class="header-section-number">10.6</span> Tools for Editing Code</a>
+  <ul class="collapse">
+  <li><a href="#integrated-development-environment-ides" id="toc-integrated-development-environment-ides" class="nav-link" data-scroll-target="#integrated-development-environment-ides"><span class="header-section-number">10.6.1</span> Integrated Development Environment (IDEs)</a></li>
+  <li><a href="#plain-text-editors-for-coding" id="toc-plain-text-editors-for-coding" class="nav-link" data-scroll-target="#plain-text-editors-for-coding"><span class="header-section-number">10.6.2</span> Plain Text Editors for Coding</a></li>
+  <li><a href="#computational-notebooks" id="toc-computational-notebooks" class="nav-link" data-scroll-target="#computational-notebooks"><span class="header-section-number">10.6.3</span> Computational Notebooks</a></li>
+  <li><a href="#activity-4.1-run-a-jupyter-notebook-yourself-from-the-browser" id="toc-activity-4.1-run-a-jupyter-notebook-yourself-from-the-browser" class="nav-link" data-scroll-target="#activity-4.1-run-a-jupyter-notebook-yourself-from-the-browser"><span class="header-section-number">10.6.4</span> Activity 4.1: Run a Jupyter Notebook Yourself from the Browser</a></li>
+  <li><a href="#computing-platforms" id="toc-computing-platforms" class="nav-link" data-scroll-target="#computing-platforms"><span class="header-section-number">10.6.5</span> Computing Platforms</a></li>
+  </ul></li>
+  <li><a href="#additional-tools" id="toc-additional-tools" class="nav-link" data-scroll-target="#additional-tools"><span class="header-section-number">10.7</span> Additional Tools</a>
+  <ul class="collapse">
+  <li><a href="#software-repository-vs-archive" id="toc-software-repository-vs-archive" class="nav-link" data-scroll-target="#software-repository-vs-archive"><span class="header-section-number">10.7.1</span> Software Repository vs Archive</a></li>
+  <li><a href="#activity-4.2-match-tools" id="toc-activity-4.2-match-tools" class="nav-link" data-scroll-target="#activity-4.2-match-tools"><span class="header-section-number">10.7.2</span> Activity 4.2: Match Tools</a></li>
+  </ul></li>
+  <li><a href="#lesson-4-summary" id="toc-lesson-4-summary" class="nav-link" data-scroll-target="#lesson-4-summary"><span class="header-section-number">10.8</span> Lesson 4: Summary</a></li>
+  <li><a href="#lesson-4-knowledge-check" id="toc-lesson-4-knowledge-check" class="nav-link" data-scroll-target="#lesson-4-knowledge-check"><span class="header-section-number">10.9</span> Lesson 4: Knowledge Check</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/edit/main/Open-Science-101/Module_2/Lesson_4/readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_2/readme.html">OS101 Module 2: Open Tools and Resources</a></li><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_2/Lesson_4/readme.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lesson 4: Tools for Open Code</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lesson 4: Tools for Open Code</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="navigation" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="navigation"><span class="header-section-number">10.1</span> Navigation</h2>
+<ul>
+<li><a href="#introduction-to-open-code">Introduction to Open Code</a></li>
+<li><a href="#tools-for-version-control">Tools for Version Control</a></li>
+<li><a href="#tools-for-editing-code">Tools for Editing Code</a></li>
+<li><a href="#additional-tools">Additional Tools</a></li>
+<li><a href="#lesson-4-summary">Lesson 4: Summary</a></li>
+<li><a href="#lesson-4-knowledge-check">Lesson 4: Knowledge Check</a></li>
+</ul>
+</section>
+<section id="overview" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="overview"><span class="header-section-number">10.2</span> Overview</h2>
+<p>This lesson introduces you to some useful tools for working with open code. You will learn the various tools available to develop, store, and share open code, from version control to code editing software to containers.</p>
+</section>
+<section id="learning-objectives" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">10.3</span> Learning Objectives</h2>
+<p>After completing this lesson, you should be able to:</p>
+<ul>
+<li>Explain the benefits of using tools for open code development.</li>
+<li>Define version control and understand how it supports collaboration in the development and management of code.</li>
+<li>List a few tools for editing software and some of their features.</li>
+<li>Distinguish between software repositories and software archives.</li>
+</ul>
+</section>
+<section id="introduction-to-open-code" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="introduction-to-open-code"><span class="header-section-number">10.4</span> Introduction to Open Code</h2>
+<p>In Lesson 3, we learned about useful tools for working with scientific data. Now, we will provide an overview of commonly used tools that help us write and run computer code to explore, analyze, and visualize our scientific data. Later in Module 4 – Open Code, we will discuss in greater detail what it means to make our code open, and walk through the steps of how to find, create, and share open code.</p>
+<p>Understanding how to work with scientific code is essential in the modern landscape of data-driven research. The tools presented in this lesson encompass a diverse array of resources designed to streamline, enhance, and optimize the process of developing, maintaining, and collaborating on code development for scientific research. They enable the creation of robust and efficient code, often leveraging the collective wisdom of the open-source community. In the pursuit of reproducibility and transparency, these tools can also facilitate the sharing and dissemination of scientific code, fostering collaboration and ensuring that the foundations of scientific research remain open and accessible to all.</p>
+<section id="historical-precedent-for-making-code-open-linux-operating-system" class="level3" data-number="10.4.1">
+<h3 data-number="10.4.1" class="anchored" data-anchor-id="historical-precedent-for-making-code-open-linux-operating-system"><span class="header-section-number">10.4.1</span> Historical Precedent for Making Code Open: Linux Operating System</h3>
+<p>Is the idea of writing code openly a new concept? No!</p>
+<section id="context-development-of-linux-os" class="level4" data-number="10.4.1.1">
+<h4 data-number="10.4.1.1" class="anchored" data-anchor-id="context-development-of-linux-os"><span class="header-section-number">10.4.1.1</span> Context: Development of Linux OS</h4>
+<p><a href="https://en.wikipedia.org/wiki/History_of_Linux">CLICK TO LEARN</a></p>
+<ul>
+<li>Started in 1991 by Linus Torvalds.</li>
+<li>Almost immediately released for scrutiny.</li>
+<li>Many eyes → Many bugs found → Many fixes.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="tools-for-version-control" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="tools-for-version-control"><span class="header-section-number">10.5</span> Tools for Version Control</h2>
+<section id="version-control" class="level3" data-number="10.5.1">
+<h3 data-number="10.5.1" class="anchored" data-anchor-id="version-control"><span class="header-section-number">10.5.1</span> Version Control</h3>
+<p>Version control is the practice of tracking and managing changes made to code or other types of files. You may be familiar with “Track changes” in software like Microsoft Word. This is a form of version control, though not one well-suited to working with code. Version control is considered standard practice in the software development community, and simplifies management of code through time.</p>
+<p>The general way we use version control starts by initializing a folder on your computing platform with the version control system you are using. A version control system automatically tracks all changes made by contributors and allows you to work offline and return later with updates. You write code as you usually do in your code editor of choice. After you have written some code or made some updates to existing code, you then commit those changes to the version control system to create a sort of “checkpoint” that you can then revert back to later if necessary. Then you add or update more code, and commit changes again. Each commit requires you to add a short message which lets you briefly describe what changes were made. These messages serve as metadata that ensures collaborators, future users, and future you understand your development process at a point in time.</p>
+<p>This may sound like a simple process, and in many ways it is! So why is it so important? Especially when it comes to coding, the ability to create a snapshot in time of a piece of code can be very helpful. For instance, you may have a piece of code that yields the intended result, but then you want to add a new function. You may choose to copy that code file so you don’t lose the current state, and then work in a new file. This can become cumbersome pretty quickly when you have multiple files that are different versions of the same piece of code. Or instead of creating a new file, you may write code for the new function directly in the original file, but now the code throws errors when you try to run it, and you can’t remember which lines you added since the last time the code ran without errors. By using version control, these problems are solved because we can revert back to the checkpoint when the code ran cleanly, and thereby avoid the need to create multiple copies to save the original piece of code.</p>
+<p>There are many other features of version control systems, such as the concept of creating “branches” that allow you to work on new updates to a piece of code independently from and in parallel to the original piece of code. A branch is a deviation from the original code, but can be merged back into the original code when desired. All of these concepts are even more useful when collaborating with others using version control platforms, a collaborative practice that will be discussed later in this lesson.</p>
+</section>
+<section id="types-of-software-version-control" class="level3" data-number="10.5.2">
+<h3 data-number="10.5.2" class="anchored" data-anchor-id="types-of-software-version-control"><span class="header-section-number">10.5.2</span> Types of Software Version Control</h3>
+<p>There are two main styles of software version control systems:</p>
+<table>
+<thead>
+<tr>
+<th>
+CENTRALIZED ☑
+</th>
+<th>
+DISTRIBUTED (MORE POPULAR)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<ul>
+<li>
+Singular “main” copy of the codebase
+</li>
+<li>
+Must interact with specific server
+</li>
+<li>
+Example: Subversion (SVN)
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+CENTRALIZED
+</th>
+<th>
+DISTRIBUTED (MORE POPULAR) ☑
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<p>
+Control:
+</p>
+<p>
+Each developer’s system can retain a copy of the codebase<br> Examples:
+</p>
+<ul>
+<li>
+Git
+</li>
+<li>
+Mercurial
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Using a distributed version control system like Git gives you more flexibility.</p>
+<p><strong>Example: Git</strong></p>
+<p>The most popular version control system for software development is Git. Git is open-source and is commonly used in conjunction with web-based software hosting sites like GitHub and GitLab (more on these in the next section), which allow for collaboration and sharing of code. You can also use it on your local computer when writing your own code. Git is often run at the command line, but there are other interfaces for using Git as well, including GitHub Desktop and some code editors that have Git integration included (more on this later).</p>
+<p><img src="../images/media/image33.png" style="width:350px;height:auto;"></p>
+<p><a href="https://xkcd.com/1597/">https://xkcd.com/1597/</a></p>
+<hr>
+<p>Git is very powerful and widely used (according to a Stack Overflow <a href="https://survey.stackoverflow.co/2022">developer survey</a>, over 87% of developers use Git), but that doesn’t mean it is straightforward to learn. There are many good resources for learning Git (see below). If you find Git confusing at first, know that you are not alone! (There’s even an XKCD comic about it!). For in-depth training on Git, please see the Software Carpentry lesson, listed below: <a href="https://swcarpentry.github.io/git-novice/">Version Control with Git: Summary and Setup (swcarpentry.github.io)</a></p>
+</section>
+<section id="version-control-platforms" class="level3" data-number="10.5.3">
+<h3 data-number="10.5.3" class="anchored" data-anchor-id="version-control-platforms"><span class="header-section-number">10.5.3</span> Version Control Platforms</h3>
+<p>Version control platforms, typically web-based software hosting platforms, expand the usefulness of version control by allowing for a centralized location to store and collaborate on code, along with many other helpful features for code development and sharing.</p>
+<p>Some examples of version control platforms:</p>
+<ul>
+<li>GitHub: a Git-based platform that allows collaboration and code history tracking. Owned by Microsoft.</li>
+<li>GitLab: a Git-based platform that also offers DevOps and CI/CD functionalities.</li>
+<li>BitBucket: a platform that can host Git and Mercurial repositories. Owned by Atlassian.</li>
+</ul>
+<p>GitHub is one of the most popular platforms, and so we will provide examples of how to use GitHub in the rest of this section. It is important to note that GitHub is where most open-source software packages are housed, and so if you are interested in getting more involved with the open source software community, GitHub is an essential tool to learn how to use!</p>
+<p><strong>Example: GitHub</strong></p>
+<p>GitHub is an online, cloud-based software repository hosting site that integrates with Git and offers many other features that help with code development, collaboration, testing, and releases. Before we dive into some of these features, it’s important to understand how GitHub acts as a remote repository when using version control systems like Git.</p>
+<p>If we go back to the general idea of using version control systems, GitHub can be added into the picture as a remote repository that hosts code. After creating a “checkpoint” in Git, you can then upload a copy of the current snapshot of your code to GitHub. There are a few reasons you might want to do this, including:</p>
+<ul>
+<li>To serve as a backup for your work (it is now stored on a remote server that you can access even if your computer dies).</li>
+<li>To share your code with others (more on this later in this course).</li>
+<li>To collaborate with others on your code. By uploading to GitHub, your code can be made accessible to others who might want to add features.</li>
+</ul>
+<p>Let’s expand on some of GitHub’s collaboration tools. Some of these features include:</p>
+<table class="table">
+<colgroup>
+<col style="width: 49%">
+<col style="width: 49%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>
+Term
+</th>
+<th>
+Description/Definition
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>
+Issue Tracking
+</td>
+<td>
+Keep track of feature requests, bugs, and other types of updates via GitHub Issues. GitHub also allows the use of labels and assigning people to tasks to help organize tasks.
+</td>
+</tr>
+<tr class="odd">
+<td>
+Project Discussion Forums
+</td>
+<td>
+GitHub allows for an online discussion forum where you can ask and answer questions, and hold community discussions.
+</td>
+</tr>
+<tr class="odd">
+<td>
+Contribution Tracking
+</td>
+<td>
+GitHub has a straightforward way to keep track of suggested code contributions (called “Pull Requests”) from different people.
+</td>
+</tr>
+<tr class="odd">
+<td>
+Code Review Tools
+</td>
+<td>
+GitHub has a rich set of tools for reviewing and accepting (or denying) contributions from others (or yourself), such as in-line comments and easily viewable tracked changes to individual files.
+</td>
+</tr>
+<tr class="odd">
+<td>
+Tailored Permissions
+</td>
+<td>
+Choose who has the ability to update the code. This helps you feel confident that only those with permission can update code that you shared in GitHub, and also others feel safe to suggest updates without worrying that they might accidentally overwrite existing code.
+</td>
+</tr>
+</tbody>
+</table>
+<p>All of these features excel at enabling asynchronous collaboration across teams. Most scientific open- source packages use GitHub for their primary code development. Note that there are many more GitHub features that we don’t go into here that support collaboration, as well as automated workflows and so much more. To learn more about GitHub, take a look at these references:</p>
+<ul>
+<li><a href="https://www.freecodecamp.org/news/introduction-to-git-and-github/">How to Use Git and GitHub – Introduction for Beginners (freecodecamp.org)</a></li>
+<li><a href="https://foundations.projectpythia.org/foundations/getting-started-github.html">Getting Started with GitHub — Pythia Foundations (projectpythia.org)</a></li>
+</ul>
+<p>[Cite Project Pythia: <a href="https://foundations.projectpythia.org/preamble/how-to-cite.html">https://foundations.projectpythia.org/preamble/how-to-cite.html</a>]</p>
+</section>
+<section id="summary-of-benefits-to-using-version-control-and-version-control-platforms" class="level3" data-number="10.5.4">
+<h3 data-number="10.5.4" class="anchored" data-anchor-id="summary-of-benefits-to-using-version-control-and-version-control-platforms"><span class="header-section-number">10.5.4</span> Summary of Benefits to Using Version Control and Version Control Platforms</h3>
+<ul>
+<li>Features the ability to rewind changes back to any committed point</li>
+<li>Eases collaboration with others</li>
+<li>Keeps a directory clean from clutter, with no need for multiple copies of files</li>
+<li>Provides a targeted backup system for your work</li>
+</ul>
+</section>
+</section>
+<section id="tools-for-editing-code" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="tools-for-editing-code"><span class="header-section-number">10.6</span> Tools for Editing Code</h2>
+<section id="integrated-development-environment-ides" class="level3" data-number="10.6.1">
+<h3 data-number="10.6.1" class="anchored" data-anchor-id="integrated-development-environment-ides"><span class="header-section-number">10.6.1</span> Integrated Development Environment (IDEs)</h3>
+<p>An Integrated Development Environment (IDE) plays an important role in open code development by offering a comprehensive toolkit to researchers, scientists, and developers for editing code. It is a software application that streamlines the entire process of creating, testing, and managing code for scientific research and data analysis. By providing an all-in-one platform, an IDE allows researchers to write, debug, and optimize code more efficiently, fostering collaboration and reproducibility in open code science projects.</p>
+<p>In open science, where transparency and accessibility are paramount, IDEs often incorporate version control systems like Git to facilitate collaboration and ensure that a research codebase is readily available for others to use and improve. Additionally, many IDEs integrate with data analysis and visualization tools. This makes it easier for scientists to analyze and interpret their data, ultimately contributing to the advancement of open code science practices.</p>
+<p>If you were in a room with 10 developers and asked them each what their favorite code editor is, you would get many different responses. In this lesson, we will go over a few of the more popular varieties.</p>
+<p><strong>Source-Code Editing &amp; Kernels – The Value of IDEs and Kernels</strong></p>
+<p>IDEs can bring a lot of good tools to your efforts. It’s not just about editing code any more. Modern, robust IDEs can do most of the things listed here, if not more. One can use an IDE without executing in a kernel; one can use a kernel without having developed code in an IDE. However, they can work hand-in-hand.</p>
+<table>
+<thead>
+<tr>
+<th>
+Integrated Development Environment (IDE) ☑
+</th>
+<th>
+Kernel
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<p>
+Source code editing:
+</p>
+<ul>
+<li>
+Syntax highlighting
+</li>
+<li>
+Error/bug warnings
+</li>
+</ul>
+<p>
+Plugins
+</p>
+<ul>
+<li>
+Debuggers
+</li>
+<li>
+Memory management
+</li>
+<li>
+Version control
+</li>
+<li>
+Build automation
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+Integrated Development Environment (IDE)
+</th>
+<th>
+Kernel ☑
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<ul>
+<li>
+Execution environment
+</li>
+<li>
+Like a virtual machine
+</li>
+<li>
+Isolates work area
+</li>
+<ul>
+<li>
+Tailor settings
+</li>
+<li>
+Easily replicable
+</li>
+</ul>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>IDE Example: Visual Studio Code</strong></p>
+<p>The most popular IDE these days, Microsoft’s Visual Studio Code (or VS Code) is feature-rich without being clunky.</p>
+<p><img src="../images/media/image34.png" style="width:100%;height:auto;"></p>
+<ul>
+<li>It has a “dark mode” option which is easier on the eyes for long coding sessions.</li>
+<li>It provides the basics such as syntax highlighting and an integrated terminal window.</li>
+<li>It also has a wealth of plugins for connecting to servers, version control systems, and troubleshooting. It has several linter plugins, which can analyze your code for bugs, errors, and to help your team code in a consistent “style”. This eases code maintenance down the road.</li>
+<li>If your line of code has an obvious error in it, the IDE will produce a red squiggle, just as if you’ve spelled something wrong in a Word Document.</li>
+</ul>
+<p>Below is an example of a developer who accidentally typed an equal sign when they should have typed a colon. VS Code caught the error, and when the developer hovered over the red squiggle, VS Code explained what the error was and offered to take them to further documentation.</p>
+<p><img src="../images/media/image35.png" style="width:100%;height:auto;"></p>
+<p>Another useful feature in VS Code (as well as many other code editors) is Git Integration. Instead of using a Terminal window, you can just make a few clicks and easily integrate Git into your workflow!</p>
+<p>From VS Code you can:</p>
+<ul>
+<li>Easily see modifications to your code.</li>
+<li>Create a branch.</li>
+<li>Upload your changes directly to GitHub.</li>
+<li>Download changes from other team members to your local system.</li>
+</ul>
+<p><strong>IDE Example: Rstudio – IDE</strong></p>
+<p>While Visual Studio Code is a more generic IDE where you can use plugins to specialize it, there are also IDEs, such as RStudio, that have specialized features for specific languages right out of the gate.</p>
+<p>Researchers conducting statistical analysis tend to use the coding languages of R and Python. RStudio has built-in tools for that very purpose, including data visualization.</p>
+<p><img src="../images/media/image36.jpeg" style="width:100%;height:auto;"></p>
+<p>Source: https://en.wikipedia.org/wiki/File:RStudio_IDE_screenshot.png</p>
+</section>
+<section id="plain-text-editors-for-coding" class="level3" data-number="10.6.2">
+<h3 data-number="10.6.2" class="anchored" data-anchor-id="plain-text-editors-for-coding"><span class="header-section-number">10.6.2</span> Plain Text Editors for Coding</h3>
+<p>Most laptop or desktop computers that run standard operating systems (Windows, MacOS, Linux) have multiple pre-installed plain-text editors that can be used for coding. It is beneficial to know how to use at least one, because it makes editing scripts and files a quick process.</p>
+<table class="table">
+<colgroup>
+<col style="width: 49%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>
+<strong>PROS</strong>
+</th>
+<th>
+<strong>CONS</strong>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>
+<ul>
+<li>
+Lightweight
+</li>
+<li>
+Many distributed natively with OS
+</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>
+No plugins to help find bugs, errors, etc.
+</li>
+<li>
+May not have syntax-highlighting
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="computational-notebooks" class="level3" data-number="10.6.3">
+<h3 data-number="10.6.3" class="anchored" data-anchor-id="computational-notebooks"><span class="header-section-number">10.6.3</span> Computational Notebooks</h3>
+<p>A computational notebook refers to a virtual, interactive computing environment that combines code execution, documentation, and data visualization in a single interface. These notebooks are widely used in data science and coding fields. Popular examples include Jupyter Notebooks and R Notebooks. They allow users to write and run code in a step-by-step manner, providing an efficient platform for data analysis, research, and collaborative coding, with the added benefit of integrating rich text (including equations), images, and charts for clear documentation and communication.</p>
+<p><strong>Example: Jupyter Notebook and JupyterLab</strong></p>
+<p><img style="width:350px;height:auto;" src="../images/media/jupyterlogo.jpg"></p>
+<p>Jupyter notebooks are open-source web applications that are widely used for creating computational documents. But before we dive into Jupyter Notebooks, we want to make it clear that Jupyter Notebooks are one of many platforms in the Jupyter ecosystem:</p>
+<ul>
+<li>Jupyter Notebook – contained language shell for interactive programming, displaying output inline with inputs</li>
+<li>JupyterLab – an in-browser user interface showing multiple windows for notebooks, terminals, and code editing</li>
+<li>JupyterHub – middleware for running shared interactive computing environments, including JupyterLab and Jupyter Notebook, on shared computing infrastructure (such as the Cloud)</li>
+</ul>
+<p>We will use Jupyter Notebook as an example of a computational notebook and discuss how JupyterLab is related to Jupyter Notebook. The following section on computing platforms will discuss JupyterHub.</p>
+<p>This screenshot shows an example of a Jupyter Notebook that integrates rich text (with headers and links), equations, code, and the interactive output from those lines of code, including a plot. This screenshot makes it clear why this is called a computational notebook - it resembles a lab notebook that you may have written out by hand in school.</p>
+<p><img src="../images/media/image38.png" style="width:100%;height:auto;"></p>
+<p><a href="https://jupyter.org/">Project Jupyter | Home</a></p>
+<hr>
+<p>Many programming languages are supported by Jupyter. Fun fact: the name “Jupyter” refers to the three core languages supported by Jupyter: Julia, Python, and R.</p>
+<p>JupyterLab is a browser-based interactive development environment that supports Jupyter Notebooks, and is designed in a more flexible environment that allows for many useful features. One of these features is Git integration, as we saw for other IDEs like Visual Studio Code.</p>
+<p>Since Jupyter Notebooks allow for integration of code with visualizations and text, they can serve as a tool to carry out research projects and create easily shareable computational documents for education, collaboration, or science communication. With rich text capabilities, such as the use of headers, italics, links, and many more, you can create a readable document that contains runnable code. These are just some of the reasons why JupyterLab and Jupyter Notebooks are widely used across many disciplines, including computational research and data science.</p>
+<section id="for-more-information-on-jupyter-products-and-its-community-check-out-their-website." class="level4" data-number="10.6.3.1">
+<h4 data-number="10.6.3.1" class="anchored" data-anchor-id="for-more-information-on-jupyter-products-and-its-community-check-out-their-website."><span class="header-section-number">10.6.3.1</span> For more information on Jupyter products and its community, check out their website.</h4>
+<p><a href="https://jupyter.org/">CLICK TO LEARN</a></p>
+<p>If you want to dive in, check out Project Pythia’s “Getting Started with Jupyter” lesson, geared toward scientists without assumption of programming background.</p>
+</section>
+</section>
+<section id="activity-4.1-run-a-jupyter-notebook-yourself-from-the-browser" class="level3" data-number="10.6.4">
+<h3 data-number="10.6.4" class="anchored" data-anchor-id="activity-4.1-run-a-jupyter-notebook-yourself-from-the-browser"><span class="header-section-number">10.6.4</span> Activity 4.1: Run a Jupyter Notebook Yourself from the Browser</h3>
+<p>Let’s use an example from Project Pythia to showcase how computational notebooks can be used in science. Project Pythia is an education Hub for the geoscientific community. They have some great learning resources and example research notebooks that are developed and maintained by the community, and are freely available.</p>
+<p>In this activity, you will run pre-written Python code in a Jupyter Notebook from your browser to make plots related to the El-Niño Southern Oscillation (or ENSO). You will use the open-source software package called Xarray to read in sea surface temperature data from a global climate model (the Community Earth System Model - CESM), and create some visualizations of ENSO events across the last 20 or so years. The goal is to recreate the plot below for the last ~20 years. This figure shows the years and magnitude of the El Niño events in red and of the La Niña events in blue.</p>
+<p><img src="../images/media/image39.jpeg" class="img-fluid"></p>
+<p>Source: <a href="https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni">https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni</a></p>
+<hr>
+<p>Follow These Steps:</p>
+<ol type="1">
+<li>Navigate to the “<a href="https://foundations.projectpythia.org/core/xarray/enso-xarray.html">Calculating ENSO with Xarray</a>” lesson</li>
+<li>In the top right corner, hover your mouse over the rocket icon, and click on “Binder”. This will open the lesson as an executable Jupyter Notebook that runs on the Cloud. Note that it may take several minutes for the Notebook to get set up. <img src="../images/media/calculatingenso.jpg" class="img-fluid"></li>
+<li>After the Notebook loads, you should see something like the following. Note – this actually uses the JupyterLab view! <img src="../images/media/calculatingenso2.jpg" class="img-fluid"></li>
+<li>You can take a little time to breeze through the text and code in the Notebook, but keep in mind that this lesson assumes a lot of prior knowledge, so it’s ok if you don’t understand everything. You can still appreciate the nice plots you’re about to make!</li>
+<li>You are now ready to run the notebook yourself! To do that, you can go to the “Run” menu in the upper left of the JupyterLab window and choose “Run All Cells”: <img src="../images/media/calculatingenso3.jpg" class="img-fluid"></li>
+<li>This should only take a few seconds, and if you scroll down, you can view a couple nice visualizations that you just created:<br><em>Use the “&lt;” and “&gt;” buttons to navigate between the images.</em></li>
+</ol>
+<p><img src="../images/media/calculatingenso4.jpg" class="img-fluid"></p>
+<p><img src="../images/media/image44.jpeg" class="img-fluid"></p>
+<ol start="7" type="1">
+<li>Take some time to look through the Notebook a bit more closely. You will see that there is text (including headers, links, and even a table right at the start!), code, and figures integrated together. This is just one example of how scientists use computational notebooks for their research.</li>
+</ol>
+<p>You can peruse more of the Project Pythia Python learning resources via their <a href="https://foundations.projectpythia.org/landing-page.html">Foundations Book</a>, and you can view more advanced example research workflows in the geosciences that use computational notebooks (which they call “<a href="https://cookbooks.projectpythia.org/">Cookbooks</a>”) to see more examples of how notebooks are used in science. If you are interested in the geosciences, you can even contribute your own notebook if you have a notebook you’d like to share!</p>
+</section>
+<section id="computing-platforms" class="level3" data-number="10.6.5">
+<h3 data-number="10.6.5" class="anchored" data-anchor-id="computing-platforms"><span class="header-section-number">10.6.5</span> Computing Platforms</h3>
+<p>We use the term “computing platform” to refer to the computational machine used to run code. There are many different computing platforms that you can choose, each having their own pros and cons. Here is an overview of three computing options:</p>
+<section id="personal-computer-e.g.-a-laptop" class="level4" data-number="10.6.5.1">
+<h4 data-number="10.6.5.1" class="anchored" data-anchor-id="personal-computer-e.g.-a-laptop"><span class="header-section-number">10.6.5.1</span> Personal Computer (e.g.&nbsp;a laptop)</h4>
+<p>Pros: - Convenient - Can run computations when and where you choose - Can tailor the software environment to be exactly what you need - Don’t have to share your computing resources</p>
+<p>Cons: - Has limited computational power - Requires downloading data and software</p>
+</section>
+<section id="high-performance-computing-hpc" class="level4" data-number="10.6.5.2">
+<h4 data-number="10.6.5.2" class="anchored" data-anchor-id="high-performance-computing-hpc"><span class="header-section-number">10.6.5.2</span> High Performance Computing (HPC)</h4>
+<p>Pros: - High computational power</p>
+<p>Cons: - Typically owned and run by a particular institution - may need to be affiliated with that institution to gain access to their HPC - May have to wait significant amounts of time to run your code, since they are typically shared across many people and groups - Need significant funds to build an HPC</p>
+</section>
+<section id="cloud-computing" class="level4" data-number="10.6.5.3">
+<h4 data-number="10.6.5.3" class="anchored" data-anchor-id="cloud-computing"><span class="header-section-number">10.6.5.3</span> Cloud Computing</h4>
+<p>Pros: - Extremely high computational power - Minimal wait times to run code - Typically accessible to anyone with an internet connection - On-demand pricing options - You only have to pay for what you use</p>
+<p>Cons: - High cost per computation - Lack of transparency in costs - E.g. it can cost significant amounts to read in data from different Cloud regions, but may not always be clear which region your data and compute are in - May require some extra knowledge in how Cloud computing works</p>
+<p>Examples of Cloud providers: - Amazon Web Services (AWS) - Google Cloud - Microsoft Azure</p>
+<p>Many data providers, especially of large datasets, are migrating their data to the Cloud to increase accessibility and to make use of the large storage capacity that the Cloud provides. For instance, NASA Earthdata (which houses all NASA Earth science data) is now using AWS to store the majority of its data. Many Cloud providers also have a number of publicly available datasets, including <a href="https://cloud.google.com/storage/docs/public-datasets/#%3A~%3Atext%3DAvailable%20public%20datasets%20on%20Cloud%20Storage%201%20ERA5%3A%2Cfrom%202015%20through%20the%20present.%20...%20More%20items">Google Cloud</a> and <a href="https://registry.opendata.aws/">AWS</a><a href="https://cloud.google.com/storage/docs/public-datasets/#%3A~%3Atext%3DAvailable%20public%20datasets%20on%20Cloud%20Storage%201%20ERA5%3A%2Cfrom%202015%20through%20the%20present.%20...%20More%20items">.</a></p>
+<p>When choosing a computing platform, it is important to consider where your datasets are saved and how big the datasets are. For instance, when working with small datasets, it is often preferable to use a personal computer since data download will take minimal time and large computing resources likely aren’t needed. When working with large datasets, however, it is best to minimize the amount of downloading and uploading data that is needed, as this can take significant amounts of time and internet bandwidth. If your large datasets are stored on the Cloud already, it is typically best to use Cloud resources for the computation as well, and likewise for HPC use.</p>
+</section>
+</section>
+</section>
+<section id="additional-tools" class="level2" data-number="10.7">
+<h2 data-number="10.7" class="anchored" data-anchor-id="additional-tools"><span class="header-section-number">10.7</span> Additional Tools</h2>
+<section id="software-repository-vs-archive" class="level3" data-number="10.7.1">
+<h3 data-number="10.7.1" class="anchored" data-anchor-id="software-repository-vs-archive"><span class="header-section-number">10.7.1</span> Software Repository vs Archive</h3>
+<p>Software repositories and archives provide centralized locations to store and share software, but there are some important key differences between them that we will discuss in this section.</p>
+<p>A software repository is a dynamic and collaborative space where developers work on the latest code, making it the heart of ongoing software development and version control. It houses actively maintained codebases, which encourages collaboration and continuous, often community-driven, improvement.</p>
+<p>Conversely, a software archive is static storage where stable and thoroughly tested software releases are kept. Users access these archives to obtain reliable versions of software, ensuring stability and reliability in their applications. Understanding the difference between these two is crucial for effective software development and distribution.</p>
+<p><img src="../images/media/image45.png" style="width:350px;height:auto;"></p>
+<p>Git/GitHub and Bitbucket are popular choices for software repositories.</p>
+<table>
+<thead>
+<tr>
+<th>
+Repository ☑
+</th>
+<th>
+Archive
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<ul>
+<li>
+Is a location for sharing code.
+</li>
+<li>
+Often use version control systems like Git, Mercurial, and Subversion to track changes
+</li>
+<li>
+Typically contains the latest development version (sometimes called the “master” or “trunk”) of a software project, which can be actively worked on by developers.
+</li>
+<li>
+Used for collaborative software development and code sharing among a team or a community of developers.
+</li>
+</ul>
+<p>
+<strong>Important note:</strong> A repository is nothing more than a place for hosting code. These days, a version control system and a repository are often one and the same thing. It is important to understand the distinction. However, some websites are purely dropboxes for code executables or zip files of source code.
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+Repository
+</th>
+<th>
+Archive ☑
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<ul>
+<li>
+Often used for distribution and long-term preservation of software.
+</li>
+<li>
+A storage system that contains specific, stable releases or versions of software, compiled binary packages, or source code releases.
+</li>
+<li>
+Users typically download software from an archive to install and use it on their systems.
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Containers</strong></p>
+<p>A software container is a standalone, and executable package that includes everything needed to run a piece of software, including the code, runtime, system tools, environment settings, and libraries. Containers are isolated environments that hold the application as well as anything needed to run the application, ensuring consistency and portability across different computing environments. A container is a helpful tool that can provide efficiency, scalability, and ease of deployment. Some examples of widely utilized container tools are Kubernetes, Docker, and Apache Mesos.</p>
+</section>
+<section id="activity-4.2-match-tools" class="level3" data-number="10.7.2">
+<h3 data-number="10.7.2" class="anchored" data-anchor-id="activity-4.2-match-tools"><span class="header-section-number">10.7.2</span> Activity 4.2: Match Tools</h3>
+<p>Match each item to their description:</p>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr>
+<td>
+Integrated development environment (IDE)
+</td>
+<td>
+Enhanced text editor for code. Assists with identifying syntax and constructs of code
+</td>
+</tr>
+<tr>
+<td>
+Software archive
+</td>
+<td>
+Static storage where stable and thoroughly test software releases are kept.
+</td>
+</tr>
+<tr>
+<td>
+Version control platform
+</td>
+<td>
+Tool that helps software developers manage and track changes in
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="lesson-4-summary" class="level2" data-number="10.8">
+<h2 data-number="10.8" class="anchored" data-anchor-id="lesson-4-summary"><span class="header-section-number">10.8</span> Lesson 4: Summary</h2>
+<p>In this lesson, you learned: - The usefulness of digital tools that manage, foster collaboration, and house open code. - How version control systems like Git and platforms like GitHub can increase collaboration and management of code. - Some common tools for editing open code, including integrated development environments (IDEs) like Visual Studio Code and Jupyter Notebooks. - The difference between software repositories and archives, and also how software containers can help with the sharing and reproducibility of code.</p>
+</section>
+<section id="lesson-4-knowledge-check" class="level2" data-number="10.9">
+<h2 data-number="10.9" class="anchored" data-anchor-id="lesson-4-knowledge-check"><span class="header-section-number">10.9</span> Lesson 4: Knowledge Check</h2>
+<p>Answer the following questions to test what you have learned so far.</p>
+<p><em>Question</em></p>
+<p><strong>01/03</strong></p>
+<p>Which is NOT a benefit to using version control and version control platforms?</p>
+<ul>
+<li>Ability to track changes that have been made</li>
+<li>You cannot go back to make changes</li>
+<li>Ease of code collaboration with others</li>
+<li>Directory clean from clutter - no need for multiple copies of files</li>
+<li>A very targeted backup system for your work</li>
+</ul>
+<p><em>Question</em></p>
+<p><strong>02/03</strong></p>
+<p>An interactive computing environment that combines code execution, documentation, and data visualization in a single interface is known as a:</p>
+<ul>
+<li>Version Control Platform</li>
+<li>Software Repository</li>
+<li>Computational Notebook</li>
+<li>Container</li>
+</ul>
+<p><em>Question</em></p>
+<p><strong>03/03</strong></p>
+<p>A software repository and a software archive are the same thing.</p>
+<ul>
+<li>True</li>
+<li>False</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/forrt\.org\/Transform-to-Open-Science-Book");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../Open-Science-101/Module_2/Lesson_3/readme.html" class="pagination-link" aria-label="Lesson 3: Tools for Open Data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lesson 3: Tools for Open Data</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../Open-Science-101/Module_2/Lesson_5/readme.html" class="pagination-link" aria-label="Lesson 5: Tools for Open Results">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Lesson 5: Tools for Open Results</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/edit/main/Open-Science-101/Module_2/Lesson_4/readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

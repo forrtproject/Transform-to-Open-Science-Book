@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="TOPS Collaboration">
+
+<title>23&nbsp; Lesson 2: Using Open Results – TOPS Open Science 101</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../Open-Science-101/Module_5/Lesson_3/readme.html" rel="next">
+<link href="../../../Open-Science-101/Module_5/Lesson_1/readme.html" rel="prev">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_5/readme.html">OS101 Module 5: Open Results</a></li><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_5/Lesson_2/readme.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Results</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../">TOPS Open Science 101</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/forrtproject/Transform-to-Open-Science-Book" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../../../TOPS-Open-Science-101.pdf">
+              <i class="bi bi-file-pdf pe-1"></i>
+            Download PDF
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="../../../TOPS-Open-Science-101.epub">
+              <i class="bi bi-journal pe-1"></i>
+            Download ePub
+            </a>
+          </li>
+      </ul>
+    </div>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transform to Open Science</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/README.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Open Science 101 Curriculum</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 1: The Ethos of Open Science</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lesson 1: What is Open Science?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Lesson 2: Why is Open Science Important?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lesson 3: How to do Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lesson 4: When Not to be Open</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_1/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lesson 5: Planning for Open Science: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 2: Open Tools and Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to the Process of Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Lesson 2: General Tools for Open Science</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Lesson 3: Tools for Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lesson 4: Tools for Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_2/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Lesson 5: Tools for Open Results</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 3: Open Data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_3/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 4: Open Code</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_2/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Code</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_4/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../Open-Science-101/Module_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OS101 Module 5: Open Results</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_1/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_2/readme.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_3/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_4/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Lesson 4: Sharing Open Results</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Open-Science-101/Module_5/Lesson_5/readme.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Lesson 5: From Theory to Practice</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../About/About-Announcements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About Transform to Open Science</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../About/tops_faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Frequently Asked Questions</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#navigation" id="toc-navigation" class="nav-link active" data-scroll-target="#navigation"><span class="header-section-number">23.1</span> Navigation</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview"><span class="header-section-number">23.2</span> Overview</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">23.3</span> Learning Objectives</a></li>
+  <li><a href="#how-to-discover-open-results" id="toc-how-to-discover-open-results" class="nav-link" data-scroll-target="#how-to-discover-open-results"><span class="header-section-number">23.4</span> How to Discover Open Results</a>
+  <ul class="collapse">
+  <li><a href="#example-exoplanets" id="toc-example-exoplanets" class="nav-link" data-scroll-target="#example-exoplanets"><span class="header-section-number">23.4.1</span> Example: Exoplanets</a></li>
+  </ul></li>
+  <li><a href="#how-to-assess-open-results" id="toc-how-to-assess-open-results" class="nav-link" data-scroll-target="#how-to-assess-open-results"><span class="header-section-number">23.5</span> How to Assess Open Results</a>
+  <ul class="collapse">
+  <li><a href="#attributes-of-reputable-material" id="toc-attributes-of-reputable-material" class="nav-link" data-scroll-target="#attributes-of-reputable-material"><span class="header-section-number">23.5.1</span> Attributes of Reputable Material</a></li>
+  </ul></li>
+  <li><a href="#how-to-use-open-results" id="toc-how-to-use-open-results" class="nav-link" data-scroll-target="#how-to-use-open-results"><span class="header-section-number">23.6</span> How to Use Open Results</a>
+  <ul class="collapse">
+  <li><a href="#how-to-contribute-and-provide-constructive-feedback" id="toc-how-to-contribute-and-provide-constructive-feedback" class="nav-link" data-scroll-target="#how-to-contribute-and-provide-constructive-feedback"><span class="header-section-number">23.6.1</span> How to Contribute and Provide Constructive Feedback</a></li>
+  <li><a href="#your-responsibilities-as-an-open-results-user" id="toc-your-responsibilities-as-an-open-results-user" class="nav-link" data-scroll-target="#your-responsibilities-as-an-open-results-user"><span class="header-section-number">23.6.2</span> Your Responsibilities as an Open Results User</a></li>
+  <li><a href="#different-ways-to-provide-feedback" id="toc-different-ways-to-provide-feedback" class="nav-link" data-scroll-target="#different-ways-to-provide-feedback"><span class="header-section-number">23.6.3</span> Different Ways to Provide Feedback</a></li>
+  <li><a href="#getting-credit-for-providing-feedback" id="toc-getting-credit-for-providing-feedback" class="nav-link" data-scroll-target="#getting-credit-for-providing-feedback"><span class="header-section-number">23.6.4</span> Getting Credit for Providing Feedback</a></li>
+  <li><a href="#open-results-user-responsibilities" id="toc-open-results-user-responsibilities" class="nav-link" data-scroll-target="#open-results-user-responsibilities"><span class="header-section-number">23.6.5</span> Open Results User Responsibilities</a></li>
+  <li><a href="#avoid-plagiarism-when-using-open-results" id="toc-avoid-plagiarism-when-using-open-results" class="nav-link" data-scroll-target="#avoid-plagiarism-when-using-open-results"><span class="header-section-number">23.6.6</span> Avoid Plagiarism When Using Open Results</a></li>
+  </ul></li>
+  <li><a href="#how-to-cite-open-results" id="toc-how-to-cite-open-results" class="nav-link" data-scroll-target="#how-to-cite-open-results"><span class="header-section-number">23.7</span> How to Cite Open Results</a>
+  <ul class="collapse">
+  <li><a href="#citation-guidelines-for-published-versus-unpublished-results" id="toc-citation-guidelines-for-published-versus-unpublished-results" class="nav-link" data-scroll-target="#citation-guidelines-for-published-versus-unpublished-results"><span class="header-section-number">23.7.1</span> Citation Guidelines for Published Versus Unpublished Results</a></li>
+  <li><a href="#examples-of-giving-credit" id="toc-examples-of-giving-credit" class="nav-link" data-scroll-target="#examples-of-giving-credit"><span class="header-section-number">23.7.2</span> Examples of Giving Credit</a></li>
+  </ul></li>
+  <li><a href="#lesson-2-summary" id="toc-lesson-2-summary" class="nav-link" data-scroll-target="#lesson-2-summary"><span class="header-section-number">23.8</span> Lesson 2: Summary</a></li>
+  <li><a href="#lesson-2-knowledge-check" id="toc-lesson-2-knowledge-check" class="nav-link" data-scroll-target="#lesson-2-knowledge-check"><span class="header-section-number">23.9</span> Lesson 2: Knowledge Check</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/edit/main/Open-Science-101/Module_5/Lesson_2/readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_5/readme.html">OS101 Module 5: Open Results</a></li><li class="breadcrumb-item"><a href="../../../Open-Science-101/Module_5/Lesson_2/readme.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Results</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Lesson 2: Using Open Results</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="navigation" class="level2" data-number="23.1">
+<h2 data-number="23.1" class="anchored" data-anchor-id="navigation"><span class="header-section-number">23.1</span> Navigation</h2>
+<ul>
+<li><a href="#how-to-discover-open-results">How to Discover Open Results</a></li>
+<li><a href="#how-to-assess-open-results">How to Assess Open Results</a></li>
+<li><a href="#how-to-use-open-results">How to Use Open Results</a></li>
+<li><a href="#how-to-cite-open-results">How to Cite Open Results</a></li>
+<li><a href="#lesson-2-summary">Lesson 2: Summary</a></li>
+<li><a href="#lesson-2-knowledge-check">Lesson 2: Knowledge Check</a></li>
+</ul>
+</section>
+<section id="overview" class="level2" data-number="23.2">
+<h2 data-number="23.2" class="anchored" data-anchor-id="overview"><span class="header-section-number">23.2</span> Overview</h2>
+<p>By the end of this lesson, you will be familiar with resources for open results utilization, how and when to cite the sources of the open results that you use, how to provide feedback to open results providers, and how to determine when it is appropriate to invite authors of the open results materials to be formal collaborators versus simply citing those resources in your work.</p>
+<p>Published articles, blog posts, and forums can lead to new ideas for your own research. A technique learned from social media can be applied to a use-case that you are trying to solve. There are many different ways to discover results.</p>
+</section>
+<section id="learning-objectives" class="level2" data-number="23.3">
+<h2 data-number="23.3" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">23.3</span> Learning Objectives</h2>
+<p>After completing this lesson, you should be able to:</p>
+<ul>
+<li>Identify a variety of open results sources including both published science research and non-traditional sources.</li>
+<li>Evaluate the reliability and quality of open results sources based on key characteristics.</li>
+<li>List the responsibilities of an open results user, including providing feedback to open results developers.</li>
+<li>List the ways to cite open results into your own research process.</li>
+</ul>
+</section>
+<section id="how-to-discover-open-results" class="level2" data-number="23.4">
+<h2 data-number="23.4" class="anchored" data-anchor-id="how-to-discover-open-results"><span class="header-section-number">23.4</span> How to Discover Open Results</h2>
+<p>How do I learn about the state of research for a particular field? How do you engage in the current conversation? Researchers often begin with a search of peer-reviewed articles. This review tells you how much research has been done in a field and what conclusions have recently been reached. In most fields, going through the peer-review process can take up to a year. The ability to find pre-prints can help reduce this delay because they offer the latest findings before a publication date. However, researchers who choose to share their results before publication typically do so in the ways listed as best practices above. As you start research on a topic, how do you find all these different types of results and engage in the most relevant research?</p>
+<section id="example-exoplanets" class="level3" data-number="23.4.1">
+<h3 data-number="23.4.1" class="anchored" data-anchor-id="example-exoplanets"><span class="header-section-number">23.4.1</span> Example: Exoplanets</h3>
+<p>The various stages of research, from conceptualization to dissemination of results, produce products that can be put into the public domain as “Open Results”. Where these results are archived, and to what degree, depends on the discipline author. However, some general guidelines on where to start a search on open results include:</p>
+<ol type="1">
+<li>Scholarly Search Portals</li>
+<li>Web Searches</li>
+</ol>
+<p><strong>Scholarly Search Portals</strong></p>
+<p>Search engines like Google and Bing have radically changed how we look up information. For research results, specialized academic search engines and portals curate scientific results from researchers based on topic and field. These engines are useful for finding peer-reviewed articles.</p>
+<table>
+<thead>
+<tr>
+<th>
+GENERIC ☑
+</th>
+<th>
+DISCIPLINE-SPECIFIC
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<ul>
+<li>
+<a href="https://scholar.google.com/">Google Scholar</a>
+</li>
+<li>
+<a href="https://ui.adsabs.harvard.edu/">ADS</a>
+</li>
+<li>
+<a href="https://www.scopus.com/">Scopus</a>
+</li>
+<li>
+Web of Knowledge
+</li>
+<li>
+<a href="https://openknowledgemaps.org/">Open knowledge map</a> - facilitates exploration of interconnected topics
+</li>
+<li>
+<a href="https://www.jstor.org/">JSTOR</a> - a wide range of scholarly content
+</li>
+<li>
+<a href="https://www.researchgate.net/search">ResearchGate</a>
+</li>
+<li>
+<a href="https://sciencecast.org/">ScienceCast</a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+GENERIC
+</th>
+<th>
+DISCIPLINE-SPECIFIC ☑
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<ul>
+<li>
+<a href="https://europepmc.org/">EuropePMC Life sciences</a>
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/">Pubmed biomedical literature</a>
+</li>
+<li>
+<a href="https://arxiv.org/">arXiv</a> - for scholarly pre-prints in STEM, economics and computer science fields
+</li>
+<li>
+<a href="https://www.biorxiv.org/">Biorxiv Preprint</a> - server for biology
+</li>
+<li>
+<a href="https://eartharxiv.org/">EarthArXiv</a> and <a href="https://essoar.org/">Earth and Space Science Open Archive</a>
+</li>
+<li>
+<a href="https://asapbio.org/preprint-servers">ASAPbio</a> - catalogs of preprint servers
+</li>
+<li>
+and others…
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Publications that provide some levels of open access are tracked in the <a href="https://doaj.org/">Directory of Open Access Journals (DOAJ).</a></p>
+<p><strong>Web Searches</strong></p>
+<p>Open results include much more than open-access peer-reviewed publications. How do you find these alternative types of research objects?</p>
+<p>Open communities and forums offer the best way to find research objects other than complete publications. How do you even find out whether these exist and where they are?</p>
+<p>Once you have found a few peer-reviewed articles that are highly relevant, to find additional research objects, you can follow the authors on social media for links to their posts, blogs, and activities. There are open communities in almost every area of research - find yours! Here are different platforms to locate these conversations and resources:</p>
+<ul>
+<li>GitHub</li>
+<li>LinkedIn</li>
+<li>YouTube</li>
+<li>Google/Bing</li>
+<li>Conference websites</li>
+<li>X, formally known as Twitter</li>
+<li>Facebook</li>
+<li>Medium</li>
+<li>Substack</li>
+<li>Stack Overflow</li>
+<li>Reddit</li>
+<li>Mastodon</li>
+</ul>
+<p>Various research objects, including datasets and software, are frequently attached to scholarly publications in the form of supplemental material. At other times, the source is referenced in the paper, which could be a GitHub repository, personal/institutional website, or other storage site. This can be another starting point, by engaging in discussions on the GitHub repository.</p>
+<p><strong>Kerchunk Example:</strong> In lesson 1, a blog post about a software library ‘kerchunk’ was presented. Let’s look at a <a href="https://discourse.pangeo.io/t/trick-for-improving-kerchunk-performance-for-large-numbers-of-chunks-files/3090">post</a> on the <a href="https://discourse.pangeo.io/">Pangeo Discourse Forum</a> of Kerchunk with a large number of views. The open science <a href="https://pangeo.io/">Pangeo project</a> worked completely in the open. The <a href="https://pangeo.io/">project website</a> (run off of GitHub) has links to blog posts, a discussion forum, and a calendar to all their meetings which anyone was welcome to join. This has resulted in an engaged and dynamic community. An example of this comes from the post linked to above, where one person asks for help, others reply, and the conversation is documented in the open. The post’s 636 views indicate that this question, or one similar, has occurred to others. Imagine if this had been done over private email? By working in the open, they are improving science and helping everyone become faster and more accurate.</p>
+</section>
+</section>
+<section id="how-to-assess-open-results" class="level2" data-number="23.5">
+<h2 data-number="23.5" class="anchored" data-anchor-id="how-to-assess-open-results"><span class="header-section-number">23.5</span> How to Assess Open Results</h2>
+<p>“Garbage in, garbage out” – your own research products are only as good as the data used in your investigation.</p>
+<p>If you use poor quality data or materials from unreliable and unvetted sources as critical components of your research, you run the risk of producing flawed, or low-quality science that may harm your reputation as a scientist. Therefore, it is critical to assess the quality and reliability of open-results sources before you include them in your own work.</p>
+<p>What are best practices for assessing the quality of alternative sources of data to research articles such as blog posts, youtube videos, and other research objects?</p>
+<section id="attributes-of-reputable-material" class="level3" data-number="23.5.1">
+<h3 data-number="23.5.1" class="anchored" data-anchor-id="attributes-of-reputable-material"><span class="header-section-number">23.5.1</span> Attributes of Reputable Material</h3>
+<p>Let’s take a look at the questions you might consider asking yourself when determining the reliability of any type of open results source.</p>
+<p>Here, we list questions under two categories: the open results material themselves, and the server they are downloaded from. The more questions here that can be answered in the affirmative, the lower the risk in utilizing the open results materials for your own research.</p>
+<table>
+<thead>
+<tr>
+<th>
+THE MATERIAL ITSELF ☑
+</th>
+<th>
+THE ASSOCIATED WEBSITE / SERVER
+</th>
+<th>
+SOURCE RELIABILITY INDICATORS
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">
+<ul>
+<li>
+Is the material associated with a peer-reviewed publication?
+</li>
+<li>
+Are the primary data associated with the results also open-source?
+</li>
+<li>
+Is code used to generate the Open Results materials also open-source?
+</li>
+<li>
+Are all fields and parameters clearly defined?
+</li>
+<li>
+Is the derivation of measurement uncertainties clearly described?
+</li>
+<li>
+Were any data or results excluded, and if so, were criteria provided?
+</li>
+<li>
+Are authoring teams also members of the field?
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+THE MATERIAL ITSELF
+</th>
+<th>
+THE ASSOCIATED WEBSITE / SERVER ☑
+</th>
+<th>
+SOURCE RELIABILITY INDICATORS
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">
+<ul>
+<li>
+Does the host website’s URL end in .edu, .gov or (if managed by a non-profit organization) in .org?
+</li>
+<li>
+Does the host website provide contact information of the author and/or organization?
+</li>
+<li>
+Is the host website updated on a frequent basis?
+</li>
+<li>
+Is the host website free of advertisements and/or sponsored content, the presence of which could indicate bias?
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+THE MATERIAL ITSELF
+</th>
+<th>
+THE ASSOCIATED WEBSITE / SERVER
+</th>
+<th>
+SOURCE RELIABILITY INDICATORS ☑
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">
+<ul>
+<li>
+Is the result reproducible? Can you interact with the data and results? Have others reported being able to reproduce the results?
+</li>
+<li>
+Is the author reliable? Have you seen them publish or share results in other forums?
+</li>
+<li>
+Is the result from only a single author/voice or includes contributions from a broader community?
+</li>
+<li>
+Does the post have a significant amount of likes/views and public comments? The value of a blog post with no comments or responses can be difficult to assess. Conversely, a thorough github discussion forum with multiple views shared indicated a robust post.
+</li>
+<li>
+Is the result part of an active conversation? (Is the information still relevant and current?)
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Adapted from <a href="https://www.scribbr.com/working-with-sources/credible-sources/">https://www.scribbr.com/working-with-sources/credible-sources/</a></p>
+<p>Note that failure to meet one or many of the criteria does not automatically mean that the open results are of poor quality, but rather that more caution should be exercised if incorporated into your own research. It also means that you will have to invest more personal vetting of the material to ensure its quality is sufficient for your purposes.</p>
+<p>Reliable Example: Qiusheng Wu YouTube videos (as mentioned in the previous lesson). Professor Wu is an expert in his field. He presents results along with notebooks that demonstrate reproducibility. Comments on his YouTube tutorial videos represent meaningful interactions between users reproducing results and the author.</p>
+</section>
+</section>
+<section id="how-to-use-open-results" class="level2" data-number="23.6">
+<h2 data-number="23.6" class="anchored" data-anchor-id="how-to-use-open-results"><span class="header-section-number">23.6</span> How to Use Open Results</h2>
+<p>While open results benefit science and have already provided valuable societal benefits, the misuse and incautious sharing of open materials can have far-reaching harmful effects. The end-user of open results bears the responsibility to ensure that the data they reference are used in a responsible manner and that any relevant guidelines for the use of the data are followed.</p>
+<section id="how-to-contribute-and-provide-constructive-feedback" class="level3" data-number="23.6.1">
+<h3 data-number="23.6.1" class="anchored" data-anchor-id="how-to-contribute-and-provide-constructive-feedback"><span class="header-section-number">23.6.1</span> How to Contribute and Provide Constructive Feedback</h3>
+<p>Contributing to and providing constructive feedback are vital components for a healthy open access ecosystem, ensuring long-term sustainability of the open resources by providing continual improvements and capability expansions.</p>
+<p>In our current system, there are results creators and consumers. This scenario presents a one way street with no feedback loop, no sharing of data back to publishers, and no sharing between intermediaries.</p>
+<p>The practice of producing open results aims to foster a system where feedback loops exist between users and makers. Users share their cleaned, integrated, or improved work to the maker. This feedback creates a symbiotic and sustainable process where everyone benefits.</p>
+</section>
+<section id="your-responsibilities-as-an-open-results-user" class="level3" data-number="23.6.2">
+<h3 data-number="23.6.2" class="anchored" data-anchor-id="your-responsibilities-as-an-open-results-user"><span class="header-section-number">23.6.2</span> Your Responsibilities as an Open Results User</h3>
+<ul>
+<li>Users should familiarize themselves with contributor guidelines posted to open result repositories and follow the associated policies. What if there aren’t contributor guidelines? Contact the creators!</li>
+<li>Always provide feedback in a respectful and supportive manner.</li>
+<li>If you discover an error in Open Results materials, the ethical action to take is to contact the author (or repository, depending on the nature of the issue) and give them the opportunity to correct the problem, rather than ignoring the issue or (worse!) taking advantage of a fixable issue to elevate your own research.</li>
+</ul>
+</section>
+<section id="different-ways-to-provide-feedback" class="level3" data-number="23.6.3">
+<h3 data-number="23.6.3" class="anchored" data-anchor-id="different-ways-to-provide-feedback"><span class="header-section-number">23.6.3</span> Different Ways to Provide Feedback</h3>
+<section id="use-github-issues" class="level4" data-number="23.6.3.1">
+<h4 data-number="23.6.3.1" class="anchored" data-anchor-id="use-github-issues"><span class="header-section-number">23.6.3.1</span> Use Github Issues</h4>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr>
+<td>
+<img src="../images/media/image29.png" style="width:100%;height:auto;">
+</td>
+<td>
+Pro: The feedback is open and other community members can see ongoing issues that are being addressed.
+</td>
+</tr>
+<tr>
+<td>
+<img src="../images/media/image29.png" style="width:100%;height:auto;">
+</td>
+<td>
+Pro: Contribution is archived and logged on GitHub.
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Working with GitHub Issues</strong></p>
+<p>See this blog for general issue etiquette</p>
+<p><a href="https://www.w3.org/International/i18n-activity/guidelines/issues.html">OPEN</a></p>
+</section>
+<section id="email-authors" class="level4" data-number="23.6.3.2">
+<h4 data-number="23.6.3.2" class="anchored" data-anchor-id="email-authors"><span class="header-section-number">23.6.3.2</span> Email authors</h4>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr>
+<td>
+<img src="../images/media/image29.png" style="width:100%;height:auto;">
+</td>
+<td>
+Con: the feedback is closed. The information is generally not propagated back to the community unless the creator creates a new version.
+</td>
+</tr>
+<tr>
+<td>
+<img src="../images/media/image29.png" style="width:100%;height:auto;">
+</td>
+<td>
+Con: No way of tracking credit.
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="getting-credit-for-providing-feedback" class="level3" data-number="23.6.4">
+<h3 data-number="23.6.4" class="anchored" data-anchor-id="getting-credit-for-providing-feedback"><span class="header-section-number">23.6.4</span> Getting Credit for Providing Feedback</h3>
+<p>If your feedback results in a substantial intellectual contribution to the work, it is reasonable for you to expect an opportunity for co-authorship in a future version of the open result. The associated contribution guidelines should address this possibility and manage expectations prior to your providing feedback.</p>
+<p>Sadly, many times contributor guidelines do not exist and it is not clear what is “substantial”.</p>
+</section>
+<section id="open-results-user-responsibilities" class="level3" data-number="23.6.5">
+<h3 data-number="23.6.5" class="anchored" data-anchor-id="open-results-user-responsibilities"><span class="header-section-number">23.6.5</span> Open Results User Responsibilities</h3>
+<ul>
+<li><strong>Institutional Security Compliance:</strong> Always download code from an authoritative source and be familiar with / follow your institution’s IT security policies.</li>
+<li><strong>Licensing Policies:</strong> Understand and abide by the license(s) associated with the open results materials being used.</li>
+<li><strong>Attribution and Contribution:</strong> Provide appropriate attribution for the open results used and contribute to the open results community.</li>
+</ul>
+<p>Additionally, give credit to repositories that provide open source materials in the acknowledgement section of your paper. If the repository provides an acknowledgments template in their “About” link, follow that suggestion. Otherwise, a generic “This research has made use of &lt;insert repository name&gt;.” will be sufficient.</p>
+</section>
+<section id="avoid-plagiarism-when-using-open-results" class="level3" data-number="23.6.6">
+<h3 data-number="23.6.6" class="anchored" data-anchor-id="avoid-plagiarism-when-using-open-results"><span class="header-section-number">23.6.6</span> Avoid Plagiarism When Using Open Results</h3>
+<p>Standard guidelines that you’ve been using in your research all along for providing appropriate attribution and citations of closed access publications also apply to open access published works.</p>
+<p>Examples of plagiarism include:</p>
+<ul>
+<li>Word-for-word copying without permission and source acknowledgement.</li>
+<li>Copying components (tables, processes, equipment) without source attribution.</li>
+<li>Paraphrasing an idea without proper source referencing.</li>
+<li>Recycling one’s own past work and presenting as a new paper.</li>
+</ul>
+<section id="factsheet-plagiarism" class="level4" data-number="23.6.6.1">
+<h4 data-number="23.6.6.1" class="anchored" data-anchor-id="factsheet-plagiarism"><span class="header-section-number">23.6.6.1</span> FACTSHEET: Plagiarism</h4>
+<p><strong>Here is a useful guide regarding the different forms of plagiarism</strong></p>
+<p><a href="https://www.elsevier.com/editor/perk/plagiarism-complaints#0-introduction">CLICK TO LEARN</a></p>
+</section>
+</section>
+</section>
+<section id="how-to-cite-open-results" class="level2" data-number="23.7">
+<h2 data-number="23.7" class="anchored" data-anchor-id="how-to-cite-open-results"><span class="header-section-number">23.7</span> How to Cite Open Results</h2>
+<p>Giving proper attribution to open results is an important and ethical responsibility for using open a source materials. The process for citation is specific to the nature of the material.</p>
+<section id="citation-guidelines-for-published-versus-unpublished-results" class="level3" data-number="23.7.1">
+<h3 data-number="23.7.1" class="anchored" data-anchor-id="citation-guidelines-for-published-versus-unpublished-results"><span class="header-section-number">23.7.1</span> Citation Guidelines for Published Versus Unpublished Results</h3>
+<p>If a paper has been formally published in a journal, then your citation should point to the published version rather than to a preprint server.</p>
+<p>Take the time to locate the originating journal to provide an accurate citation.</p>
+<p><img src="../images/media/image31.png" style="width:100%;height:auto;"></p>
+<p>Preprint Server (Cite only if journal publication not available)</p>
+<hr>
+<p><img src="../images/media/image32.png" style="width:100%;height:auto;"></p>
+<p>Source Publication (Always cite)</p>
+<hr>
+<p>If a paper that you wish to cite is not yet accepted for publication, you should follow the guidelines of the journal to which you are submitting your paper. A preprint reference citation typically includes author name(s), date of the most recent version posted, paper title, name of the preprint server, object type (“preprint”), and the DOI.</p>
+<p><img src="../images/media/image33.png" style="width:100%;height:auto;"></p>
+<p>At the time of the Lesson preparation, the following paper did not yet appear as a journal publication.</p>
+<p>Jin, H., et al.&nbsp;2023, “Optical color of Type Ib and Ic supernovae and implications for their progenitors,” ApJ, preprint, arXiv:2304.10670.</p>
+<hr>
+<table>
+<thead>
+<tr>
+<th>
+FOR MATERIAL THAT HAS A DOI ☑
+</th>
+<th>
+FOR MATERIAL THAT DOES NOT HAVE A DOI
+</th>
+<th>
+FOR OTHER MATERIALS OR INTERACTIONS THAT WERE HELPFUL FOR YOUR RESEARCH
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">
+<p>
+To cite all of the following, follow existing guidelines and community best practices:
+</p>
+<ul>
+<li>
+Cite publications
+</li>
+<li>
+Cite data
+</li>
+<li>
+Cite software
+</li>
+<li>
+Cite any other object with a DOI. Since many journals will only allow authors to cite material that has a DOI, what do you do with other types of open results?
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+FOR MATERIAL THAT HAS A DOI
+</th>
+<th>
+FOR MATERIAL THAT DOES NOT HAVE A DOI ☑
+</th>
+<th>
+FOR OTHER MATERIALS OR INTERACTIONS THAT WERE HELPFUL FOR YOUR RESEARCH
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">
+<p>
+Examples include blog posts, videos, and notebooks.
+</p>
+<ul>
+<li>
+You could also contact the author and ask them to obtain a DOI.
+</li>
+<li>
+Leave a comment in the comments section or on the forum letting the author know about your publication.
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+FOR MATERIAL THAT HAS A DOI
+</th>
+<th>
+FOR MATERIAL THAT DOES NOT HAVE A DOI
+</th>
+<th>
+FOR OTHER MATERIALS OR INTERACTIONS THAT WERE HELPFUL FOR YOUR RESEARCH ☑
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="3">
+<ul>
+<li>
+Acknowledge communities and forums that helped you advance your research in the Acknowledgements Section. Not only does this give them credit, but it helps others find those communities.
+</li>
+<li>
+Citing open research results advances science by giving appropriate credit for all parts of the research process. This is essential for the cultural shift to open science; we must give credit for all types of contributions, and expect them in return. Participatory science allows more people, from more places, with different voices and experiences to participate in science.
+</li>
+<li>
+Contributing and collaborating this way lowers the barriers (like conference fees) to participating in science and broadens who can participate.
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="examples-of-giving-credit" class="level3" data-number="23.7.2">
+<h3 data-number="23.7.2" class="anchored" data-anchor-id="examples-of-giving-credit"><span class="header-section-number">23.7.2</span> Examples of Giving Credit</h3>
+<p>In the Lesson 1 blog post <a href="https://medium.com/pangeo/fake-it-until-you-make-it-reading-goes-netcdf4-data-on-aws-s3-as-zarr-for-rapid-data-access-61e33f8fe685">example</a>, researchers acknowledged people they worked with in an article they wrote that they found helpful, and two different communities, as well as the computational environment they worked on. This is a great example of giving credit: “I would like to thank Rich Signell (USGS) and Martin Durant (Anaconda) for their help in learning this process. If you’re interested in seeing more detail on how this works, I recommend Rich’s article from 2020 on the topic. I would also like to recognize <a href="https://pangeo.io/">Pangeo</a> and <a href="https://pangeo-forge.org/">Pangeo-forge</a> who work hard to make working with big data in geoscience as easy as possible. Work on this project was done on the Pangeo AWS deployment.”</p>
+<p>In Lesson 1, the JWST case study was presented. The peer-reviewed <a href="https://www.nature.com/articles/s41586-022-05269-w#Ack1">publication</a> that reported the first discovery of CO2 on another planet has been accessed 18,000+ times. Notice is that the authorship is attributed to the entire team. The Acknowledgements section duly explains the contributions of their collaborators and partners, “The results reported herein benefited during the design phase from collaborations and/or information exchange within NASA’s Nexus for Exoplanet System Science (NExSS) research coordination network sponsored by NASA’s Science Mission Directorate.” Also, “All the data and models presented in this publication can be found at <a href="https://doi.org/10.5281/zenodo.6959427">https://doi.org/10.5281/zenodo.6959427</a>”. And finally, they cite all the software! “The codes used in this publication to extract, reduce and analyze the data are as follows..”</p>
+</section>
+</section>
+<section id="lesson-2-summary" class="level2" data-number="23.8">
+<h2 data-number="23.8" class="anchored" data-anchor-id="lesson-2-summary"><span class="header-section-number">23.8</span> Lesson 2: Summary</h2>
+<p>In this lesson, you learned:</p>
+<ul>
+<li>Open results can be found using both Scholarly Search Portals and Web searches.</li>
+<li>The reliability of a post can generally be evaluated by the trustworthiness of the website from which they originated from, the engagement of community members, and the scientific rigor of its content.</li>
+<li>Users of open results, as inherent stewards of the open a source community, informally carry some responsibility to contribute to the community’s sustainability. This participation includes providing feedback to open results providers and developers.</li>
+<li>Giving proper attribution to open results is an important and ethical responsibility for using open source materials. The process for citation is specific to the nature of the material.</li>
+</ul>
+</section>
+<section id="lesson-2-knowledge-check" class="level2" data-number="23.9">
+<h2 data-number="23.9" class="anchored" data-anchor-id="lesson-2-knowledge-check"><span class="header-section-number">23.9</span> Lesson 2: Knowledge Check</h2>
+<p>Answer the following questions to test what you have learned so far.</p>
+<p><em>Question</em></p>
+<p><strong>01/02</strong></p>
+<p>Which of the following could be a source of open results? Select all that apply.</p>
+<ul>
+<li>Web searches</li>
+<li>Papers accessed through a paid subscription</li>
+<li>Materials made public after a 1-year exclusive-use/paid-subscription-only period</li>
+<li>Repositories</li>
+<li>Open access papers</li>
+</ul>
+<p><em>Question</em></p>
+<p><strong>02/02</strong></p>
+<p>Which of the following characteristics suggest that a particular paper / data set is more likely to be a credible Open Result? Select all that apply.</p>
+<ul>
+<li>The website lists its source of funding</li>
+<li>The results are described in an associated peer-reviewer publication</li>
+<li>Detailed documentation accompanies the data, including defined fields and parameters</li>
+<li>Organization contact information is listed</li>
+<li>The website was last updated in 2015</li>
+<li>The webpage advertises open job positions with the funder</li>
+<li>The author is an expert in the field</li>
+<li>The webpage’s URL ends in ‘.com’</li>
+<li>The accompanying documentation states that “on inspection, data that were obvious outliers were excluded from the following analysis”</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/forrt\.org\/Transform-to-Open-Science-Book");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../Open-Science-101/Module_5/Lesson_1/readme.html" class="pagination-link" aria-label="Lesson 1: Introduction to Open Results">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Lesson 1: Introduction to Open Results</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../Open-Science-101/Module_5/Lesson_3/readme.html" class="pagination-link" aria-label="Lesson 3: Making Open Results">
+        <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Lesson 3: Making Open Results</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/edit/main/Open-Science-101/Module_5/Lesson_2/readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/forrtproject/Transform-to-Open-Science-Book/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

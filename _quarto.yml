@@ -1,0 +1,77 @@
+project:
+  type: book
+
+book:
+  title: "TOPS Open Science 101"
+  reader-mode: true
+  page-navigation: true
+  search: true
+  downloads: [pdf, epub]
+
+  #cover-image:
+  #favicon:
+  site-url: https://forrt.org/Transform-to-Open-Science-Book
+  repo-url: https://github.com/forrtproject/Transform-to-Open-Science-Book
+  repo-branch: main
+  repo-actions: [edit, issue]
+
+
+  chapters:
+    - index.md
+    - Open-Science-101/README.md
+
+    - part: Open-Science-101/Module_1/readme.md
+      chapters:
+      - Open-Science-101/Module_1/Lesson_1/readme.md
+      - Open-Science-101/Module_1/Lesson_2/readme.md
+      - Open-Science-101/Module_1/Lesson_3/readme.md
+      - Open-Science-101/Module_1/Lesson_4/readme.md
+      - Open-Science-101/Module_1/Lesson_5/readme.md
+
+    - part: Open-Science-101/Module_2/readme.md
+      chapters:
+      - Open-Science-101/Module_2/Lesson_1/readme.md
+      - Open-Science-101/Module_2/Lesson_2/readme.md
+      - Open-Science-101/Module_2/Lesson_3/readme.md
+      - Open-Science-101/Module_2/Lesson_4/readme.md
+      - Open-Science-101/Module_2/Lesson_5/readme.md
+
+    - part: Open-Science-101/Module_3/readme.md
+      chapters:
+      - Open-Science-101/Module_3/Lesson_1/readme.md
+      - Open-Science-101/Module_3/Lesson_2/readme.md
+      - Open-Science-101/Module_3/Lesson_3/readme.md
+      - Open-Science-101/Module_3/Lesson_4/readme.md
+      - Open-Science-101/Module_3/Lesson_5/readme.md
+
+    - part: Open-Science-101/Module_4/readme.md
+      chapters:
+      - Open-Science-101/Module_4/Lesson_1/readme.md
+      - Open-Science-101/Module_4/Lesson_2/readme.md
+      - Open-Science-101/Module_4/Lesson_3/readme.md
+      - Open-Science-101/Module_4/Lesson_4/readme.md
+      - Open-Science-101/Module_4/Lesson_5/readme.md
+
+    - part: Open-Science-101/Module_5/readme.md
+      chapters:
+      - Open-Science-101/Module_5/Lesson_1/readme.md
+      - Open-Science-101/Module_5/Lesson_2/readme.md
+      - Open-Science-101/Module_5/Lesson_3/readme.md
+      - Open-Science-101/Module_5/Lesson_4/readme.md
+      - Open-Science-101/Module_5/Lesson_5/readme.md
+
+    - part: About/About-Announcements.md
+      chapters:
+      - About/tops_faq.md
+
+format:
+  html:
+    theme: cosmo
+    author-meta: "TOPS Collaboration"
+    callout-appearance: simple
+
+  pdf:
+    documentclass: scrreprt
+
+  epub:
+    toc: true
