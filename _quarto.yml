@@ -17,7 +17,7 @@ book:
 
 
   chapters:
-    - index.md
+    - index.qmd
     - Open-Science-101/README.md
 
     - part: Open-Science-101/Module_1/readme.md
