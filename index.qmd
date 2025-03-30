@@ -1,12 +1,3 @@
-
-```{r bookdown-meta, echo = FALSE, include=FALSE}
-library(metathis)
-if (knitr::is_html_output()) {
-  meta() |>
-    meta_general(robots = "noindex, nofollow")    
-}
-```
-
 # Transform to Open Science {.unnumbered}
 
 Welcome to the open science guide for Transform to Open Science (TOPS).
